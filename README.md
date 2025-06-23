@@ -47,11 +47,4 @@ La estructura modular permite agregar nuevas páginas o funcionalidades sin comp
 
 ---
 
-## 📬 Contribuciones
-
-Si tienes sugerencias, ideas o encuentras algún problema, no dudes en abrir un issue o enviar un pull request.  
-¡Toda colaboración es bienvenida!
-
----
-
 **¡Gracias por visitar este proyecto!**
