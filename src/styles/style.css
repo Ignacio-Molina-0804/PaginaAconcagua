@@ -20,8 +20,6 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }
 
@@ -143,4 +141,18 @@ footer {
     background: #d4a017;
     margin: 0 auto 25px auto;
     border-radius: 3px;
+}
+
+.footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 1em;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
 }
