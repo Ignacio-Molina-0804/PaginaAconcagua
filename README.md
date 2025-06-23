@@ -9,10 +9,12 @@ Este repositorio contiene el desarrollo de una página web para una empresa dedi
 ## ✨ Características principales
 
 - **Diseño adaptable:** La página está pensada para verse correctamente en computadoras, tablets y dispositivos móviles.
-- **Navegación fija:** El menú de navegación permanece visible en la parte superior mientras el usuario recorre la página, facilitando el acceso a las diferentes secciones.
+- **Navegación fija y compartida:** El menú de navegación y el footer son iguales en todas las páginas, facilitando la experiencia de usuario y el mantenimiento.
 - **Inicio con imagen destacada:** Se utiliza una imagen de fondo representativa de la actividad, acompañada de un mensaje de bienvenida y llamada a la acción.
 - **Bloques de información:** Debajo de la imagen principal se encuentra un bloque donde se puede agregar información relevante sobre la empresa, sus valores, servicios o próximos eventos.
-- **Estructura organizada:** Los archivos están distribuidos en carpetas para facilitar el mantenimiento y la escalabilidad del proyecto (por ejemplo, carpetas para estilos, scripts, imágenes y datos).
+- **Secciones independientes:** Cada apartado principal (Quiénes somos, Salidas, Galería, Consultas) tiene su propio archivo HTML dentro de la carpeta `/src/pages`.
+- **Footer con redes sociales:** El pie de página incluye enlaces a redes sociales y se muestra en todas las páginas.
+- **Estructura organizada:** Los archivos están distribuidos en carpetas para facilitar el mantenimiento y la escalabilidad del proyecto (por ejemplo, carpetas para páginas, estilos, scripts, imágenes y datos).
 - **Fácil personalización:** El contenido, imágenes y secciones pueden ser adaptados según las necesidades y la identidad visual de la empresa una vez que se defina el nombre y el logo definitivo.
 
 ---
@@ -26,8 +28,13 @@ src/
 │   └── style.css
 ├── scripts/
 │   └── main.js
-└── data/
-    └── (imágenes y archivos de datos)
+├── data/
+│   └── (imágenes y archivos de datos)
+└── pages/
+    ├── quienes-somos.html
+    ├── salidas.html
+    ├── galeria.html
+    └── consultas.html
 ```
 
 ---
