@@ -1,9 +1,15 @@
+/* ---------------------------------- */
+/* Reset y estilos generales */
+/* ---------------------------------- */
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
 
+/* ---------------------------------- */
+/* Footer general */
+/* ---------------------------------- */
 footer {
     background-color: #333;
     color: white;
@@ -12,6 +18,9 @@ footer {
     width: 100%;
 }
 
+/* ---------------------------------- */
+/* Navbar */
+/* ---------------------------------- */
 .navbar {
     position: fixed;
     top: 0;
@@ -61,6 +70,9 @@ footer {
     color: #ffd700;
 }
 
+/* ---------------------------------- */
+/* Hero principal */
+/* ---------------------------------- */
 .hero {
     position: relative;
     height: 90vh;
@@ -85,7 +97,7 @@ footer {
 }
 
 .hero-guias .hero-content {
-    background: rgba(34,34,34,0.55); /* ejemplo: fondo más oscuro */
+    background: rgba(34,34,34,0.55);
 }
 
 .hero-content h1 {
@@ -100,17 +112,24 @@ footer {
     margin-bottom: 25px;
 }
 
-.btn {
+/* ---------------------------------- */
+/* Botones */
+/* ---------------------------------- */
+.btn,
+.btn-hero {
     background: #fff;
     color: #222;
-    padding: 12px 28px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1em;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
+    border: none;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-size: 1em;
 }
 
 .btn:hover {
@@ -121,15 +140,9 @@ footer {
 .btn-hero {
     display: inline-block;
     margin-top: 28px;
-    background: #fff;
-    color: #222;
     padding: 14px 32px;
     border-radius: 6px;
     font-size: 1.1em;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s;
-    border: none;
     box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
@@ -138,6 +151,9 @@ footer {
     color: #222;
 }
 
+/* ---------------------------------- */
+/* Sección de información */
+/* ---------------------------------- */
 .info-section {
     background: #fff;
     padding: 60px 20px 40px 20px;
@@ -160,6 +176,9 @@ footer {
     border-radius: 3px;
 }
 
+/* ---------------------------------- */
+/* Footer específico */
+/* ---------------------------------- */
 .footer {
     background: #111;
     color: #fff;
@@ -193,6 +212,9 @@ footer {
     filter: brightness(0.8) invert(0.7) sepia(1) saturate(5) hue-rotate(180deg);
 }
 
+/* ---------------------------------- */
+/* Bloques de información */
+/* ---------------------------------- */
 .info-bloques {
     max-width: 1500px;
     width: 90%;
@@ -200,7 +222,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 60px;
-    padding: 0 0;
+    padding: 0;
 }
 
 .info-bloque {
@@ -236,7 +258,6 @@ footer {
 
 .info-texto {
     flex: 1 1 0;
-    max-width: none;
     text-align: left;
     font-size: 1.2em;
 }
@@ -247,6 +268,9 @@ footer {
     color: #222;
 }
 
+/* ---------------------------------- */
+/* Animación de aparición */
+/* ---------------------------------- */
 .section-animada {
     opacity: 0;
     transform: translateY(40px);
@@ -259,49 +283,42 @@ footer {
     transform: translateY(0);
 }
 
-.guia-bloque {
+/* ---------------------------------- */
+/* Bloques de guías y sliders */
+/* ---------------------------------- */
+.guia-bloque,
+.slider-guia {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 60px;
-    width: 100%;
-    max-width: 1100px;
     margin: 60px auto 0 auto;
-    padding: 40px 40px;
-    box-sizing: border-box;
     background: #fafbfc;
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    padding: 40px 40px;
+    box-sizing: border-box;
 }
 
 .slider-guia {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 64px;
-    width: 100%;
-    max-width: 1100px;
     min-height: 350px;
-    margin: 56px 0 0 0;
-    background: #fafbfc;
     border-radius: 22px;
-    box-shadow: 0 4px 32px rgba(0,0,0,0.10);
     padding: 56px 48px;
-    position: relative;
-    box-sizing: border-box;
     overflow: hidden;
+    position: relative;
+    gap: 64px;
 }
 
 .guia-info {
     flex: 1 1 0;
-    text-align: left;
     font-size: 1.25em;
     max-width: 600px;
+    text-align: left;
 }
 
 .guia-info h3 {
-    margin-top: 0;
     font-size: 2em;
+    margin-top: 0;
 }
 
 .guia-foto {
@@ -322,7 +339,8 @@ footer {
 .slider-flechas {
     display: flex;
     gap: 18px;
-    margin: 32px 0 0 0;
+    margin-top: 32px;
+    justify-content: center;
 }
 
 .slider-flechas button {
@@ -335,9 +353,6 @@ footer {
     height: 54px;
     cursor: pointer;
     transition: background 0.2s, transform 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
@@ -355,15 +370,19 @@ footer {
     transform: none;
 }
 
-/* NUEVO BLOQUE PARA NUESTRO EQUIPO */
+.guia-bloque.fade {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ---------------------------------- */
+/* Sección Nuestro Equipo */
+/* ---------------------------------- */
 .nuestro-equipo {
     max-width: 900px;
     margin: 60px auto 0 auto;
     text-align: center;
     padding: 0 24px 24px 24px;
-    background: none;
-    border-radius: 0;
-    box-shadow: none;
 }
 
 .nuestro-equipo h2 {
@@ -388,18 +407,9 @@ footer {
     line-height: 1.6;
 }
 
-.guia-bloque,
-.guia-info,
-.guia-foto {
-    transition: opacity 0.4s;
-}
-
-.guia-bloque.fade {
-    opacity: 0;
-    pointer-events: none;
-}
-
+/* ---------------------------------- */
 /* Media Queries */
+/* ---------------------------------- */
 @media (max-width: 1200px) {
     .slider-guia {
         max-width: 98vw;
@@ -415,54 +425,16 @@ footer {
     }
 }
 
+@media (max-width: 1000px),
 @media (max-width: 800px) {
-    .slider-guia {
-        flex-direction: column-reverse;
-        width: 98vw;
-        padding: 24px 8px;
-        gap: 32px;
-        min-height: unset;
-    }
-    .guia-info {
-        font-size: 1em;
-        text-align: center;
-        align-items: center;
-    }
-    .slider-flechas {
-        justify-content: center;
-    }
-    .guia-foto {
-        margin-bottom: 16px;
-    }
-}
-
-@media (max-width: 800px) {
-    .info-bloque {
-        flex-direction: column !important;
-        text-align: center;
-        gap: 20px;
-    }
-    .info-texto {
-        max-width: 100%;
-        text-align: center;
-    }
-    .info-img img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-width: 1000px) {
     .info-bloque {
         flex-direction: column !important;
         text-align: center;
         gap: 30px;
     }
-    .info-img img {
-        max-width: 100%;
-        height: auto;
-    }
+    .info-img img,
     .info-texto {
+        max-width: 100%;
         text-align: center;
     }
 }
@@ -481,22 +453,7 @@ footer {
         width: 98vw;
         padding: 24px 8px;
         gap: 32px;
-        min-height: unset;
     }
-}
-
-@media (max-width: 700px) {
-    .slider-guia {
-        flex-direction: column-reverse;
-        padding: 20px 8px;
-        gap: 20px;
-    }
-    .guia-info {
-        text-align: center;
-    }
-}
-
-@media (max-width: 900px) {
     .guia-bloque {
         flex-direction: column-reverse;
         align-items: center;
@@ -512,6 +469,18 @@ footer {
         justify-content: center;
     }
 }
+
+@media (max-width: 700px) {
+    .slider-guia {
+        flex-direction: column-reverse;
+        padding: 20px 8px;
+        gap: 20px;
+    }
+    .guia-info {
+        text-align: center;
+    }
+}
+
 @media (max-width: 600px) {
     .hero-content h1 {
         font-size: 2.5em;
