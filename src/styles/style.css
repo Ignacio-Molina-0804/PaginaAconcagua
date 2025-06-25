@@ -85,7 +85,7 @@ footer {
 }
 
 .hero-guias .hero-content {
-    background: rgba(34,34,34,0.55); /* ejemplo: fondo más oscuro */
+    background: rgba(34,34,34,0.55);
 }
 
 .hero-content h1 {
@@ -272,24 +272,12 @@ footer {
     background: #fafbfc;
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    transition: opacity 0.4s;
 }
 
-.slider-guia {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 64px;
-    width: 100%;
-    max-width: 1100px;
-    min-height: 350px;
-    margin: 56px 0 0 0;
-    background: #fafbfc;
-    border-radius: 22px;
-    box-shadow: 0 4px 32px rgba(0,0,0,0.10);
-    padding: 56px 48px;
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
+.guia-bloque.fade {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .guia-info {
@@ -297,6 +285,7 @@ footer {
     text-align: left;
     font-size: 1.25em;
     max-width: 600px;
+    transition: opacity 0.4s;
 }
 
 .guia-info h3 {
@@ -309,6 +298,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: opacity 0.4s;
 }
 
 .img-guia-slider {
@@ -355,7 +345,6 @@ footer {
     transform: none;
 }
 
-/* NUEVO BLOQUE PARA NUESTRO EQUIPO */
 .nuestro-equipo {
     max-width: 900px;
     margin: 60px auto 0 auto;
@@ -388,17 +377,6 @@ footer {
     line-height: 1.6;
 }
 
-.guia-bloque,
-.guia-info,
-.guia-foto {
-    transition: opacity 0.4s;
-}
-
-.guia-bloque.fade {
-    opacity: 0;
-    pointer-events: none;
-}
-
 /* Media Queries */
 @media (max-width: 1200px) {
     .slider-guia {
@@ -412,43 +390,6 @@ footer {
     }
     .guia-foto {
         flex: none;
-    }
-}
-
-@media (max-width: 800px) {
-    .slider-guia {
-        flex-direction: column-reverse;
-        width: 98vw;
-        padding: 24px 8px;
-        gap: 32px;
-        min-height: unset;
-    }
-    .guia-info {
-        font-size: 1em;
-        text-align: center;
-        align-items: center;
-    }
-    .slider-flechas {
-        justify-content: center;
-    }
-    .guia-foto {
-        margin-bottom: 16px;
-    }
-}
-
-@media (max-width: 800px) {
-    .info-bloque {
-        flex-direction: column !important;
-        text-align: center;
-        gap: 20px;
-    }
-    .info-texto {
-        max-width: 100%;
-        text-align: center;
-    }
-    .info-img img {
-        width: 100%;
-        height: auto;
     }
 }
 
@@ -485,6 +426,27 @@ footer {
     }
 }
 
+@media (max-width: 800px) {
+    .slider-guia {
+        flex-direction: column-reverse;
+        width: 98vw;
+        padding: 24px 8px;
+        gap: 32px;
+        min-height: unset;
+    }
+    .guia-info {
+        font-size: 1em;
+        text-align: center;
+        align-items: center;
+    }
+    .slider-flechas {
+        justify-content: center;
+    }
+    .guia-foto {
+        margin-bottom: 16px;
+    }
+}
+
 @media (max-width: 700px) {
     .slider-guia {
         flex-direction: column-reverse;
@@ -496,22 +458,6 @@ footer {
     }
 }
 
-@media (max-width: 900px) {
-    .guia-bloque {
-        flex-direction: column-reverse;
-        align-items: center;
-        padding: 0 8px;
-        gap: 24px;
-    }
-    .guia-info {
-        text-align: center;
-        font-size: 1em;
-        max-width: 100%;
-    }
-    .slider-flechas {
-        justify-content: center;
-    }
-}
 @media (max-width: 600px) {
     .hero-content h1 {
         font-size: 2.5em;
