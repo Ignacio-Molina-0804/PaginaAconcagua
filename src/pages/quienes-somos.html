@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiénes Somos | Empresa de Montañismo</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -23,7 +25,50 @@
         </nav>
     </header>
 
-    <!-- Contenido específico de la página -->
+    <main>
+    
+        <section class="hero hero-guias">
+            <div class="hero-content">
+                <h1>NUESTROS GUÍAS</h1>
+                <p>Conocé a quienes te acompañarán en cada aventura</p>
+            </div>
+        </section>
+
+        <section class="nuestro-equipo">
+            <h2>Nuestro equipo</h2>
+            <div class="info-underline"></div>
+            <p>
+                Somos un grupo de guías certificados y apasionados por la montaña, con años de experiencia en
+                expediciones y actividades de aventura.
+            </p>
+            <p>
+                Nos caracteriza el compromiso con la seguridad, el respeto por la naturaleza y el deseo de compartir
+                experiencias inolvidables con cada persona que se suma a nuestras salidas.
+            </p>
+            <p>
+                ¡Te invitamos a conocernos y a vivir la montaña con nosotros!
+            </p>
+        </section>
+
+        <section class="guia-bloque">
+            <div class="guia-info">
+                <h3 id="guia-nombre">Gastón Molina</h3>
+                <p id="guia-descripcion">
+                    Guía de montaña certificado con más de 12 años de experiencia liderando expediciones en los Andes y
+                    otras cordilleras de Sudamérica.<br>
+                    Apasionado por la naturaleza, la seguridad y la formación de nuevos aventureros.<br>
+                    “Cada salida es una oportunidad para aprender, disfrutar y compartir el amor por la montaña.”
+                </p>
+                <div class="slider-flechas">
+                    <button id="prev-guia" aria-label="Guía anterior">&#8592;</button>
+                    <button id="next-guia" aria-label="Guía siguiente">&#8594;</button>
+                </div>
+            </div>
+            <div class="guia-foto">
+                <img id="guia-img" src="../data/guia-principal.jpg" alt="Guía de montaña" class="img-guia-slider">
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="footer-content">
@@ -38,5 +83,8 @@
             </div>
         </div>
     </footer>
+    <script src="../scripts/animaciones.js"></script>
+    <script src="../scripts/slider-guias.js"></script>
 </body>
+
 </html>
