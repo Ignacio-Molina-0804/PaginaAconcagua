@@ -24,21 +24,21 @@ Este repositorio contiene el desarrollo de una página web para una empresa dedi
 ## 📁 Estructura del proyecto
 
 ```
-src/
 ├── index.html
-├── styles/
-│   └── style.css
-├── scripts/
-│   ├── animaciones.js
-│   └── slider-guias.js
-├── data/
-│   ├── (imágenes y archivos de datos)
-│   └── logo.png
-└── pages/
-    ├── quienes-somos.html
-    ├── salidas.html
-    ├── galeria.html
-    └── consultas.html
+└── src/
+    ├── styles/
+    │   └── style.css
+    ├── scripts/
+    │   ├── animaciones.js
+    │   └── slider-guias.js
+    ├── data/
+    │   ├── (imágenes y archivos de datos)
+    │   └── logo.png
+    └── pages/
+        ├── quienes-somos.html
+        ├── salidas.html
+        ├── galeria.html
+        └── consultas.html
 ```
 
 ---
@@ -72,7 +72,8 @@ La estructura modular permite agregar nuevas páginas o funcionalidades sin comp
    npm start
    ```
 
-   Esto abrirá la carpeta `src` en tu navegador con recarga automática.
+   Esto abrirá la carpeta del proyecto en tu navegador con recarga automática.  
+   Si usas la extensión **Go Live** de Visual Studio Code, simplemente haz clic en "Go Live" y navega a `index.html`.
 
 ---
 
