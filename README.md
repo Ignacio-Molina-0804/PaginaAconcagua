@@ -8,14 +8,16 @@ Este repositorio contiene el desarrollo de una página web para una empresa dedi
 
 ## ✨ Características principales
 
-- **Diseño adaptable:** La página está pensada para verse correctamente en computadoras, tablets y dispositivos móviles.
-- **Navegación fija y compartida:** El menú de navegación y el footer son iguales en todas las páginas, facilitando la experiencia de usuario y el mantenimiento.
-- **Inicio con imagen destacada:** Se utiliza una imagen de fondo representativa de la actividad, acompañada de un mensaje de bienvenida y llamada a la acción.
-- **Bloques de información:** Debajo de la imagen principal se encuentra un bloque donde se puede agregar información relevante sobre la empresa, sus valores, servicios o próximos eventos.
-- **Secciones independientes:** Cada apartado principal (Quiénes somos, Salidas, Galería, Consultas) tiene su propio archivo HTML dentro de la carpeta `/src/pages`.
-- **Footer con redes sociales:** El pie de página incluye enlaces a redes sociales y se muestra en todas las páginas.
-- **Estructura organizada:** Los archivos están distribuidos en carpetas para facilitar el mantenimiento y la escalabilidad del proyecto (por ejemplo, carpetas para páginas, estilos, scripts, imágenes y datos).
-- **Fácil personalización:** El contenido, imágenes y secciones pueden ser adaptados según las necesidades y la identidad visual de la empresa una vez que se defina el nombre y el logo definitivo.
+- **Diseño adaptable:** La página se visualiza correctamente en computadoras, tablets y dispositivos móviles.
+- **Navegación fija y compartida:** El menú de navegación y el footer son iguales en todas las páginas.
+- **Inicio con imagen destacada:** Imagen de fondo representativa, mensaje de bienvenida y llamada a la acción.
+- **Bloques de información:** Secciones con información sobre la empresa, valores, servicios y próximos eventos.
+- **Secciones independientes:** Cada apartado principal (Quiénes somos, Salidas, Galería, Consultas) tiene su propio archivo HTML en `/src/pages`.
+- **Slider de guías:** En la sección "Quiénes somos" se puede navegar entre los guías con animación y flechas.
+- **Footer con redes sociales:** Pie de página con enlaces a Facebook e Instagram.
+- **Animaciones al hacer scroll:** Las secciones principales aparecen con animación al desplazarse por la página.
+- **Estructura organizada:** Archivos distribuidos en carpetas para facilitar el mantenimiento y la escalabilidad.
+- **Fácil personalización:** El contenido, imágenes y secciones pueden adaptarse fácilmente.
 
 ---
 
@@ -27,9 +29,11 @@ src/
 ├── styles/
 │   └── style.css
 ├── scripts/
-│   └── main.js
+│   ├── animaciones.js
+│   └── slider-guias.js
 ├── data/
-│   └── (imágenes y archivos de datos)
+│   ├── (imágenes y archivos de datos)
+│   └── logo.png
 └── pages/
     ├── quienes-somos.html
     ├── salidas.html
@@ -43,7 +47,7 @@ src/
 
 - **HTML5** para la estructura de la página.
 - **CSS3** para los estilos y el diseño visual.
-- **JavaScript** (opcional, para funcionalidades interactivas futuras).
+- **JavaScript** para funcionalidades interactivas (animaciones y slider de guías).
 
 ---
 
@@ -51,6 +55,24 @@ src/
 
 Este proyecto está pensado para ser fácilmente modificado y ampliado. Puedes cambiar textos, imágenes, colores y secciones según las necesidades de la empresa.  
 La estructura modular permite agregar nuevas páginas o funcionalidades sin complicaciones.
+
+---
+
+## ▶️ Cómo ejecutar el proyecto
+
+1. Instala las dependencias (opcional, solo si usas live-server):
+
+   ```bash
+   npm install
+   ```
+
+2. Inicia el servidor de desarrollo:
+
+   ```bash
+   npm start
+   ```
+
+   Esto abrirá la carpeta `src` en tu navegador con recarga automática.
 
 ---
 
