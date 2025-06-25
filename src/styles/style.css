@@ -4,17 +4,6 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
-main {
-    padding: 20px;
-}
-
 footer {
     background-color: #333;
     color: white;
@@ -37,7 +26,6 @@ footer {
     padding: 0 40px;
     height: 70px;
     box-sizing: border-box;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .logo {
@@ -269,134 +257,6 @@ footer {
 .section-animada.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-.quienes-img-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px 0 30px 0;
-}
-
-.img-grande {
-    width: 90%;
-    max-width: 700px;
-    border-radius: 18px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
-    object-fit: cover;
-}
-
-.img-guia-pequena {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
-    display: block;
-    margin: 0 auto;
-}
-
-.quienes-info-bloque {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    max-width: 1200px;
-    margin: 0 auto 60px auto;
-    padding: 0 20px;
-}
-
-.quienes-info-bloque {
-    max-width: 700px;
-    margin: 40px auto 30px auto;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.quienes-info-texto {
-    flex: 1 1 0;
-    font-size: 1.2em;
-    text-align: left;
-}
-
-.quienes-info-texto h2 {
-    margin-top: 0;
-    color: #222;
-    font-size: 2em;
-}
-
-.quienes-info-img {
-    flex: 1 1 0;
-    display: flex;
-    justify-content: center;
-}
-
-.quienes-info-img img {
-    width: 100%;
-    max-width: 350px;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-    object-fit: cover;
-}
-
-.quienes-equipo-section {
-    max-width: 600px;
-    margin: 60px auto 0 auto;
-    text-align: center;
-    padding: 32px 24px 0 24px;
-}
-
-.quienes-equipo-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 18px;
-}
-
-.quienes-equipo-section p {
-    font-size: 1.15em;
-    margin-bottom: 12px;
-    color: #222;
-}
-
-.guia-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 36px auto 0 auto;
-    background: #fafbfc;
-    border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-    padding: 28px 24px 18px 24px;
-    width: fit-content;
-}
-
-.img-guia-pequena {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 14px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.10);
-    margin-bottom: 10px;
-}
-
-.info-underline {
-    width: 60px;
-    height: 5px;
-    background: #d4a017;
-    border-radius: 3px;
-    margin: 0 auto;
-}
-
-.guia-descripcion {
-    font-size: 1em;
-    color: #444;
-    margin: 10px 0 0 0;
-    max-width: 300px;
-}
-
-.guia-card h3 {
-    margin: 12px 0 6px 0;
-    font-size: 1.25em;
-    color: #222;
 }
 
 .guia-bloque {
