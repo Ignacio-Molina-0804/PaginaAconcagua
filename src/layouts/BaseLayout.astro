@@ -1,0 +1,22 @@
+---
+const { title = "Montañismo Gastón Molina" } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <slot name="header" />
+    <main><slot /></main>
+    <slot name="footer" />
+    <!-- Scripts globales -->
+	<script>
+	import "../../src/scripts/animaciones.js";
+	import "../../src/scripts/slider-guias.js";  // Ajusta según tu estructura real
+	</script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout title="Salidas | Empresa de Montañismo">
+  <slot name="header"><Navbar /></slot>
+
+  <!-- Acá iría el contenido específico de las salidas -->
+  <section class="info-section">
+    <h2>Próximas Salidas</h2>
+    <div class="info-underline"></div>
+    <p>Estamos organizando nuevas aventuras. Pronto vas a poder ver toda la info. 🌄📅</p>
+  </section>
+
+  <slot name="footer"><Footer /></slot>
+</BaseLayout>

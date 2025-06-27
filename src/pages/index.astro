@@ -1,0 +1,94 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout title="Montañismo Gastón Molina">
+  <slot name="header"><Navbar /></slot>
+
+  <section class="hero hero-home">
+    <div class="hero-content">
+      <h1>BIENVENIDO</h1>
+      <p>Descubre la aventura en la montaña</p>
+    </div>
+  </section>
+
+  <section class="info-section section-animada">
+    <h2>Sobre Nosotros</h2>
+    <div class="info-underline"></div>
+    <p>
+      Somos una empresa dedicada a compartir la pasión por la montaña y la
+      aventura. Organizamos salidas, expediciones y actividades al aire libre
+      para todos los niveles, guiados por profesionales con amplia experiencia.<br
+      /><br />
+      Nuestro objetivo es que cada persona viva una experiencia inolvidable, disfrute
+      de la naturaleza y descubra nuevos desafíos en un entorno seguro y de compañerismo.
+      <strong>¡Te invitamos a ser parte de nuestra próxima aventura!</strong>
+    </p>
+  </section>
+
+  <section class="info-bloques section-animada">
+    <div class="info-bloque fila">
+      <div class="info-img">
+        <img
+          src="/data/ascenso-cerro-aconcagua-ruta-normal-640.jpg"
+          alt="Nuestro equipo en la montaña"
+        />
+      </div>
+      <div class="info-texto">
+        <h3>¿Quiénes somos?</h3>
+        <p>
+          Somos un grupo de apasionados por la montaña y la aventura, con más de
+          15 años de experiencia guiando expediciones y actividades al aire
+          libre. Nuestro equipo está formado por guías certificados y amantes de
+          la naturaleza, comprometidos con la seguridad y el disfrute de cada
+          participante.<br /><br />
+          Creemos que cada salida es una oportunidad para descubrir nuevos paisajes,
+          desafiarse a uno mismo y crear recuerdos inolvidables.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-bloques section-animada">
+    <div class="info-bloque fila inversa">
+      <div class="info-img">
+        <img
+          src="/data/ascent-to-mount-aconcagua-472.jpg"
+          alt="Grupo en la cima"
+        />
+      </div>
+      <div class="info-texto">
+        <h3>Nuestra misión</h3>
+        <p>
+          Brindar experiencias únicas de montañismo y aventura, promoviendo el
+          respeto por el entorno natural y la camaradería entre los
+          participantes.<br /><br />
+          Nos esforzamos por ofrecer salidas seguras, organizadas y adaptadas a todos
+          los niveles, para que tanto principiantes como expertos puedan disfrutar
+          de la montaña con confianza.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-bloques section-animada">
+    <div class="info-bloque fila">
+      <div class="info-img">
+        <img src="/data/imagenGrupoGente.avif" alt="Trekking en grupo" />
+      </div>
+      <div class="info-texto">
+        <h3>¿Por qué elegirnos?</h3>
+        <ul>
+          <li>Guías profesionales y certificados</li>
+          <li>Grupos reducidos y atención personalizada</li>
+          <li>Itinerarios adaptados a diferentes niveles</li>
+          <li>Compromiso con la seguridad y el medio ambiente</li>
+          <li>Ambiente amigable y de compañerismo</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <slot name="footer"><Footer /></slot>
+</BaseLayout>

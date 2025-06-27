@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout title="Consultas | Empresa de Montañismo">
+  <slot name="header"><Navbar /></slot>
+
+  <!-- Acá iría el formulario o medios de contacto -->
+  <section class="info-section">
+    <h2>Consultanos</h2>
+    <div class="info-underline"></div>
+    <p>¿Tenés dudas o querés sumarte a una salida? Escribinos y te respondemos al toque. 📩</p>
+  </section>
+
+  <slot name="footer"><Footer /></slot>
+</BaseLayout>
