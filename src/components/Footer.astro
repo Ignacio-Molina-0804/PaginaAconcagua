@@ -1,12 +1,15 @@
-<footer class="footer">
-  <div class="footer-content">
-    <p>&copy; 2025 Empresa de Montañismo. Todos los derechos reservados.</p>
-    <div class="footer-social">
-      <a href="https://facebook.com" target="_blank">
-        <img src="/data/facebook-logo.png" alt="Facebook" class="social-icon" />
+---
+// src/components/Footer.astro
+---
+<footer class="bg-gray-900 text-white py-4">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+    <p class="mb-4 md:mb-0">&copy; 2025 Empresa de Montañismo. Todos los derechos reservados.</p>
+    <div class="flex space-x-4">
+      <a href="https://facebook.com" target="_blank" class="hover:opacity-80 transition-opacity">
+        <img src="/data/facebook-logo.png" alt="Facebook" class="w-8 h-8 filter brightness-0 invert" />
       </a>
-      <a href="https://instagram.com" target="_blank">
-        <img src="/data/insta-logo.png" alt="Instagram" class="social-icon" />
+      <a href="https://instagram.com" target="_blank" class="hover:opacity-80 transition-opacity">
+        <img src="/data/insta-logo.png" alt="Instagram" class="w-8 h-8 filter brightness-0 invert" />
       </a>
     </div>
   </div>

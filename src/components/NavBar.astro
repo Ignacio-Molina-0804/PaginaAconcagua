@@ -1,13 +1,18 @@
-<nav class="navbar">
-  <div class="logo"> 
-    <!-- <img src="/data/logo.png" alt="Logo" height="40" /> -->
-    <span>Montañismo Gaston Molina</span>
+---
+// src/components/Navbar.astro
+---
+<nav class="fixed top-0 left-0 w-full z-50 bg-gray-900 text-white shadow-md">
+  <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+    <div class="flex items-center space-x-2 mb-4 md:mb-0">
+      <!-- <img src="/data/logo.png" alt="Logo" class="h-10" /> -->
+      <span class="font-bold text-lg">Montañismo Gaston Molina</span>
+    </div>
+    <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
+      <li><a href="/" class="hover:text-yellow-400 transition-colors">Home</a></li>
+      <li><a href="/quienes-somos" class="hover:text-yellow-400 transition-colors">Quienes somos</a></li>
+      <li><a href="/salidas" class="hover:text-yellow-400 transition-colors">Salidas</a></li>
+      <li><a href="/galeria" class="hover:text-yellow-400 transition-colors">Galería</a></li>
+      <li><a href="/consultas" class="hover:text-yellow-400 transition-colors">Consultas</a></li>
+    </ul>
   </div>
-  <ul class="nav-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/quienes-somos">Quienes somos</a></li>
-    <li><a href="/salidas">Salidas</a></li>
-    <li><a href="/galeria">Galería</a></li>
-    <li><a href="/consultas">Consultas</a></li>
-  </ul>
 </nav>
