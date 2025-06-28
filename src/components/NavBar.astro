@@ -1,47 +1,74 @@
 ---
 // src/components/Navbar.astro
-// Elimina cualquier importación de Icon
 ---
 
 <nav class="fixed top-0 left-0 w-full z-50 bg-gray-900 text-white shadow-md">
-  <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
-    <div class="flex items-center space-x-2 mb-4 md:mb-0">
-      <span class="font-bold text-lg">Montañismo Gastón Molina</span>
-    </div>
-    
-    <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
-      <li><a href="/" class="hover:text-yellow-400 transition-colors py-2 block">Home</a></li>
-      <li><a href="/quienes-somos" class="hover:text-yellow-400 transition-colors py-2 block">Quiénes Somos</a></li>
-      
-      <!-- Menú desplegable de Salidas -->
-      <li class="relative group">
-        <button class="hover:text-yellow-400 transition-colors flex items-center gap-1 py-2">
-          Salidas
-          <!-- SVG directo - reemplaza el Icon -->
-          <svg 
-            class="w-4 h-4 mt-0.5 transition-transform group-hover:rotate-180" 
-            fill="currentColor" 
-            viewBox="0 0 20 20"
-          >
-            <path 
-              fill-rule="evenodd" 
-              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" 
-              clip-rule="evenodd"
-            ></path>
+  <div class="container mx-auto px-6 py-4">
+    <!-- Contenedor principal -->
+    <div class="flex items-center justify-between">
+      <!-- Logo/Marca -->
+      <div class="flex items-center space-x-2">
+        <span class="font-bold text-lg">Montañismo Gastón Molina</span>
+      </div>
+
+      <!-- Menú para desktop -->
+      <div class="hidden md:flex items-center space-x-6">
+        <ul class="flex space-x-6">
+          <li><a href="/" class="hover:text-yellow-400 transition-colors py-2 block">Home</a></li>
+          <li><a href="/quienes-somos" class="hover:text-yellow-400 transition-colors py-2 block">Quiénes Somos</a></li>
+          
+          <li class="relative group">
+            <button class="hover:text-yellow-400 transition-colors flex items-center gap-1 py-2">
+              Salidas
+              <svg class="w-4 h-4 mt-0.5 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            
+            <div class="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-1 group-hover:translate-y-0">
+              <a href="/salidas/trekking" class="block px-4 py-2 hover:bg-gray-700 hover:text-yellow-400">Trekking</a>
+              <a href="/salidas/aconcagua" class="block px-4 py-2 hover:bg-gray-700 hover:text-yellow-400">Aconcagua</a>
+            </div>
+          </li>
+          
+          <li><a href="/galeria" class="hover:text-yellow-400 transition-colors py-2 block">Galería</a></li>
+          <li><a href="/consultas" class="hover:text-yellow-400 transition-colors py-2 block">Consultas</a></li>
+        </ul>
+      </div>
+
+      <!-- Botón hamburguesa -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-gray-300 hover:text-white focus:outline-none" aria-label="Menú">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
+      </div>
+    </div>
+
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+      <ul class="space-y-2">
+        <li><a href="/" class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded">Home</a></li>
+        <li><a href="/quienes-somos" class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded">Quiénes Somos</a></li>
         
-        <!-- Submenú -->
-        <div class="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-1 group-hover:translate-y-0">
-          <a href="/salidas/trekking" class="block px-4 py-2 hover:bg-gray-700 hover:text-yellow-400">Trekking</a>
-          <a href="/salidas/aconcagua" class="block px-4 py-2 hover:bg-gray-700 hover:text-yellow-400">Aconcagua</a>
-          <!-- <a href="/salidas/expediciones" class="block px-4 py-2 hover:bg-gray-700 hover:text-yellow-400">Expediciones</a>
-          <a href="/salidas/cursos" class="block px-4 py-2 hover:bg-gray-700 hover:text-yellow-400">Cursos</a> -->
-        </div>
-      </li>
-      
-      <li><a href="/galeria" class="hover:text-yellow-400 transition-colors py-2 block">Galería</a></li>
-      <li><a href="/consultas" class="hover:text-yellow-400 transition-colors py-2 block">Consultas</a></li>
-    </ul>
+        <li>
+          <button id="dropdown-btn" class="w-full flex justify-between items-center px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded" aria-expanded="false">
+            <span>Salidas</span>
+            <svg id="dropdown-arrow" class="w-4 h-4 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <ul id="dropdown-menu" class="hidden pl-4 mt-2 space-y-2">
+            <li><a href="/salidas/trekking" class="block px-3 py-2 hover:bg-gray-700 hover:text-yellow-400 rounded">Trekking</a></li>
+            <li><a href="/salidas/aconcagua" class="block px-3 py-2 hover:bg-gray-700 hover:text-yellow-400 rounded">Aconcagua</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="/galeria" class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded">Galería</a></li>
+        <li><a href="/consultas" class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded">Consultas</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
+
