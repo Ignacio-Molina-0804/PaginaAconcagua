@@ -1,37 +1,38 @@
 # Proyecto de Página Web para Empresa de Montañismo
 
-Este repositorio contiene el desarrollo de una página web moderna y adaptable para una empresa dedicada al montañismo, excursiones y actividades de aventura. El objetivo es ofrecer una presencia digital atractiva, funcional y fácil de mantener, mostrando servicios, próximas salidas, galería de imágenes y un canal de contacto para consultas de potenciales clientes.
+Este repositorio contiene el desarrollo de una página web moderna, adaptable y profesional para una empresa dedicada al montañismo, excursiones y actividades de aventura. El sitio está pensado para mostrar servicios, próximas salidas, galería de imágenes y un canal de contacto para consultas de potenciales clientes.
 
-> **Nota:** El nombre de la empresa aún no está definido, por lo que el proyecto está preparado para ser fácilmente personalizado en el futuro.
+Puedes ver una previsualización online en:  
+👉 **[https://gastonmolinaguide.netlify.app](https://gastonmolinaguide.netlify.app)**
 
 ---
 
-## ✨ Migración a Astro y Tailwind CSS
+## 🚀 Stack Moderno: Astro + Tailwind CSS
 
-El proyecto fue migrado desde una estructura tradicional basada en HTML, CSS y JavaScript a [Astro](https://astro.build/), un framework moderno para construir sitios web rápidos y modulares.  
-Además, se incorporó [Tailwind CSS](https://tailwindcss.com/) para facilitar la creación de interfaces atractivas y responsivas mediante utilidades de clases CSS.
+El proyecto fue migrado y optimizado utilizando [Astro](https://astro.build/) como framework principal y [Tailwind CSS](https://tailwindcss.com/) para los estilos.  
+Esto permite un desarrollo ágil, componentes reutilizables, excelente rendimiento y un diseño adaptable a cualquier dispositivo.
 
 **Ventajas de la migración:**
-- **Componentización:** Reutilización de elementos como navegación y footer en todas las páginas.
-- **Mejor organización:** Separación clara entre componentes, layouts, páginas y scripts.
-- **Optimización automática:** Mejor rendimiento y carga de recursos.
-- **Escalabilidad:** Fácil de mantener y ampliar.
-- **Estilos modernos:** Tailwind CSS permite un diseño rápido, consistente y adaptable a cualquier dispositivo.
+- Componentización: NavBar, Footer, Hero y otros elementos reutilizables en todas las páginas.
+- Mejor organización: Separación clara entre componentes, layouts, páginas y scripts.
+- Optimización automática: Mejor rendimiento y carga de recursos.
+- Escalabilidad: Fácil de mantener y ampliar.
+- Estilos modernos: Tailwind CSS permite un diseño rápido, consistente y responsive.
 
 ---
 
 ## 🌟 Características principales
 
-- **Diseño adaptable:** Visualización óptima en computadoras, tablets y móviles gracias a Tailwind CSS.
-- **Navegación fija y compartida:** Menú y footer comunes en todas las páginas.
-- **Inicio con imagen destacada:** Hero con imagen de fondo, mensaje de bienvenida y llamada a la acción.
-- **Bloques de información:** Secciones sobre la empresa, valores, servicios y próximos eventos.
+- **Diseño responsive:** Visualización óptima en computadoras, tablets y móviles.
+- **Navegación y footer fijos:** Menú y pie de página comunes en todas las páginas.
+- **Hero dinámico:** Imagen de fondo, mensaje de bienvenida y llamada a la acción en cada sección.
+- **Bloques informativos:** Secciones sobre la empresa, valores, servicios y próximos eventos.
 - **Secciones independientes:** Cada apartado principal tiene su propio archivo en `/src/pages`.
 - **Slider de guías:** En "Quiénes somos" se puede navegar entre los guías con animación y flechas.
-- **Footer con redes sociales:** Enlaces a Facebook e Instagram.
 - **Animaciones al hacer scroll:** Las secciones aparecen animadas al desplazarse.
-- **Estructura organizada:** Archivos distribuidos en carpetas para facilitar el mantenimiento.
+- **Galería de imágenes:** Página dedicada para mostrar fotos de expediciones y actividades.
 - **Fácil personalización:** Textos, imágenes y secciones adaptables a las necesidades de la empresa.
+- **Optimización para SEO y rendimiento:** Astro genera HTML estático rápido y accesible.
 
 ---
 
@@ -41,14 +42,13 @@ Además, se incorporó [Tailwind CSS](https://tailwindcss.com/) para facilitar l
 astro-project/
 │
 ├── public/
-│   └── data/               # Imágenes del proyecto
+│   └── data/               # Imágenes y recursos estáticos
 │
 ├── src/
 │   ├── components/         # Componentes Astro reutilizables (NavBar, Footer, Hero)
-│   ├── layouts/            # Layouts base para las páginas
+│   ├── layouts/            # Layout base para las páginas
 │   ├── pages/              # Páginas principales (index, quienes-somos, salidas, galeria, consultas)
 │   ├── scripts/            # JavaScript para animaciones y slider de guías
-│   └── styles/             # Estilos globales (global.css)
 │
 ├── package.json            # Dependencias y scripts
 ├── astro.config.mjs        # Configuración de Astro y Tailwind CSS
