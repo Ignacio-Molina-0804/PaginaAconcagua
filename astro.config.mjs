@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
-
-import tailwindcss from '@tailwindcss/vite';
+import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://your-site-url.com',
@@ -9,9 +8,6 @@ export default defineConfig({
     enabled: false // 👈 Forma correcta de desactivarlo
   },
 
-  integrations: [],
+  integrations: [tailwind()],
 
-  vite: {
-    plugins: [tailwindcss()]
-  }
 });
