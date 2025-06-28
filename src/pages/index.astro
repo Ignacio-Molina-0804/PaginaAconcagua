@@ -4,18 +4,19 @@ import Navbar from "../components/NavBar.astro";
 import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
 ---
+
 <BaseLayout title="Montañismo Gastón Molina">
   <slot name="header"><Navbar /></slot>
 
   <Hero 
-    backgroundImage="data/aconcagua_ejemplo.avif",
-    title="BIENVENIDO",
-    subtitle="Descubre la aventura en la montaña",
+    backgroundImage="data/aconcagua_ejemplo.avif"
+    title="BIENVENIDO"
+    subtitle="Descubre la aventura en la montaña"
     blurIntensity="md"
     opacity={20}
   />
 
-  <section class="py-16 px-6 text-center bg-white section-animada">
+  <section class="py-16 px-6 text-center bg-white section-animada opacity-0 translate-y-10 transition-[opacity,transform] duration-800 ease-[cubic-bezier(0.23,1,0.32,1)]">
     <h2 class="text-4xl text-gray-800 font-black mb-3 tracking-wide">Sobre Nosotros</h2>
     <div class="w-32 h-1.5 bg-yellow-600 rounded mx-auto mb-8"></div>
     <p class="max-w-3xl mx-auto text-lg leading-relaxed">
@@ -28,7 +29,7 @@ import Footer from "../components/Footer.astro";
     </p>
   </section>
 
-  <section class="max-w-6xl mx-auto py-10 px-4 section-animada">
+  <section class="max-w-6xl mx-auto py-10 px-4 section-animada opacity-0 translate-y-10 transition-[opacity,transform] duration-800 ease-[cubic-bezier(0.23,1,0.32,1)]">
     <div class="flex flex-col lg:flex-row items-center gap-12 mb-1">
       <div class="lg:w-1/2">
         <img 
@@ -50,11 +51,9 @@ import Footer from "../components/Footer.astro";
         </p>
       </div>
     </div>
-
   </section>
 
-
-  <section class="max-w-6xl mx-auto py-10 px-4 section-animada">
+  <section class="max-w-6xl mx-auto py-10 px-4 section-animada opacity-0 translate-y-10 transition-[opacity,transform] duration-800 ease-[cubic-bezier(0.23,1,0.32,1)]">
     <div class="flex flex-col lg:flex-row-reverse items-center gap-12 mb-1">
       <div class="lg:w-1/2">
         <img 
@@ -75,10 +74,9 @@ import Footer from "../components/Footer.astro";
         </p>
       </div>
     </div>
-
   </section>
 
-  <section class="max-w-6xl mx-auto py-10 px-4 section-animada">
+  <section class="max-w-6xl mx-auto py-10 px-4 section-animada opacity-0 translate-y-10 transition-[opacity,transform] duration-800 ease-[cubic-bezier(0.23,1,0.32,1)]">
     <div class="flex flex-col lg:flex-row items-center gap-12 mb-1">
       <div class="lg:w-1/2">
         <img 
@@ -98,7 +96,6 @@ import Footer from "../components/Footer.astro";
         </ul>
       </div>
     </div>
-
   </section>
 
   <slot name="footer"><Footer /></slot>

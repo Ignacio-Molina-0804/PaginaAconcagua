@@ -1,5 +1,5 @@
 module.exports = {
-   content: [
+  content: [
     "./src/**/*.{astro,html,js,ts}",
     "./public/**/*.html"
   ],
@@ -14,16 +14,19 @@ module.exports = {
       transitionDuration: {
         '250': '250ms',
         '300': '300ms',
-        '400': '400ms'
+        '400': '400ms',
+        '800': '800ms'
       },
       transitionTimingFunction: {
         'menu-in': 'cubic-bezier(0.4, 0, 0.2, 1)',
         'menu-out': 'cubic-bezier(0.4, 0, 0.2, 1)',
-        'smooth': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+        'smooth': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+        'section': 'cubic-bezier(0.23, 1, 0.32, 1)'
       },
       animation: {
         'fade-in-down': 'fadeInDown 0.4s ease-out',
-        'fade-out-up': 'fadeOutUp 0.35s ease-in'
+        'fade-out-up': 'fadeOutUp 0.35s ease-in',
+        'section-enter': 'sectionEnter 0.8s ease forwards'
       },
       keyframes: {
         fadeInDown: {
@@ -33,7 +36,15 @@ module.exports = {
         fadeOutUp: {
           '0%': { opacity: '1', transform: 'translateY(0)' },
           '100%': { opacity: '0', transform: 'translateY(-15px)' }
+        },
+        sectionEnter: {
+          '0%': { opacity: '0', transform: 'translateY(2.5rem)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' }
         }
+      },
+      opacity: {
+        '0': '0',
+        '1': '1'
       }
     },
   },
