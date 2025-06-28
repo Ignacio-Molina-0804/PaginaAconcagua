@@ -1,0 +1,21 @@
+---
+// Corrige los imports
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NavBar from "../../components/NavBar.astro";
+import Hero from "../../components/Hero.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<BaseLayout title="Consultas | Empresa de Montañismo">
+    <slot name="header"><NavBar /></slot>
+    
+    <Hero
+      backgroundImage="../img/fondo.jpg"
+      title="Título dinámico"
+      subtitle="Subtítulo opcional"
+      blurIntensity="md"  
+      opacity={30}  
+    />
+    
+    <slot name="footer"><Footer /></slot>
+</BaseLayout>
