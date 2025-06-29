@@ -1,4 +1,4 @@
-// slider-guias.js - Versión mejorada
+// slider-guias.js - Versión con logos personalizados
 document.addEventListener('DOMContentLoaded', () => {
     const guias = [
         {
@@ -6,21 +6,27 @@ document.addEventListener('DOMContentLoaded', () => {
             descripcion: `Guía de montaña certificado con más de 12 años de experiencia liderando expediciones en los Andes y otras cordilleras de Sudamérica.<br><br>
             Apasionado por la naturaleza, la seguridad y la formación de nuevos aventureros.<br><br>
             <em class="italic text-gray-600">"Cada salida es una oportunidad para aprender, disfrutar y compartir el amor por la montaña."</em>`,
-            img: "/data/guia-principal.jpg"
+            img: "/data/guia-principal.jpg",
+            instagram: "https://instagram.com/gastonmontana",
+            facebook: "https://facebook.com/gastonmontana"
         },
         {
             nombre: "Lucía Fernández",
             descripcion: `Especialista en trekking y logística de expediciones. Ha guiado grupos en Patagonia, Cuyo y el norte argentino.<br><br>
             Su energía y dedicación hacen que cada aventura sea segura y divertida.<br><br>
             <em class="italic text-gray-600">"La montaña nos enseña humildad y trabajo en equipo."</em>`,
-            img: "/data/guia-lucia.jpeg"
+            img: "/data/guia-lucia.jpeg",
+            instagram: "https://instagram.com/luciaandina",
+            facebook: "https://facebook.com/luciaandina"
         },
         {
             nombre: "Martín Pérez",
             descripcion: `Instructor de escalada y rescate en montaña. Más de 10 años formando a nuevos montañistas.<br><br>
             Siempre atento a los detalles y a la seguridad de todos.<br><br>
             <em class="italic text-gray-600">"El mejor paisaje es el que compartimos con otros."</em>`,
-            img: "/data/guia-martin.webp"
+            img: "/data/guia-martin.webp",
+            instagram: "https://instagram.com/martinescalador",
+            facebook: "https://facebook.com/martinescalador"
         }
     ];
 
@@ -30,10 +36,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.getElementById('next-guia');
 
     function mostrarGuia(idx) {
+        const guia = guias[idx];
+        
         // Actualiza el contenido
-        document.getElementById('guia-nombre').textContent = guias[idx].nombre;
-        document.getElementById('guia-descripcion').innerHTML = guias[idx].descripcion;
-        document.getElementById('guia-img').src = guias[idx].img;
+        document.getElementById('guia-nombre').textContent = guia.nombre;
+        document.getElementById('guia-descripcion').innerHTML = guia.descripcion;
+        document.getElementById('guia-img').src = guia.img;
+        
+        // Actualiza redes sociales
+        let redesHTML = '';
+        if (guia.instagram) {
+            redesHTML += `
+            <a href="${guia.instagram}" target="_blank" rel="noopener noreferrer" 
+               class="group inline-flex items-center mr-6">
+               <div class="bg-gray-300 group-hover:bg-pink-600 p-1 rounded-full transition-colors mr-2">
+                  <img src="/data/insta-logo.png" alt="Instagram" class="w-5 h-5 group-hover:invert">
+               </div>
+               <span class="text-gray-700 group-hover:text-pink-600 transition-colors">
+                  @${guia.instagram.split('/').pop()}
+               </span>
+            </a>`;
+        }
+        if (guia.facebook) {
+            redesHTML += `
+            <a href="${guia.facebook}" target="_blank" rel="noopener noreferrer" 
+               class="group inline-flex items-center">
+               <div class="bg-gray-300 group-hover:bg-blue-600 p-1 rounded-full transition-colors mr-2">
+                  <img src="/data/facebook-logo.png" alt="Facebook" class="w-5 h-5 group-hover:invert">
+               </div>
+               <span class="text-gray-700 group-hover:text-blue-600 transition-colors">
+                  ${guia.nombre.split(' ')[0]}
+               </span>
+            </a>`;
+        }
+        
+        if (redesHTML) {
+            document.getElementById('redes-guia').innerHTML = `
+            <div class="mt-4 flex items-center">
+                ${redesHTML}
+            </div>`;
+        } else {
+            document.getElementById('redes-guia').innerHTML = '';
+        }
         
         // Actualiza estado de los botones
         actualizarFlechas();
