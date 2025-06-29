@@ -5,6 +5,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // Tus extensiones existentes (se mantienen igual)
       transitionProperty: {
         'menu': 'max-height, opacity, transform',
         'height': 'height',
@@ -45,6 +46,24 @@ module.exports = {
       opacity: {
         '0': '0',
         '1': '1'
+      },
+      
+      // Nuevas extensiones agregadas para el Hero responsive
+      height: {
+        'screen-70': '70vh',
+        'screen-80': '80vh',
+        'screen-90': '90vh'
+      },
+      backdropBlur: {
+        'ios-sm': '5px',
+        'ios-md': '10px',
+        'ios-lg': '20px'
+      },
+      backgroundImage: {
+        'hero-gradient': 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, transparent 100%)'
+      },
+      backgroundColor: {
+        'ios-overlay': 'rgba(0, 0, 0, 0.3)'
       }
     },
   },
@@ -56,7 +75,9 @@ module.exports = {
       opacity: ['group-hover', 'group-focus'],
       scale: ['group-hover', 'group-focus'],
       rotate: ['group-hover', 'group-focus'],
-      transform: ['group-hover', 'group-focus']
+      transform: ['group-hover', 'group-focus'],
+      // Nueva variante para soporte de backdrop-filter en Safari
+      backdropFilter: ['responsive']
     }
   }
 }
