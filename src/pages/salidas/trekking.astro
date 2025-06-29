@@ -16,14 +16,14 @@ import Footer from "../../components/Footer.astro";
       opacity={30}  
     />
 
-    <main class="container mx-auto px-4 py-8 max-w-4xl">
-      <section class="mb-12">
-        <h2 class="text-3xl font-bold text-gray-800 mb-6">Nuestras Rutas de Trekking</h2>
+    <main class="container mx-auto px-4 sm:px-6 py-6 sm:py-8 max-w-4xl">
+      <section class="mb-8 sm:mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">Nuestras Rutas de Trekking</h2>
         
-        <div class="grid md:grid-cols-2 gap-8">
+        <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
           <div>
-            <h3 class="text-xl font-semibold text-yellow-600 mb-3">Características</h3>
-            <ul class="space-y-2 text-gray-700">
+            <h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Características</h3>
+            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
               <li>🥾 Dificultad: Desde principiante hasta avanzado</li>
               <li>⏱️ Duración: 1 día hasta expediciones de 1 semana</li>
               <li>🌄 Altura máxima: 2,000 a 5,000 msnm según ruta</li>
@@ -32,9 +32,9 @@ import Footer from "../../components/Footer.astro";
             </ul>
           </div>
           
-          <div>
-            <h3 class="text-xl font-semibold text-yellow-600 mb-3">Incluimos</h3>
-            <ul class="space-y-2 text-gray-700">
+          <div class="mt-4 md:mt-0">
+            <h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Incluimos</h3>
+            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
               <li>✅ Guías certificados</li>
               <li>✅ Seguro de accidentes</li>
               <li>✅ Almuerzo campestre (en rutas de día completo)</li>
@@ -45,27 +45,27 @@ import Footer from "../../components/Footer.astro";
         </div>
       </section>
 
-      <section class="mb-12">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Próximas Salidas</h3>
-        <div class="space-y-4">
-          <div class="border-l-4 border-green-500 pl-4 py-2">
-            <h4 class="font-semibold text-lg">Cerro Champaquí</h4>
-            <p class="text-gray-600">📅 15-17 Octubre | 💪 Dificultad media | 🏔️ 2,790 msnm</p>
+      <section class="mb-8 sm:mb-12">
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Próximas Salidas</h3>
+        <div class="space-y-3 sm:space-y-4">
+          <div class="border-l-4 border-green-500 pl-3 sm:pl-4 py-1 sm:py-2">
+            <h4 class="font-semibold text-base sm:text-lg">Cerro Champaquí</h4>
+            <p class="text-xs sm:text-sm text-gray-600">📅 15-17 Octubre | 💪 Dificultad media | 🏔️ 2,790 msnm</p>
           </div>
-          <div class="border-l-4 border-blue-500 pl-4 py-2">
-            <h4 class="font-semibold text-lg">Valle de Calamuchita</h4>
-            <p class="text-gray-600">📅 5 Noviembre | 💪 Baja dificultad | 🌿 Todo el día</p>
+          <div class="border-l-4 border-blue-500 pl-3 sm:pl-4 py-1 sm:py-2">
+            <h4 class="font-semibold text-base sm:text-lg">Valle de Calamuchita</h4>
+            <p class="text-xs sm:text-sm text-gray-600">📅 5 Noviembre | 💪 Baja dificultad | 🌿 Todo el día</p>
           </div>
-          <div class="border-l-4 border-red-500 pl-4 py-2">
-            <h4 class="font-semibold text-lg">Los Gigantes</h4>
-            <p class="text-gray-600">📅 20-22 Noviembre | 💪 Alta dificultad | ⛰️ 2,370 msnm</p>
+          <div class="border-l-4 border-red-500 pl-3 sm:pl-4 py-1 sm:py-2">
+            <h4 class="font-semibold text-base sm:text-lg">Los Gigantes</h4>
+            <p class="text-xs sm:text-sm text-gray-600">📅 20-22 Noviembre | 💪 Alta dificultad | ⛰️ 2,370 msnm</p>
           </div>
         </div>
       </section>
 
-      <section class="bg-gray-50 p-6 rounded-lg mb-8">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Nuestra Filosofía</h3>
-        <div class="space-y-4">
+      <section class="bg-gray-50 p-4 sm:p-6 rounded-lg mb-6 sm:mb-8">
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Nuestra Filosofía</h3>
+        <div class="space-y-3 sm:space-y-4 text-sm sm:text-base">
           <p>El trekking es <strong>más que caminar</strong> - es una forma de reconectar con la naturaleza, superar límites personales y crear lazos con compañeros de aventura.</p>
           <p>Nuestros guías son <strong>locales con amplio conocimiento</strong> de las rutas, flora y fauna de cada región.</p>
           <p>Promovemos el <strong>turismo responsable</strong>, dejando cero huella en los entornos naturales que visitamos.</p>
@@ -73,11 +73,11 @@ import Footer from "../../components/Footer.astro";
       </section>
 
       <section>
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Recomendaciones</h3>
-        <div class="grid md:grid-cols-2 gap-6">
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Recomendaciones</h3>
+        <div class="grid md:grid-cols-2 gap-4 sm:gap-6">
           <div>
-            <h4 class="font-semibold text-lg mb-2">Equipo Básico</h4>
-            <ul class="list-disc pl-5 space-y-1">
+            <h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Equipo Básico</h4>
+            <ul class="list-disc pl-5 space-y-1 text-sm sm:text-base">
               <li>Zapatillas de trekking o botas</li>
               <li>Mochila cómoda (20-30L)</li>
               <li>Protector solar y gorra</li>
@@ -86,8 +86,8 @@ import Footer from "../../components/Footer.astro";
             </ul>
           </div>
           <div>
-            <h4 class="font-semibold text-lg mb-2">Preparación Física</h4>
-            <ul class="list-disc pl-5 space-y-1">
+            <h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Preparación Física</h4>
+            <ul class="list-disc pl-5 space-y-1 text-sm sm:text-base">
               <li>Caminar regularmente antes de la salida</li>
               <li>Hidratarse bien desde días previos</li>
               <li>Comunicar cualquier condición médica</li>

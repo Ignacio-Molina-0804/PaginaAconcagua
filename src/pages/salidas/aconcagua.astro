@@ -16,14 +16,14 @@ import Footer from "../../components/Footer.astro";
       opacity={30}  
     />
 
-    <main class="container mx-auto px-4 py-8 max-w-4xl">
-      <section class="mb-12">
-        <h2 class="text-3xl font-bold text-gray-800 mb-6">La Aventura del Aconcagua</h2>
+    <main class="container mx-auto px-4 sm:px-6 py-6 sm:py-8 max-w-4xl">
+      <section class="mb-8 sm:mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">La Aventura del Aconcagua</h2>
         
-        <div class="grid md:grid-cols-2 gap-8">
+        <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
           <div>
-            <h3 class="text-xl font-semibold text-yellow-600 mb-3">Detalles Técnicos</h3>
-            <ul class="space-y-2 text-gray-700">
+            <h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Detalles Técnicos</h3>
+            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
               <li>🗻 Altura: 6,962 msnm (Punto más alto de América)</li>
               <li>📍 Ubicación: Mendoza, Argentina</li>
               <li>⏳ Duración: 18-21 días (expedición completa)</li>
@@ -32,9 +32,9 @@ import Footer from "../../components/Footer.astro";
             </ul>
           </div>
           
-          <div>
-            <h3 class="text-xl font-semibold text-yellow-600 mb-3">Incluye</h3>
-            <ul class="space-y-2 text-gray-700">
+          <div class="mt-4 md:mt-0">
+            <h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Incluye</h3>
+            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
               <li>✅ Guías de montaña certificados UIAGM</li>
               <li>✅ Permisos y tasas de acceso</li>
               <li>✅ Comidas durante la expedición</li>
@@ -45,27 +45,27 @@ import Footer from "../../components/Footer.astro";
         </div>
       </section>
 
-      <section class="mb-12">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Itinerario Resumido</h3>
-        <div class="border-l-4 border-yellow-500 pl-4 space-y-6">
+      <section class="mb-8 sm:mb-12">
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Itinerario Resumido</h3>
+        <div class="border-l-4 border-yellow-500 pl-3 sm:pl-4 space-y-4 sm:space-y-6">
           <div>
-            <h4 class="font-semibold text-lg">Días 1-3: Aclimatación</h4>
-            <p>Trekking por el Valle de Horcones, visita a Plaza de Mulas (4,370m)</p>
+            <h4 class="font-semibold text-base sm:text-lg">Días 1-3: Aclimatación</h4>
+            <p class="text-sm sm:text-base">Trekking por el Valle de Horcones, visita a Plaza de Mulas (4,370m)</p>
           </div>
           <div>
-            <h4 class="font-semibold text-lg">Días 4-10: Ascenso progresivo</h4>
-            <p>Rotación de alturas: Camp Canadá (5,000m), Nido de Cóndores (5,400m)</p>
+            <h4 class="font-semibold text-base sm:text-lg">Días 4-10: Ascenso progresivo</h4>
+            <p class="text-sm sm:text-base">Rotación de alturas: Camp Canadá (5,000m), Nido de Cóndores (5,400m)</p>
           </div>
           <div>
-            <h4 class="font-semibold text-lg">Día 14-16: Cumbre</h4>
-            <p>Ataque a la cumbre desde Berlín o Colera (ventana meteorológica)</p>
+            <h4 class="font-semibold text-base sm:text-lg">Día 14-16: Cumbre</h4>
+            <p class="text-sm sm:text-base">Ataque a la cumbre desde Berlín o Colera (ventana meteorológica)</p>
           </div>
         </div>
       </section>
 
-      <section class="bg-gray-50 p-6 rounded-lg mb-8">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">¿Por qué elegir esta expedición?</h3>
-        <div class="space-y-4">
+      <section class="bg-gray-50 p-4 sm:p-6 rounded-lg mb-6 sm:mb-8">
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">¿Por qué elegir esta expedición?</h3>
+        <div class="space-y-3 sm:space-y-4 text-sm sm:text-base">
           <p>El Aconcagua ofrece uno de los <strong>retos más accesibles entre los siete techos continentales</strong>, combinando paisajes andinos espectaculares con la emoción de alcanzar alturas himalayas.</p>
           <p>Nuestro equipo cuenta con <strong>15 años de experiencia</strong> en la montaña y un <strong>85% de tasa de éxito</strong> en cumbre, gracias a nuestro protocolo de aclimatación progresiva.</p>
           <p>La ruta normal no requiere técnicas de escalada avanzadas, pero sí <strong>excelente condición física y resistencia</strong>.</p>
@@ -73,11 +73,11 @@ import Footer from "../../components/Footer.astro";
       </section>
 
       <section>
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Galería de la Ruta</h3>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <img src="/data/aconcagua-1.jpg" alt="Vista del Aconcagua" class="rounded-lg h-40 object-cover">
-          <img src="/data/campamento-base-aconcagua.jpeg" alt="Campamento base" class="rounded-lg h-40 object-cover">
-          <img src="/data/aconcagua-summit.jpg" alt="Vista desde la cumbre" class="rounded-lg h-40 object-cover">
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Galería de la Ruta</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4">
+          <img src="/data/aconcagua-1.jpg" alt="Vista del Aconcagua" class="rounded-lg h-32 sm:h-40 object-cover">
+          <img src="/data/campamento-base-aconcagua.jpeg" alt="Campamento base" class="rounded-lg h-32 sm:h-40 object-cover">
+          <img src="/data/aconcagua-summit.jpg" alt="Vista desde la cumbre" class="rounded-lg h-32 sm:h-40 object-cover">
         </div>
       </section>
     </main>
