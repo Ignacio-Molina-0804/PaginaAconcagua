@@ -12,13 +12,13 @@ const { title = "Montañismo Gastón Molina" } = Astro.props;
     <slot name="header" />
     <main><slot /></main>
     <slot name="footer" />
-
+  
     <!-- Scripts globales -->
-    <script type="module" src="/src/scripts/animaciones.js"></script>
-    <script type="module" src="/src/scripts/navbar.js"></script>
-    <script type="module" src="/src/scripts/consultas-form.js"></script>
-    <script type="module" src="/src/scripts/slider-guias.js"></script>
-    
-
+    <script>
+      import "../../src/scripts/animaciones.js";
+      import "../../src/scripts/slider-guias.js";
+      import "../../src/scripts/navbar.js";
+      import "../../src/scripts/consultas-form.js";
+    </script>
   </body>
 </html>
