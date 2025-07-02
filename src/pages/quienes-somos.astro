@@ -5,7 +5,7 @@ import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<BaseLayout title="Quiénes Somos | Empresa de Montañismo">
+<BaseLayout title="Quiénes Somos | Empresa de Montañismo", description = "Información sobre quienes seran tus guías" >
   <slot name="header"><Navbar /></slot>
 
   <Hero 
@@ -77,6 +77,6 @@ import Footer from "../components/Footer.astro";
   <slot name="footer"><Footer /></slot>
 
   <script>
-    import "../../src/scripts/slider-guias.js";
+    import "/src/scripts/slider-guias.js";
   </script>
 </BaseLayout>
