@@ -3,9 +3,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import NavBar from "../../components/NavBar.astro";
 import Hero from "../../components/Hero.astro";
 import Footer from "../../components/Footer.astro";
+
+const pageTitle = "Aconcagua | Montañismo Gastón Molina";
+const pageDescription = "Expedición al Aconcagua, el techo de América, con guías certificados y un protocolo de aclimatación progresiva.";
 ---
 
-<BaseLayout title="Aconcagua | Montañismo Gastón Molina",  description = "Explicación sobre salida a Aconcagua" >
+<BaseLayout title={pageTitle} description={pageDescription}>
     <slot name="header"><NavBar /></slot>
     
     <Hero

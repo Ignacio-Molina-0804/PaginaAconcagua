@@ -13,9 +13,11 @@ const tiposConsulta = [
   "Grupos privados",
   "Otros"
 ];
----
 
-<BaseLayout title="Consultas | Empresa de Montañismo", description = "Página para hacer consultas sobre las salidas" >
+const pageTitle = "Contáctanos | Montañismo Gastón Molina";
+const pageDescription = "Completa nuestro formulario de contacto y te responderemos en menos de 24 horas. Estamos aquí para ayudarte con tus consultas sobre montañismo, expediciones y más.";
+---
+<BaseLayout title={pageTitle} description={pageDescription}>
   <slot name="header"><Navbar /></slot>
 
   <Hero 

@@ -3,9 +3,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import NavBar from "../../components/NavBar.astro";
 import Hero from "../../components/Hero.astro";
 import Footer from "../../components/Footer.astro";
+
+const pageTitle = "Trekking en Montaña | Montañismo Gastón Molina";
+const pageDescription = "Explora nuestras rutas de trekking guiadas, desde caminatas suaves hasta desafiantes ascensos en la montaña. Conoce nuestros itinerarios y recomendaciones para disfrutar al máximo de la naturaleza.";
 ---
 
-<BaseLayout title="Trekking | Montañismo Gastón Molina", description = "Explicación sobre salidas de Trekking" >
+<BaseLayout title={pageTitle} description={pageDescription}>
     <slot name="header"><NavBar /></slot>
     
     <Hero
