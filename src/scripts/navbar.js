@@ -7,30 +7,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const dropdownMenu = document.getElementById('dropdown-menu');
   const dropdownArrow = document.getElementById('dropdown-arrow');
 
-  // Función para abrir el menú
+  if (!menuBtn || !mobileMenu || !dropdownBtn || !dropdownMenu || !dropdownArrow) return;
+
   const openMenu = () => {
     menuBtn.classList.add('open');
     mobileMenu.classList.remove('hidden');
-    
-    // Forzar recálculo del layout para activar la animación
     void mobileMenu.offsetHeight;
-    
-    // Aplicar estilos para animación de apertura
     mobileMenu.style.maxHeight = '500px';
     mobileMenu.style.opacity = '1';
     mobileMenu.style.transform = 'translateY(0)';
-    
     menuBtn.setAttribute('aria-expanded', 'true');
   };
 
-  // Función para cerrar el menú
   const closeMenu = () => {
-    // Aplicar estilos para animación de cierre
     mobileMenu.style.maxHeight = '0';
     mobileMenu.style.opacity = '0';
     mobileMenu.style.transform = 'translateY(-10px)';
-    
-    // Esperar a que termine la animación para ocultar
     setTimeout(() => {
       mobileMenu.classList.add('hidden');
       menuBtn.classList.remove('open');
@@ -38,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 300);
   };
 
-  // Evento del botón hamburguesa
   menuBtn.addEventListener('click', () => {
     if (mobileMenu.classList.contains('hidden')) {
       openMenu();
@@ -47,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Submenú desplegable en móvil
   dropdownBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     dropdownMenu.classList.toggle('hidden');
@@ -55,10 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
     dropdownBtn.setAttribute('aria-expanded', !dropdownMenu.classList.contains('hidden'));
   });
 
-  // Cerrar menú al hacer click fuera
   document.addEventListener('click', (e) => {
-    if (!mobileMenu.classList.contains('hidden') && 
-        !e.target.closest('#mobile-menu') && 
+    if (!mobileMenu.classList.contains('hidden') &&
+        !e.target.closest('#mobile-menu') &&
         !e.target.closest('#menu-btn')) {
       closeMenu();
     }

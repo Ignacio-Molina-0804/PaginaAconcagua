@@ -11,11 +11,10 @@ export function setupScrollAnimations() {
     });
   };
 
-  // Ejecutar al cargar
-  mostrarAnimada();
-  
-  // Ejecutar al hacer scroll
-  window.addEventListener('scroll', mostrarAnimada);
+  if (animadas.length > 0) {
+    mostrarAnimada();
+    window.addEventListener('scroll', mostrarAnimada);
+  }
 }
 
 // Inicializar cuando el DOM esté listo
