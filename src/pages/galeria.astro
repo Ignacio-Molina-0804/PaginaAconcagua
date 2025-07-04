@@ -5,19 +5,69 @@ import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
 
 const pageTitle = "Galería de Aventuras | Montañismo Gastón Molina";
-const pageDescription = "Revive los momentos más épicos en la montaña. Explora nuestra galería de fotos y videos de expediciones, trekking y aventuras al aire libre. Inspírate con las imágenes de nuestros guías y participantes en acción.";
+const pageDescription = "Revive los momentos más épicos en la montaña. Explora nuestra galería de fotos del Aconcagua y otras expediciones.";
+
+// Imágenes basadas en tu directorio public/data
+const galleryImages = [
+  { id: 1, src: "/data/aconcagua_ejemplo.webp", alt: "Vista panorámica del Aconcagua", date: "2023-11-15" },
+  { id: 2, src: "/data/aconcagua-1.webp", alt: "Ascenso al Aconcagua", date: "2023-09-22" },
+  { id: 3, src: "/data/aconcagua-argentina-1.webp", alt: "Aconcagua desde Argentina", date: "2023-10-05" },
+  { id: 4, src: "/data/aconcagua-summit.webp", alt: "Cumbre del Aconcagua", date: "2023-08-17" },
+  { id: 5, src: "/data/aconcugua.webp", alt: "Trekking en Aconcagua", date: "2023-07-30" },
+  { id: 6, src: "/data/ascenso-cerro-aconcagua-ruta-normal-640.webp", alt: "Ruta normal de ascenso", date: "2023-06-12" },
+  { id: 7, src: "/data/ascent-to-mount-aconcagua-472.webp", alt: "Ascenso en equipo", date: "2023-05-18" },
+  { id: 8, src: "/data/campamento-base-aconcagua.webp", alt: "Campamento base del Aconcagua", date: "2023-04-22" },
+  { id: 9, src: "/data/guia-lucia.webp", alt: "Guía Lucía en expedición", date: "2023-03-15" },
+  { id: 10, src: "/data/guia-martin.webp", alt: "Guía Martín liderando grupo", date: "2023-02-08" },
+  { id: 11, src: "/data/guia-principal.webp", alt: "Nuestro equipo de guías", date: "2023-01-20" },
+  { id: 12, src: "/data/imagenGrupoGente.webp", alt: "Grupo de expedicionarios", date: "2022-12-05" },
+];
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
   <slot name="header"><Navbar /></slot>
 
   <Hero 
-    backgroundImage="/data/galeria-hero.webp"
+    backgroundImage="/data/trekking-hero.webp"
     title="Galería de Aventuras"
-    subtitle="Revive los momentos más épicos en la montaña"
+    subtitle="Expediciones al Aconcagua y otras montañas"
     blurIntensity="md"
     opacity={20}
   />
+
+  <main class="container mx-auto px-4 py-12">
+    <!-- Galería estilo masonry -->
+    <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
+      {galleryImages.map((image) => (
+        <div class="relative group break-inside-avoid">
+          <img 
+            src={image.src} 
+            alt={image.alt}
+            class="w-full rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 flex items-end p-4 transition-opacity duration-300">
+            <div>
+              <p class="text-white text-sm font-medium">
+                {new Date(image.date).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </p>
+              <p class="text-white font-bold">{image.alt}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Texto descriptivo -->
+    <div class="max-w-2xl mx-auto mt-16 text-center">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Expediciones al Aconcagua</h2>
+      <p class="text-gray-600">
+        Estas imágenes capturan momentos únicos de nuestras expediciones al cerro Aconcagua, 
+        el techo de América. Desde el campamento base hasta la cumbre, cada foto cuenta una historia 
+        de esfuerzo, compañerismo y superación.
+      </p>
+    </div>
+  </main>
 
   <slot name="footer"><Footer /></slot>
 </BaseLayout>
