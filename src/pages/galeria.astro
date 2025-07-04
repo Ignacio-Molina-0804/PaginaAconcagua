@@ -36,17 +36,17 @@ const galleryImages = [
   />
 
   <main class="container mx-auto px-4 py-12">
-    <!-- Galería estilo masonry -->
-    <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
+    <!-- Galería con grid uniforme -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
       {galleryImages.map((image) => (
-        <div class="relative group break-inside-avoid">
+        <div class="relative group overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
           <img 
             src={image.src} 
             alt={image.alt}
-            class="w-full rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
           />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 flex items-end p-4 transition-opacity duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div>
               <p class="text-white text-sm font-medium">
                 {new Date(image.date).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}
@@ -58,13 +58,26 @@ const galleryImages = [
       ))}
     </div>
 
-    <!-- Texto descriptivo -->
-    <div class="max-w-2xl mx-auto mt-16 text-center">
-      <h2 class="text-2xl font-bold text-gray-800 mb-4">Expediciones al Aconcagua</h2>
-      <p class="text-gray-600">
+    <!-- Línea divisoria decorativa -->
+    <div class="relative my-12">
+      <div class="absolute inset-0 flex items-center">
+        <div class="w-full border-t border-amber-200/30"></div>
+      </div>
+      <div class="relative flex justify-center">
+        <span class="px-4 bg-white text-amber-600 text-lg font-bold">
+          NUESTRAS AVENTURAS
+        </span>
+      </div>
+    </div>
+
+    <!-- Texto descriptivo con mejor espaciado -->
+    <div class="max-w-3xl mx-auto text-center px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Expediciones al Aconcagua</h2>
+      <div class="h-1 w-24 bg-amber-500 mx-auto mb-8"></div>
+      <p class="text-gray-600 text-lg leading-relaxed">
         Estas imágenes capturan momentos únicos de nuestras expediciones al cerro Aconcagua, 
         el techo de América. Desde el campamento base hasta la cumbre, cada foto cuenta una historia 
-        de esfuerzo, compañerismo y superación.
+        de esfuerzo, compañerismo y superación en la montaña.
       </p>
     </div>
   </main>
