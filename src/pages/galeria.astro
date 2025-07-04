@@ -7,7 +7,6 @@ import Footer from "../components/Footer.astro";
 const pageTitle = "Galería de Aventuras | Montañismo Gastón Molina";
 const pageDescription = "Revive los momentos más épicos en la montaña. Explora nuestra galería de fotos del Aconcagua y otras expediciones.";
 
-// Imágenes basadas en tu directorio public/data
 const galleryImages = [
   { id: 1, src: "/data/aconcagua_ejemplo.webp", alt: "Vista panorámica del Aconcagua", date: "2023-11-15" },
   { id: 2, src: "/data/aconcagua-1.webp", alt: "Ascenso al Aconcagua", date: "2023-09-22" },
@@ -36,8 +35,14 @@ const galleryImages = [
   />
 
   <main class="container mx-auto px-4 py-12">
+    <!-- Título principal arriba de todo -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">NUESTRAS AVENTURAS</h2>
+      <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
+    </div>
+
     <!-- Galería con grid uniforme -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
       {galleryImages.map((image) => (
         <div class="relative group overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
           <img 
@@ -58,22 +63,9 @@ const galleryImages = [
       ))}
     </div>
 
-    <!-- Línea divisoria decorativa -->
-    <div class="relative my-12">
-      <div class="absolute inset-0 flex items-center">
-        <div class="w-full border-t border-amber-200/30"></div>
-      </div>
-      <div class="relative flex justify-center">
-        <span class="px-4 bg-white text-amber-600 text-lg font-bold">
-          NUESTRAS AVENTURAS
-        </span>
-      </div>
-    </div>
-
-    <!-- Texto descriptivo con mejor espaciado -->
-    <div class="max-w-3xl mx-auto text-center px-4">
-      <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Expediciones al Aconcagua</h2>
-      <div class="h-1 w-24 bg-amber-500 mx-auto mb-8"></div>
+    <!-- Texto descriptivo -->
+    <div class="max-w-3xl mx-auto text-center px-4 pt-8 border-t border-gray-200">
+      <h3 class="text-2xl font-bold text-gray-800 mb-6">Expediciones al Aconcagua</h3>
       <p class="text-gray-600 text-lg leading-relaxed">
         Estas imágenes capturan momentos únicos de nuestras expediciones al cerro Aconcagua, 
         el techo de América. Desde el campamento base hasta la cumbre, cada foto cuenta una historia 
