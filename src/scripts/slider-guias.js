@@ -1,4 +1,4 @@
-// slider-guias.js - Versión robusta con validaciones
+// slider-guias.js - Versión optimizada para carga de imágenes
 
 document.addEventListener('DOMContentLoaded', () => {
   const guias = [
@@ -31,6 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
+  // Precargar imágenes
+  function precargarImagenes() {
+    guias.forEach(guia => {
+      const img = new Image();
+      img.src = guia.img;
+    });
+  }
+
+  // Elementos del DOM
   const guiaContainer = document.querySelector('.guia-container');
   const prevButton = document.getElementById('prev-guia');
   const nextButton = document.getElementById('next-guia');
@@ -38,26 +47,36 @@ document.addEventListener('DOMContentLoaded', () => {
   const descEl = document.getElementById('guia-descripcion');
   const imgEl = document.getElementById('guia-img');
   const redesEl = document.getElementById('redes-guia');
+  const imgLoading = document.getElementById('img-loading');
 
-  if (!guiaContainer || !prevButton || !nextButton || !nombreEl || !descEl || !imgEl || !redesEl) return;
+  // Validación de elementos
+  if (!guiaContainer || !prevButton || !nextButton || !nombreEl || !descEl || !imgEl || !redesEl || !imgLoading) {
+    console.error('No se encontraron todos los elementos necesarios para el slider');
+    return;
+  }
 
   let guiaActual = 0;
 
+  // Mostrar guía con manejo de carga de imagen
   function mostrarGuia(idx) {
     const guia = guias[idx];
-
+    
+    // Mostrar loader y ocultar imagen temporalmente
+    imgLoading.style.display = 'flex';
+    imgEl.style.opacity = 0;
+    
+    // Actualizar contenido mientras carga la imagen
     nombreEl.textContent = guia.nombre;
     descEl.innerHTML = guia.descripcion;
-    imgEl.src = guia.img;
-
+    
+    // Manejar redes sociales
     let redesHTML = '';
-
     if (guia.instagram) {
       redesHTML += `
         <a href="${guia.instagram}" target="_blank" rel="noopener noreferrer" 
            class="group inline-flex items-center mr-6">
            <div class="bg-gray-300 group-hover:bg-pink-600 p-1 rounded-full transition-colors mr-2">
-              <img src="/data/insta-logo.webp" alt="Instagram" class="w-5 h-5 group-hover:invert">
+              <img src="/data/insta-logo.webp" alt="Instagram" class="w-5 h-5 group-hover:invert" loading="lazy">
            </div>
            <span class="text-gray-700 group-hover:text-pink-600 transition-colors">
               @${guia.instagram.split('/').pop()}
@@ -70,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="${guia.facebook}" target="_blank" rel="noopener noreferrer" 
            class="group inline-flex items-center">
            <div class="bg-gray-300 group-hover:bg-blue-600 p-1 rounded-full transition-colors mr-2">
-              <img src="/data/facebook-logo.webp" alt="Facebook" class="w-5 h-5 group-hover:invert">
+              <img src="/data/facebook-logo.webp" alt="Facebook" class="w-5 h-5 group-hover:invert" loading="lazy">
            </div>
            <span class="text-gray-700 group-hover:text-blue-600 transition-colors">
               ${guia.nombre.split(' ')[0]}
@@ -82,33 +101,37 @@ document.addEventListener('DOMContentLoaded', () => {
       ? `<div class="mt-4 flex items-center">${redesHTML}</div>`
       : '';
 
+    // Cargar imagen con verificación de caché
+    const imgCache = new Image();
+    imgCache.onload = function() {
+      imgEl.src = guia.img;
+      imgEl.onload = function() {
+        imgLoading.style.display = 'none';
+        imgEl.style.opacity = 1;
+      };
+    };
+    imgCache.src = guia.img;
+
     actualizarFlechas();
   }
 
+  // Mostrar guía con animación
   function mostrarGuiaAnimado(idx) {
-    guiaContainer.classList.add('opacity-0', 'transition-opacity', 'duration-300');
-
+    guiaContainer.classList.add('opacity-0');
+    
     setTimeout(() => {
       mostrarGuia(idx);
       guiaContainer.classList.remove('opacity-0');
     }, 300);
   }
 
+  // Actualizar estado de los botones
   function actualizarFlechas() {
     prevButton.disabled = guiaActual === 0;
     nextButton.disabled = guiaActual === guias.length - 1;
-
-    prevButton.classList.toggle('bg-gray-400', prevButton.disabled);
-    prevButton.classList.toggle('cursor-not-allowed', prevButton.disabled);
-    prevButton.classList.toggle('bg-yellow-600', !prevButton.disabled);
-    prevButton.classList.toggle('hover:bg-yellow-700', !prevButton.disabled);
-
-    nextButton.classList.toggle('bg-gray-400', nextButton.disabled);
-    nextButton.classList.toggle('cursor-not-allowed', nextButton.disabled);
-    nextButton.classList.toggle('bg-yellow-600', !nextButton.disabled);
-    nextButton.classList.toggle('hover:bg-yellow-700', !nextButton.disabled);
   }
 
+  // Event listeners
   prevButton.addEventListener('click', () => {
     if (guiaActual > 0) {
       guiaActual--;
@@ -123,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Navegación por teclado
   document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft' && !prevButton.disabled) {
       prevButton.click();
@@ -131,5 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Inicialización
+  precargarImagenes();
   mostrarGuiaAnimado(guiaActual);
 });
