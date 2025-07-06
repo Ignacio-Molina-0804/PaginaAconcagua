@@ -31,11 +31,12 @@ const galleryImages = [
     title="Galería de Aventuras"
     subtitle="Expediciones al Aconcagua y otras montañas"
     blurIntensity="md"
+    loading="eager" 
     opacity={20}
   />
 
   <main class="container mx-auto px-4 py-12">
-    <!-- Encabezado mejorado -->
+
     <div class="text-center mb-16 animate-fade-in">
       <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
         <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-amber-800">
@@ -45,7 +46,6 @@ const galleryImages = [
       <div class="w-24 h-1.5 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto rounded-full"></div>
     </div>
 
-    <!-- Galería con efecto stagger -->
     <div 
       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
       style="--stagger-delay: 100ms"
@@ -74,7 +74,6 @@ const galleryImages = [
       ))}
     </div>
 
-    <!-- Pie de galería con animación -->
     <div class="max-w-3xl mx-auto text-center px-4 pt-10 border-t border-gray-100 animate-fade-in">
       <h3 class="text-2xl font-bold text-gray-800 mb-6">Memorias del Aconcagua</h3>
       <p class="text-gray-600 text-lg leading-relaxed">
@@ -93,7 +92,6 @@ const galleryImages = [
 
   <slot name="footer"><Footer /></slot>
 
-  <!-- Estilos para animaciones -->
   <style>
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }

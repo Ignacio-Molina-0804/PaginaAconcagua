@@ -1,4 +1,4 @@
-// slider-guias.js - Versión optimizada para carga de imágenes
+// slider-guias.js
 
 document.addEventListener('DOMContentLoaded', () => {
   const guias = [
@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Elementos del DOM
   const guiaContainer = document.querySelector('.guia-container');
   const prevButton = document.getElementById('prev-guia');
   const nextButton = document.getElementById('next-guia');
@@ -49,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const redesEl = document.getElementById('redes-guia');
   const imgLoading = document.getElementById('img-loading');
 
-  // Validación de elementos
   if (!guiaContainer || !prevButton || !nextButton || !nombreEl || !descEl || !imgEl || !redesEl || !imgLoading) {
     console.error('No se encontraron todos los elementos necesarios para el slider');
     return;
@@ -57,19 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let guiaActual = 0;
 
-  // Mostrar guía con manejo de carga de imagen
   function mostrarGuia(idx) {
     const guia = guias[idx];
     
-    // Mostrar loader y ocultar imagen temporalmente
     imgLoading.style.display = 'flex';
     imgEl.style.opacity = 0;
     
-    // Actualizar contenido mientras carga la imagen
     nombreEl.textContent = guia.nombre;
     descEl.innerHTML = guia.descripcion;
     
-    // Manejar redes sociales
     let redesHTML = '';
     if (guia.instagram) {
       redesHTML += `
@@ -101,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
       ? `<div class="mt-4 flex items-center">${redesHTML}</div>`
       : '';
 
-    // Cargar imagen con verificación de caché
     const imgCache = new Image();
     imgCache.onload = function() {
       imgEl.src = guia.img;
@@ -115,7 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
     actualizarFlechas();
   }
 
-  // Mostrar guía con animación
   function mostrarGuiaAnimado(idx) {
     guiaContainer.classList.add('opacity-0');
     
@@ -125,13 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 300);
   }
 
-  // Actualizar estado de los botones
   function actualizarFlechas() {
     prevButton.disabled = guiaActual === 0;
     nextButton.disabled = guiaActual === guias.length - 1;
   }
 
-  // Event listeners
   prevButton.addEventListener('click', () => {
     if (guiaActual > 0) {
       guiaActual--;
@@ -146,7 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Navegación por teclado
   document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft' && !prevButton.disabled) {
       prevButton.click();
@@ -155,7 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Inicialización
   precargarImagenes();
   mostrarGuiaAnimado(guiaActual);
 });
