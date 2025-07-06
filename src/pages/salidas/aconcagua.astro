@@ -4,13 +4,16 @@ import NavBar from "../../components/NavBar.astro";
 import Hero from "../../components/Hero.astro";
 import Footer from "../../components/Footer.astro";
 
+// Título y descripción para SEO y encabezado de la página
 const pageTitle = "Aconcagua | Montañismo Gastón Molina";
 const pageDescription = "Expedición al Aconcagua, el techo de América, con guías certificados y un protocolo de aclimatación progresiva.";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
+    <!-- Barra de navegación superior -->
     <slot name="header"><NavBar /></slot>
     
+    <!-- Sección Hero con imagen de fondo, título y subtítulo -->
     <Hero
       backgroundImage="/data/aconcagua-argentina-1.webp"
       title="Expedición al Aconcagua"
@@ -21,10 +24,12 @@ const pageDescription = "Expedición al Aconcagua, el techo de América, con gu�
     />
 
     <main class="container mx-auto px-4 sm:px-6 py-6 sm:py-8 max-w-4xl">
+      <!-- Sección de introducción y detalles técnicos -->
       <section class="mb-8 sm:mb-12">
         <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">La Aventura del Aconcagua</h2>
         
         <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
+          <!-- Columna: Detalles técnicos de la expedición -->
           <div>
             <h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Detalles Técnicos</h3>
             <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
@@ -36,6 +41,7 @@ const pageDescription = "Expedición al Aconcagua, el techo de América, con gu�
             </ul>
           </div>
           
+          <!-- Columna: Qué incluye la expedición -->
           <div class="mt-4 md:mt-0">
             <h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Incluye</h3>
             <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
@@ -49,6 +55,7 @@ const pageDescription = "Expedición al Aconcagua, el techo de América, con gu�
         </div>
       </section>
 
+      <!-- Sección de itinerario resumido -->
       <section class="mb-8 sm:mb-12">
         <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Itinerario Resumido</h3>
         <div class="border-l-4 border-yellow-500 pl-3 sm:pl-4 space-y-4 sm:space-y-6">
@@ -67,6 +74,7 @@ const pageDescription = "Expedición al Aconcagua, el techo de América, con gu�
         </div>
       </section>
 
+      <!-- Sección de razones para elegir la expedición -->
       <section class="bg-gray-50 p-4 sm:p-6 rounded-lg mb-6 sm:mb-8">
         <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">¿Por qué elegir esta expedición?</h3>
         <div class="space-y-3 sm:space-y-4 text-sm sm:text-base">
@@ -76,6 +84,7 @@ const pageDescription = "Expedición al Aconcagua, el techo de América, con gu�
         </div>
       </section>
 
+      <!-- Sección de galería de imágenes de la ruta -->
       <section>
         <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Galería de la Ruta</h3>
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4">
@@ -86,5 +95,6 @@ const pageDescription = "Expedición al Aconcagua, el techo de América, con gu�
       </section>
     </main>
     
+    <!-- Footer del sitio -->
     <slot name="footer"><Footer /></slot>
 </BaseLayout>

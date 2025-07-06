@@ -6,16 +6,22 @@ const { title = "Montañismo Gastón Molina",  description = "Sitio web de Monta
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- Título dinámico de la página -->
     <title>{title}</title>
+    <!-- Descripción dinámica para SEO -->
     <meta name="description" content={description} />
+    <!-- Favicon del sitio -->
     <link rel="icon" href="/data/favicon.png" type="image/png" />
   </head>
   <body>
+    <!-- Slot para el header (barra de navegación) -->
     <slot name="header" />
+    <!-- Contenido principal de la página -->
     <main><slot /></main>
+    <!-- Slot para el footer -->
     <slot name="footer" />
   
-    <!-- Scripts globales -->
+    <!-- Scripts globales para animaciones y navbar -->
     <script>
       import "../../src/scripts/animaciones.js";
       import "../../src/scripts/navbar.js";

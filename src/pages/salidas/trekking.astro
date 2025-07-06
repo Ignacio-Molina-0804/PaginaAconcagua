@@ -4,13 +4,16 @@ import NavBar from "../../components/NavBar.astro";
 import Hero from "../../components/Hero.astro";
 import Footer from "../../components/Footer.astro";
 
+// Título y descripción para SEO y encabezado de la página
 const pageTitle = "Trekking en Montaña | Montañismo Gastón Molina";
 const pageDescription = "Explora nuestras rutas de trekking guiadas, desde caminatas suaves hasta desafiantes ascensos en la montaña. Conoce nuestros itinerarios y recomendaciones para disfrutar al máximo de la naturaleza.";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
+    <!-- Barra de navegación superior -->
     <slot name="header"><NavBar /></slot>
     
+    <!-- Sección Hero con imagen de fondo, título y subtítulo -->
     <Hero
       backgroundImage="/data/trekking-hero.webp"
       title="Trekking en Montaña"
@@ -21,10 +24,12 @@ const pageDescription = "Explora nuestras rutas de trekking guiadas, desde camin
     />
 
     <main class="container mx-auto px-4 sm:px-6 py-6 sm:py-8 max-w-4xl">
+      <!-- Sección de presentación de rutas -->
       <section class="mb-8 sm:mb-12">
         <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">Nuestras Rutas de Trekking</h2>
         
         <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
+          <!-- Columna: Características generales -->
           <div>
             <h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Características</h3>
             <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
@@ -36,6 +41,7 @@ const pageDescription = "Explora nuestras rutas de trekking guiadas, desde camin
             </ul>
           </div>
           
+          <!-- Columna: Qué incluye la experiencia -->
           <div class="mt-4 md:mt-0">
             <h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Incluimos</h3>
             <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
@@ -49,17 +55,21 @@ const pageDescription = "Explora nuestras rutas de trekking guiadas, desde camin
         </div>
       </section>
 
+      <!-- Sección de próximas salidas -->
       <section class="mb-8 sm:mb-12">
         <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Próximas Salidas</h3>
         <div class="space-y-3 sm:space-y-4">
+          <!-- Salida 1 -->
           <div class="border-l-4 border-green-500 pl-3 sm:pl-4 py-1 sm:py-2">
             <h4 class="font-semibold text-base sm:text-lg">Cerro Champaquí</h4>
             <p class="text-xs sm:text-sm text-gray-600">📅 15-17 Octubre | 💪 Dificultad media | 🏔️ 2,790 msnm</p>
           </div>
+          <!-- Salida 2 -->
           <div class="border-l-4 border-blue-500 pl-3 sm:pl-4 py-1 sm:py-2">
             <h4 class="font-semibold text-base sm:text-lg">Valle de Calamuchita</h4>
             <p class="text-xs sm:text-sm text-gray-600">📅 5 Noviembre | 💪 Baja dificultad | 🌿 Todo el día</p>
           </div>
+          <!-- Salida 3 -->
           <div class="border-l-4 border-red-500 pl-3 sm:pl-4 py-1 sm:py-2">
             <h4 class="font-semibold text-base sm:text-lg">Los Gigantes</h4>
             <p class="text-xs sm:text-sm text-gray-600">📅 20-22 Noviembre | 💪 Alta dificultad | ⛰️ 2,370 msnm</p>
@@ -67,6 +77,7 @@ const pageDescription = "Explora nuestras rutas de trekking guiadas, desde camin
         </div>
       </section>
 
+      <!-- Sección sobre la filosofía de la empresa -->
       <section class="bg-gray-50 p-4 sm:p-6 rounded-lg mb-6 sm:mb-8">
         <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Nuestra Filosofía</h3>
         <div class="space-y-3 sm:space-y-4 text-sm sm:text-base">
@@ -76,9 +87,11 @@ const pageDescription = "Explora nuestras rutas de trekking guiadas, desde camin
         </div>
       </section>
 
+      <!-- Sección de recomendaciones para los participantes -->
       <section>
         <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Recomendaciones</h3>
         <div class="grid md:grid-cols-2 gap-4 sm:gap-6">
+          <!-- Columna: Equipo básico recomendado -->
           <div>
             <h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Equipo Básico</h4>
             <ul class="list-disc pl-5 space-y-1 text-sm sm:text-base">
@@ -89,6 +102,7 @@ const pageDescription = "Explora nuestras rutas de trekking guiadas, desde camin
               <li>Ropa por capas</li>
             </ul>
           </div>
+          <!-- Columna: Consejos de preparación física -->
           <div>
             <h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Preparación Física</h4>
             <ul class="list-disc pl-5 space-y-1 text-sm sm:text-base">
@@ -102,5 +116,6 @@ const pageDescription = "Explora nuestras rutas de trekking guiadas, desde camin
       </section>
     </main>
     
+    <!-- Footer del sitio -->
     <slot name="footer"><Footer /></slot>
 </BaseLayout>

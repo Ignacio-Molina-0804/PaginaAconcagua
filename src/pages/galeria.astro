@@ -4,9 +4,11 @@ import Navbar from "../components/NavBar.astro";
 import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
 
+// Título y descripción para SEO y encabezado de la página
 const pageTitle = "Galería de Aventuras | Montañismo Gastón Molina";
 const pageDescription = "Revive los momentos más épicos en la montaña. Explora nuestra galería de fotos del Aconcagua y otras expediciones.";
 
+// Array de imágenes para la galería, cada una con su ruta, descripción y fecha
 const galleryImages = [
   { id: 1, src: "/data/aconcagua_ejemplo.webp", alt: "Vista panorámica del Aconcagua", date: "2023-11-15" },
   { id: 2, src: "/data/aconcagua-1.webp", alt: "Ascenso al Aconcagua", date: "2023-09-22" },
@@ -24,8 +26,10 @@ const galleryImages = [
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Barra de navegación superior -->
   <slot name="header"><Navbar /></slot>
 
+  <!-- Sección Hero con imagen de fondo y título -->
   <Hero 
     backgroundImage="/data/galeria-hero.webp"
     title="Galería de Aventuras"
@@ -37,6 +41,7 @@ const galleryImages = [
 
   <main class="container mx-auto px-4 py-12">
 
+    <!-- Título principal de la galería -->
     <div class="text-center mb-16 animate-fade-in">
       <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
         <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-amber-800">
@@ -46,6 +51,7 @@ const galleryImages = [
       <div class="w-24 h-1.5 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto rounded-full"></div>
     </div>
 
+    <!-- Galería de imágenes en formato grid -->
     <div 
       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
       style="--stagger-delay: 100ms"
@@ -55,6 +61,7 @@ const galleryImages = [
           class="relative group overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
           style={`animation-delay: ${index * 0.1}s`}
         >
+          {/* Imagen de la galería */}
           <img 
             src={image.src} 
             alt={image.alt}
@@ -62,9 +69,11 @@ const galleryImages = [
             loading="lazy"
             decoding="async"
           />
+          {/* Overlay con información al pasar el mouse */}
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
               <span class="inline-block px-3 py-1 bg-amber-600 text-white text-xs font-semibold rounded-full mb-2">
+                {/* Fecha de la foto, formateada */}
                 {new Date(image.date).toLocaleDateString('es-ES', { month: 'short', day: 'numeric' })}
               </span>
               <p class="text-white font-bold text-lg">{image.alt}</p>
@@ -74,6 +83,7 @@ const galleryImages = [
       ))}
     </div>
 
+    <!-- Sección de texto motivacional y llamado a la acción -->
     <div class="max-w-3xl mx-auto text-center px-4 pt-10 border-t border-gray-100 animate-fade-in">
       <h3 class="text-2xl font-bold text-gray-800 mb-6">Memorias del Aconcagua</h3>
       <p class="text-gray-600 text-lg leading-relaxed">
@@ -81,6 +91,7 @@ const galleryImages = [
         nos exige lo mejor de nosotros mismos. Estas fotografías capturan esos instantes 
         donde el esfuerzo se transforma en gloria.
       </p>
+      <!-- Botón para ir a la página de consultas -->
       <a 
         href="/consultas" 
         class="mt-8 inline-block px-8 py-3 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-full transition-colors duration-300"
@@ -90,8 +101,10 @@ const galleryImages = [
     </div>
   </main>
 
+  <!-- Footer del sitio -->
   <slot name="footer"><Footer /></slot>
 
+  <!-- Animaciones CSS para la galería -->
   <style>
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }

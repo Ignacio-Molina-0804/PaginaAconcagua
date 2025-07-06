@@ -1,15 +1,18 @@
 ---
 // src/components/Hero.astro
+
+// Definición de las props que recibe el componente Hero
 export interface Props {
-  backgroundImage: string;
-  title: string;
-  subtitle?: string;
-  blurIntensity?: 'sm' | 'md' | 'lg';
-  opacity?: number; // 0-100
-  placeholderColor?: string; // Color de fondo mientras carga
-  loading?: 'eager' | 'lazy'; // Estrategia de carga
+  backgroundImage: string;           // Imagen de fondo (ruta)
+  title: string;                     // Título principal
+  subtitle?: string;                 // Subtítulo opcional
+  blurIntensity?: 'sm' | 'md' | 'lg';// Intensidad del desenfoque del fondo
+  opacity?: number;                  // Opacidad del fondo (0-100)
+  placeholderColor?: string;         // Color de fondo mientras carga la imagen
+  loading?: 'eager' | 'lazy';        // Estrategia de carga de la imagen
 }
 
+// Desestructuración de props con valores por defecto
 const { 
   backgroundImage, 
   title, 
@@ -20,21 +23,28 @@ const {
   loading = 'lazy'
 } = Astro.props;
 
+// Clases de Tailwind para el desenfoque según la prop
 const blurClasses = {
   sm: 'backdrop-blur-sm',
   md: 'backdrop-blur-md',
   lg: 'backdrop-blur-lg'
 };
 
+// Si la imagen debe cargarse "eager", se pre-carga con un script auxiliar
 if (loading === 'eager') {
   import('../scripts/preloadImage').then(({ preloadImage }) => preloadImage(backgroundImage));
 }
 ---
 
+<!-- 
+  Sección principal del Hero.
+  Usa una imagen de fondo, un overlay oscuro y un bloque con título y subtítulo.
+-->
 <section 
   class="relative h-[70vh] sm:h-[80vh] md:h-[90vh] flex items-center justify-center bg-cover bg-center bg-no-repeat overflow-hidden"
   style={`background-color: ${placeholderColor};`}
 >
+  <!-- Imagen de fondo (cubre toda la sección) -->
   <img
     src={backgroundImage}
     alt=""
@@ -47,15 +57,19 @@ if (loading === 'eager') {
     decoding="async"
   />
   
+  <!-- Overlay negro semitransparente para oscurecer la imagen -->
   <div class="absolute inset-0 bg-black/30"></div>
   
+  <!-- Contenedor del título y subtítulo, con fondo desenfocado y opacidad -->
   <div 
     class={`text-center text-white px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 rounded-lg border border-white/10 ${blurClasses[blurIntensity]} mx-4 sm:mx-6`}
     style={`background-color: rgb(0 0 0 / ${opacity}%);`}
   >
+    <!-- Título principal -->
     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4 tracking-wider leading-tight">
       {title}
     </h1>
+    <!-- Subtítulo, si existe -->
     {subtitle && (
       <p class="text-base sm:text-lg md:text-xl lg:text-2xl font-medium mt-2 sm:mt-3">
         {subtitle}
@@ -63,15 +77,17 @@ if (loading === 'eager') {
     )}
   </div>
   
+  <!-- Gradiente en la parte inferior para mejorar la legibilidad -->
   <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
 </section>
 
 <style>
+  /* Optimización de renderizado de la imagen */
   [astro-root] img {
     transform: translateZ(0);
   }
   
-  /* Optimización para móviles */
+  /* Ajuste de posición de la imagen en móviles */
   @media (max-width: 640px) {
     [astro-root] img {
       object-position: center 30%;
