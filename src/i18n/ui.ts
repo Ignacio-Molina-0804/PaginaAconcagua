@@ -18,6 +18,10 @@ export const labels = {
         'nav.queries': 'Consultas',
         'nav.language': 'Idioma',
 
+        //Footer
+        'footer.text':' 2025 Empresa de Montañismo. Todos los derechos reservados.'
+        
+
     },
 
     en: {
@@ -31,6 +35,9 @@ export const labels = {
         'nav.queries': 'Queries',
         'nav.language': 'Language',
 
+        //Footer
+        'footer.text':' 2025 Climbing Company. All rights reserved.'
+
     },
 
     pt: {
@@ -43,6 +50,9 @@ export const labels = {
         'nav.galery': 'Galeria',
         'nav.queries': 'Consultas',
         'nav.language': 'Idioma',
+
+        //Footer
+        'footer.text':' 2025 Empresa de Escalada. Todos os direitos reservados.'
 
     }
 }
