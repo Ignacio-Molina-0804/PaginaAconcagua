@@ -1,0 +1,123 @@
+---
+/*
+  Importamos los componentes base necesarios para armar la estructura de la página:
+  - BaseLayout: layout general que envuelve todo el contenido.
+  - Navbar: barra de navegación superior.
+  - Hero: sección visual de bienvenida con fondo.
+  - Footer: pie de página.
+*/
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Navbar from "../../components/NavBar.astro";
+import Hero from "../../components/Hero.astro";
+import Footer from "../../components/Footer.astro";
+
+// Definimos el título y descripción de la página para el SEO y metadatos
+const pageTitle = "Quiénes Somos | Empresa de Montañismo";
+const pageDescription = "Información sobre quienes seran tus guías";
+---
+
+<!-- Comenzamos a renderizar el layout base pasando título y descripción -->
+<BaseLayout title={pageTitle} description={pageDescription}>
+
+  <!-- Slot para insertar elementos en la etiqueta <head> -->
+  <slot name="head">
+    <!-- Precarga de imágenes para mejorar el rendimiento -->
+    <link rel="preload" href="/data/guia-principal.webp" as="image">
+    <link rel="preload" href="/data/guia-lucia.webp" as="image">
+    <link rel="preload" href="/data/guia-martin.webp" as="image">
+  </slot>
+
+  <!-- Insertamos la barra de navegación dentro del slot de cabecera -->
+  <slot name="header"><Navbar /></slot>
+
+  <!-- Sección destacada con imagen de fondo y texto llamativo -->
+  <Hero 
+    backgroundImage="/data/hero-guias.webp"
+    title="NUESTROS GUÍAS"
+    subtitle="Conocé a quienes te acompañarán en cada aventura"
+    blurIntensity="md"
+    loading="eager" 
+    opacity={20}
+  />
+
+  <!-- Sección descriptiva de presentación del equipo -->
+  <section class="max-w-4xl mx-auto py-8 px-4 sm:px-6 text-center section-animada opacity-0 translate-y-10 transition-[opacity,transform] duration-800 ease-[cubic-bezier(0.23,1,0.32,1)]">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3">Nuestro equipo</h2>
+    <div class="w-20 h-1 bg-yellow-600 mx-auto mb-6 sm:mb-8 rounded-full"></div>
+    
+    <!-- Breve descripción en párrafos -->
+    <div class="space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed px-2">
+      <p>
+        Somos un grupo de guías certificados y apasionados por la montaña, con
+        años de experiencia en expediciones y actividades de aventura.
+      </p>
+      <p>
+        Nos caracteriza el compromiso con la seguridad, el respeto por la
+        naturaleza y el deseo de compartir experiencias inolvidables con cada
+        persona que se suma a nuestras salidas.
+      </p>
+      <p class="font-medium text-sm sm:text-base">¡Te invitamos a conocernos y a vivir la montaña con nosotros!</p>
+    </div>
+  </section>
+
+  <!-- Sección interactiva para mostrar a cada guía con controles de navegación -->
+  <section class="bg-gray-200 rounded-xl sm:rounded-2xl shadow-[0_10px_30px_-15px_rgba(0,0,0,0.3)] p-4 sm:p-6 md:p-8 max-w-4xl sm:max-w-5xl md:max-w-6xl mx-auto my-8 sm:my-12 md:my-16 transition-all duration-300 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.4)] border border-white/10 section-animada opacity-0 translate-y-10 transition-[opacity,transform] duration-800 ease-[cubic-bezier(0.23,1,0.32,1)]">
+    <div class="guia-container transition-opacity duration-300">
+      <!-- Contenedor que muestra imagen + texto del guía actual -->
+      <div class="flex flex-col lg:flex-row items-center gap-4 sm:gap-6 md:gap-8">
+
+        <!-- Imagen del guía actual -->
+        <div class="w-full lg:w-1/3 flex justify-center relative">
+          <img
+            id="guia-img"
+            src="/data/guia-principal.webp"
+            alt="Guía de montaña"
+            class="w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 object-cover rounded-lg sm:rounded-xl shadow-md sm:shadow-lg transition-opacity duration-300"
+            onload="this.style.opacity=1; document.getElementById('img-loading').style.display='none'"
+            style="opacity:0"
+            loading="eager"
+          />
+          <!-- Placeholder mientras carga la imagen -->
+          <div id="img-loading" class="absolute inset-0 bg-gray-300 animate-pulse rounded-lg sm:rounded-xl flex items-center justify-center">
+            <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Texto dinámico: nombre, descripción y redes del guía -->
+        <div class="w-full lg:w-2/3 mt-4 lg:mt-0">
+          <h3 id="guia-nombre" class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-2 sm:mb-3 md:mb-4"></h3>
+          <div id="guia-descripcion" class="prose text-sm sm:text-base text-gray-700 space-y-2 sm:space-y-3"></div>
+          <div id="redes-guia" class="mt-3 sm:mt-4"></div>
+
+          <!-- Botones para navegar entre guías -->
+          <div class="flex gap-3 sm:gap-4 mt-4 sm:mt-6 justify-center lg:justify-start">
+            <button 
+              id="prev-guia"
+              class="bg-yellow-600 hover:bg-yellow-700 text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-all shadow-md disabled:bg-gray-400 disabled:cursor-not-allowed text-sm sm:text-base"
+              aria-label="Guía anterior"
+            >
+              ←
+            </button>
+            <button 
+              id="next-guia"
+              class="bg-yellow-600 hover:bg-yellow-700 text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-all shadow-md disabled:bg-gray-400 disabled:cursor-not-allowed text-sm sm:text-base"
+              aria-label="Siguiente guía"
+            >
+              →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <slot name="footer"><Footer /></slot>
+
+  <!-- Importamos el script que maneja la lógica del slider de guías -->
+  <script>
+    import "/src/scripts/slider-guias.js";
+  </script>
+</BaseLayout>
