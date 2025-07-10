@@ -1,5 +1,14 @@
 ---
 // src/components/Navbar.astro
+
+// Importaciones
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { useTranslations } from "../i18n/util";
+import { languageList } from "../i18n/ui";
+
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
+
 ---
 
 <!-- 
@@ -35,8 +44,8 @@
       <!-- Menú de navegación para escritorio (desktop) -->
       <div class="hidden md:flex items-center space-x-6">
         <ul class="flex space-x-6">
-          <li><a href="/" class="hover:text-yellow-400 transition-colors py-2 block">Home</a></li>
-          <li><a href="/quienes-somos" class="hover:text-yellow-400 transition-colors py-2 block">Quiénes Somos</a></li>
+          <li><a href={getRelativeLocaleUrl(currentLang, "/")} class="hover:text-yellow-400 transition-colors py-2 block">Home</a></li>
+          <li><a href={getRelativeLocaleUrl(currentLang, "/quienes-somos")} class="hover:text-yellow-400 transition-colors py-2 block">Quiénes Somos</a></li>
           
           <!-- Menú desplegable para "Salidas" -->
           <li class="relative group">
@@ -49,13 +58,13 @@
             </button>
             <!-- Opciones del menú desplegable -->
             <div class="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-1 group-hover:translate-y-0">
-              <a href="/salidas/trekking" class="block px-4 py-2 hover:bg-gray-700 hover:text-yellow-400">Trekking</a>
-              <a href="/salidas/aconcagua" class="block px-4 py-2 hover:bg-gray-700 hover:text-yellow-400">Aconcagua</a>
+              <a href={getRelativeLocaleUrl(currentLang, "/salidas/trekking")} class="block px-4 py-2 hover:bg-gray-700 hover:text-yellow-400">Trekking</a>
+              <a href={getRelativeLocaleUrl(currentLang, "/salidas/aconcagua")} class="block px-4 py-2 hover:bg-gray-700 hover:text-yellow-400">Aconcagua</a>
             </div>
           </li>
           
-          <li><a href="/galeria" class="hover:text-yellow-400 transition-colors py-2 block">Galería</a></li>
-          <li><a href="/consultas" class="hover:text-yellow-400 transition-colors py-2 block">Consultas</a></li>
+          <li><a href={getRelativeLocaleUrl(currentLang, "/galeria")} class="hover:text-yellow-400 transition-colors py-2 block">Galería</a></li>
+          <li><a href={getRelativeLocaleUrl(currentLang, "/consultas")} class="hover:text-yellow-400 transition-colors py-2 block">Consultas</a></li>
         </ul>
       </div>
 
@@ -74,8 +83,8 @@
     <div id="mobile-menu" class="hidden md:hidden mt-4 transition-all duration-300 ease-in-out overflow-hidden"
       style="max-height: 0; opacity: 0; transform: translateY(-10px)">
       <ul class="space-y-2 pb-4">
-        <li><a href="/" class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors">Home</a></li>
-        <li><a href="/quienes-somos" class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors">Quiénes Somos</a></li>
+        <li><a href={getRelativeLocaleUrl(currentLang, "/")} class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors">Home</a></li>
+        <li><a href={getRelativeLocaleUrl(currentLang, "/quienes-somos")} class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors">Quiénes Somos</a></li>
         
         <!-- Menú desplegable móvil para "Salidas" -->
         <li>
@@ -88,13 +97,13 @@
           </button>
           <!-- Opciones del submenú móvil -->
           <ul id="dropdown-menu" class="hidden pl-4 mt-2 space-y-2">
-            <li><a href="/salidas/trekking" class="block px-3 py-2 hover:bg-gray-700 hover:text-yellow-400 rounded transition-colors">Trekking</a></li>
-            <li><a href="/salidas/aconcagua" class="block px-3 py-2 hover:bg-gray-700 hover:text-yellow-400 rounded transition-colors">Aconcagua</a></li>
+            <li><a href={getRelativeLocaleUrl(currentLang, "/salidas/trekking")} class="block px-3 py-2 hover:bg-gray-700 hover:text-yellow-400 rounded transition-colors">Trekking</a></li>
+            <li><a href={getRelativeLocaleUrl(currentLang, "/salidas/aconcagua")} class="block px-3 py-2 hover:bg-gray-700 hover:text-yellow-400 rounded transition-colors">Aconcagua</a></li>
           </ul>
         </li>
         
-        <li><a href="/galeria" class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors">Galería</a></li>
-        <li><a href="/consultas" class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors">Consultas</a></li>
+        <li><a href={getRelativeLocaleUrl(currentLang, "/galeria")} class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors">Galería</a></li>
+        <li><a href={getRelativeLocaleUrl(currentLang, "/consultas")} class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors">Consultas</a></li>
         
         <!-- Selector de Idioma para móvil -->
         <li class="pt-2 border-t border-gray-700">
