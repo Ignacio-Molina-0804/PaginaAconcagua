@@ -8,11 +8,38 @@ export const languageList = {
 
 export const labels = {
     es: {
+
+        //NavBar
+        'nav.title': 'Montañismo Gastón Molina',
+        'nav.home': 'Inicio',
+        'nav.aboutus': 'Sobre nosotros',
+        'nav.departures': 'Salidas',
+        'nav.galery': 'Galería',
+        'nav.queries': 'Consultas',
+
     },
 
     en: {
+
+        //NavBar
+        'nav.title': 'Climbing Gastón Molina',
+        'nav.home': 'Home',
+        'nav.aboutus': 'About us',
+        'nav.departures': 'Departures',
+        'nav.galery': 'Gallery',
+        'nav.queries': 'Queries',
+
     },
 
     pt: {
+
+        //NavBar
+        'nav.title': 'Escalada Gastón Molina',
+        'nav.home': 'Início',
+        'nav.aboutus': 'Sobre nós',
+        'nav.departures': 'Partidas',
+        'nav.galery': 'Galeria',
+        'nav.queries': 'Consultas',
+
     }
 }

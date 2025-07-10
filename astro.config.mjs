@@ -12,7 +12,7 @@ export default defineConfig({
 
   i18n: {
     defaultLocale: "es", // Idioma por defecto del sitio
-    locales: ["es", "en", "fr"], // Idiomas soportados
+    locales: ["es", "en", "pt"], // Idiomas soportados
 
     routing: {
       // PrefixDefaultLocale: true = siempre muestra el idioma en la URL

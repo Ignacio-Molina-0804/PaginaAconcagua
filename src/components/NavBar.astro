@@ -21,7 +21,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
       <!-- Logo e Idioma -->
       <div class="flex items-center space-x-4">
         <!-- Nombre o logo de la empresa -->
-        <span class="font-bold text-lg">Montañismo Gastón Molina</span>
+        <span class="font-bold text-lg">{t('nav.title')}</span>
         
         <!-- Selector de Idioma (desktop) -->
         <div class="relative group">
@@ -44,13 +44,13 @@ const t = useTranslations(currentLang as keyof typeof languageList);
       <!-- Menú de navegación para escritorio (desktop) -->
       <div class="hidden md:flex items-center space-x-6">
         <ul class="flex space-x-6">
-          <li><a href={getRelativeLocaleUrl(currentLang, "/")} class="hover:text-yellow-400 transition-colors py-2 block">Home</a></li>
-          <li><a href={getRelativeLocaleUrl(currentLang, "/quienes-somos")} class="hover:text-yellow-400 transition-colors py-2 block">Quiénes Somos</a></li>
+          <li><a href={getRelativeLocaleUrl(currentLang, "/")} class="hover:text-yellow-400 transition-colors py-2 block">{t('nav.home')}</a></li>
+          <li><a href={getRelativeLocaleUrl(currentLang, "/quienes-somos")} class="hover:text-yellow-400 transition-colors py-2 block">{t('nav.aboutus')}</a></li>
           
           <!-- Menú desplegable para "Salidas" -->
           <li class="relative group">
             <button class="hover:text-yellow-400 transition-colors flex items-center gap-1 py-2">
-              Salidas
+              {t('nav.departures')}
               <!-- Flecha para desplegar -->
               <svg class="w-4 h-4 mt-0.5 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -63,8 +63,8 @@ const t = useTranslations(currentLang as keyof typeof languageList);
             </div>
           </li>
           
-          <li><a href={getRelativeLocaleUrl(currentLang, "/galeria")} class="hover:text-yellow-400 transition-colors py-2 block">Galería</a></li>
-          <li><a href={getRelativeLocaleUrl(currentLang, "/consultas")} class="hover:text-yellow-400 transition-colors py-2 block">Consultas</a></li>
+          <li><a href={getRelativeLocaleUrl(currentLang, "/galeria")} class="hover:text-yellow-400 transition-colors py-2 block">{t('nav.galery')}</a></li>
+          <li><a href={getRelativeLocaleUrl(currentLang, "/consultas")} class="hover:text-yellow-400 transition-colors py-2 block">{t('nav.queries')}</a></li>
         </ul>
       </div>
 
@@ -83,13 +83,13 @@ const t = useTranslations(currentLang as keyof typeof languageList);
     <div id="mobile-menu" class="hidden md:hidden mt-4 transition-all duration-300 ease-in-out overflow-hidden"
       style="max-height: 0; opacity: 0; transform: translateY(-10px)">
       <ul class="space-y-2 pb-4">
-        <li><a href={getRelativeLocaleUrl(currentLang, "/")} class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors">Home</a></li>
-        <li><a href={getRelativeLocaleUrl(currentLang, "/quienes-somos")} class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors">Quiénes Somos</a></li>
+        <li><a href={getRelativeLocaleUrl(currentLang, "/")} class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors">{t('nav.home')}</a></li>
+        <li><a href={getRelativeLocaleUrl(currentLang, "/quienes-somos")} class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors">{t('nav.aboutus')}</a></li>
         
         <!-- Menú desplegable móvil para "Salidas" -->
         <li>
           <button id="dropdown-btn" class="w-full flex justify-between items-center px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors" aria-expanded="false">
-            <span>Salidas</span>
+            <span>{t('nav.departures')}</span>
             <!-- Flecha para desplegar -->
             <svg id="dropdown-arrow" class="w-4 h-4 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -102,8 +102,8 @@ const t = useTranslations(currentLang as keyof typeof languageList);
           </ul>
         </li>
         
-        <li><a href={getRelativeLocaleUrl(currentLang, "/galeria")} class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors">Galería</a></li>
-        <li><a href={getRelativeLocaleUrl(currentLang, "/consultas")} class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors">Consultas</a></li>
+        <li><a href={getRelativeLocaleUrl(currentLang, "/galeria")} class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors">{t('nav.galery')}</a></li>
+        <li><a href={getRelativeLocaleUrl(currentLang, "/consultas")} class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors">{t('nav.queries')}</a></li>
         
         <!-- Selector de Idioma para móvil -->
         <li class="pt-2 border-t border-gray-700">
