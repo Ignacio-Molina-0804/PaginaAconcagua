@@ -107,7 +107,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         
         <!-- Selector de Idioma para móvil -->
         <li class="pt-2 border-t border-gray-700">
-          <div class="font-medium px-3 py-2">Idioma</div>
+          <div class="font-medium px-3 py-2">{t('nav.language')}</div>
           <div class="flex space-x-2 px-3 py-1">
             <a href="/es" class={`px-3 py-1 rounded hover:bg-gray-700 hover:text-yellow-400 ${currentLang === 'es' ? 'bg-gray-700 text-yellow-400' : ''}`}>ES</a>
             <a href="/en" class={`px-3 py-1 rounded hover:bg-gray-700 hover:text-yellow-400 ${currentLang === 'en' ? 'bg-gray-700 text-yellow-400' : ''}`}>EN</a>

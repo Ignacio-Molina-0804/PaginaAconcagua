@@ -16,6 +16,7 @@ export const labels = {
         'nav.departures': 'Salidas',
         'nav.galery': 'Galería',
         'nav.queries': 'Consultas',
+        'nav.language': 'Idioma',
 
     },
 
@@ -28,6 +29,7 @@ export const labels = {
         'nav.departures': 'Departures',
         'nav.galery': 'Gallery',
         'nav.queries': 'Queries',
+        'nav.language': 'Language',
 
     },
 
@@ -40,6 +42,7 @@ export const labels = {
         'nav.departures': 'Partidas',
         'nav.galery': 'Galeria',
         'nav.queries': 'Consultas',
+        'nav.language': 'Idioma',
 
     }
 }
