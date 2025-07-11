@@ -46,6 +46,16 @@ export const labels = {
         'home.testimony.person3': '"He hecho varias expediciones con ellos y siempre superan mis expectativas. La organización es impecable."',
         'home.testimony.person4': '"La pasión que tienen por la montaña es contagiosa. Aprendí mucho y disfruté cada momento. ¡Volveré!"',
 
+        //Sobre Nosotros
+        'aboutus.hero.title': 'NUESTROS GUÍAS',
+        'aboutus.hero.subtitle': 'Conocé a quienes te acompañarán en cada aventura',
+        'aboutus.title': 'Nuestro equipo',
+        'aboutus.subtitle1': 'Somos un grupo de guías certificados y apasionados por la montaña, con años de experiencia en expediciones y actividades de aventura.',
+        'aboutus.subtitle2': 'Nos caracteriza el compromiso con la seguridad, el respeto por la naturaleza y el deseo de compartir experiencias inolvidables con cada persona que se suma a nuestras salidas.',
+        'aboutus.subtitle3': '¡Te invitamos a conocernos y a vivir la montaña con nosotros!',
+        'aboutus.guide1.name': 'Gastón Molina',
+        'aboutus.guide1.description':'Guía de montaña certificado con más de 12 años de experiencia liderando expediciones en los Andes y otras cordilleras de Sudamérica.<br><br>Apasionado por la naturaleza, la seguridad y la formación de nuevos aventureros.<br><br><em class="italic text-gray-600">"Cada salida es una oportunidad para aprender, disfrutar y compartir el amor por la montaña."</em>',
+
     },
 
     en: {
@@ -86,6 +96,17 @@ export const labels = {
         'home.testimony.person2': '"My first time climbing and it was perfect. The team adapted to our level and made us feel comfortable at all times."',
         'home.testimony.person3': '"I have done several expeditions with them and they always exceed my expectations. The organization is impeccable."',
         'home.testimony.person4': '"The passion they have for the mountains is contagious. I learned a lot and enjoyed every moment. I will return!"',
+
+        //Sobre Nosotros
+        'aboutus.hero.title': 'OUR GUIDES',
+        'aboutus.hero.subtitle': 'Meet those who will accompany you on every adventure',
+        'aboutus.title': 'Our team',
+        'aboutus.subtitle1': 'We are a group of certified guides and mountain enthusiasts with years of experience in expeditions and adventure activities.',
+        'aboutus.subtitle2': 'We are characterized by our commitment to safety, respect for nature, and the desire to share unforgettable experiences with every person who joins our outings.',
+        'aboutus.subtitle3': 'We invite you to get to know us and live the mountains with us!',
+        'aboutus.guide1.name': 'Gastón Molina',
+        'aboutus.guide1.description':'Certified mountain guide with over 12 years of experience leading expeditions in the Andes and other mountain ranges in South America.<br><br>Passionate about nature, safety, and training new adventurers.<br><br><em class="italic text-gray-600">"Every outing is an opportunity to learn, enjoy, and share the love for the mountains."</em>',
+
         
 
     },
@@ -128,6 +149,14 @@ export const labels = {
         'home.testimony.person2': '"Minha primeira vez escalando e foi perfeito. A equipe se adaptou ao nosso nível e nos fez sentir confortáveis o tempo todo."',
         'home.testimony.person3': '"Já fiz várias expedições com eles e sempre superam minhas expectativas. A organização é impecável."',
         'home.testimony.person4': '"A paixão que eles têm pelas montanhas é contagiante. Aprendi muito e aproveitei cada momento. Voltarei!"',
+
+        //Sobre Nosotros
+        'aboutus.hero.title': 'NOSSOS GUIAS',
+        'aboutus.hero.subtitle': 'Conheça quem irá te acompanhar em cada aventura',
+        'aboutus.title': 'Nossa equipe',
+        'aboutus.subtitle1': 'Somos um grupo de guias certificados e apaixonados por montanhas, com anos de experiência em expedições e atividades de aventura.',
+        'aboutus.subtitle2': 'Nosso compromisso é com a segurança, o respeito pela natureza e o desejo de compartilhar experiências inesquecíveis com cada pessoa que se junta às nossas saídas.',
+        'aboutus.subtitle3': 'Convidamos você a nos conhecer e viver as montanhas conosco!',
         
     }
 }

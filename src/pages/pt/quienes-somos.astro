@@ -11,6 +11,13 @@ import Navbar from "../../components/NavBar.astro";
 import Hero from "../../components/Hero.astro";
 import Footer from "../../components/Footer.astro";
 
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { useTranslations } from "../../i18n/util";
+import { languageList } from "../../i18n/ui";
+
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
+
 // Definimos el título y descripción de la página para el SEO y metadatos
 const pageTitle = "Quiénes Somos | Empresa de Montañismo";
 const pageDescription = "Información sobre quienes seran tus guías";
@@ -33,8 +40,8 @@ const pageDescription = "Información sobre quienes seran tus guías";
   <!-- Sección destacada con imagen de fondo y texto llamativo -->
   <Hero 
     backgroundImage="/data/hero-guias.webp"
-    title="NUESTROS GUÍAS"
-    subtitle="Conocé a quienes te acompañarán en cada aventura"
+    title={t("aboutus.hero.title")}
+    subtitle={t("aboutus.hero.subtitle")}
     blurIntensity="md"
     loading="eager" 
     opacity={20}
@@ -42,21 +49,18 @@ const pageDescription = "Información sobre quienes seran tus guías";
 
   <!-- Sección descriptiva de presentación del equipo -->
   <section class="max-w-4xl mx-auto py-8 px-4 sm:px-6 text-center section-animada opacity-0 translate-y-10 transition-[opacity,transform] duration-800 ease-[cubic-bezier(0.23,1,0.32,1)]">
-    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3">Nuestro equipo</h2>
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3">{t("aboutus.title")}</h2>
     <div class="w-20 h-1 bg-yellow-600 mx-auto mb-6 sm:mb-8 rounded-full"></div>
     
     <!-- Breve descripción en párrafos -->
     <div class="space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed px-2">
       <p>
-        Somos un grupo de guías certificados y apasionados por la montaña, con
-        años de experiencia en expediciones y actividades de aventura.
+        {t("home.about.subtitle.1")}
       </p>
       <p>
-        Nos caracteriza el compromiso con la seguridad, el respeto por la
-        naturaleza y el deseo de compartir experiencias inolvidables con cada
-        persona que se suma a nuestras salidas.
+        {t("home.about.subtitle.2")}
       </p>
-      <p class="font-medium text-sm sm:text-base">¡Te invitamos a conocernos y a vivir la montaña con nosotros!</p>
+      <p class="font-medium text-sm sm:text-base">{t("home.about.subtitle.3")}</p>
     </div>
   </section>
 
@@ -118,6 +122,6 @@ const pageDescription = "Información sobre quienes seran tus guías";
 
   <!-- Importamos el script que maneja la lógica del slider de guías -->
   <script>
-    import "/src/scripts/slider-guias.js";
+    import "/src/scripts/slider-guias-pt.js";
   </script>
 </BaseLayout>

@@ -4,27 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const guias = [
     {
       nombre: "Gastón Molina",
-      descripcion: `Guía de montaña certificado con más de 12 años de experiencia liderando expediciones en los Andes y otras cordilleras de Sudamérica.<br><br>
-        Apasionado por la naturaleza, la seguridad y la formación de nuevos aventureros.<br><br>
-        <em class="italic text-gray-600">"Cada salida es una oportunidad para aprender, disfrutar y compartir el amor por la montaña."</em>`,
+      descripcion: `Certified mountain guide with over 12 years of experience leading expeditions in the Andes and other South American mountain ranges. <br><br>Passionate about nature, safety, and training new adventurers. <br><br> <em class="italic text-gray-600">"Every outing is an opportunity to learn, enjoy, and share the love of the mountains."</em>`,
       img: "/data/guia-principal.webp",
       instagram: "https://instagram.com/gastonmontana",
       facebook: "https://facebook.com/gastonmontana"
     },
     {
       nombre: "Lucía Fernández",
-      descripcion: `Especialista en trekking y logística de expediciones. Ha guiado grupos en Patagonia, Cuyo y el norte argentino.<br><br>
-        Su energía y dedicación hacen que cada aventura sea segura y divertida.<br><br>
-        <em class="italic text-gray-600">"La montaña nos enseña humildad y trabajo en equipo."</em>`,
+      descripcion: `Trekking and expedition logistics specialist. He has led groups in Patagonia, Cuyo, and northern Argentina. <br><br> His energy and dedication make every adventure safe and fun. <br><br> <em class="italic text-gray-600">"The mountains teach us humility and teamwork."</em>`,
       img: "/data/guia-lucia.webp",
       instagram: "https://instagram.com/luciaandina",
       facebook: "https://facebook.com/luciaandina"
     },
     {
       nombre: "Martín Pérez",
-      descripcion: `Instructor de escalada y rescate en montaña. Más de 10 años formando a nuevos montañistas.<br><br>
-        Siempre atento a los detalles y a la seguridad de todos.<br><br>
-        <em class="italic text-gray-600">"El mejor paisaje es el que compartimos con otros."</em>`,
+      descripcion: `Climbing and mountain rescue instructor. Over 10 years training new mountaineers. <br><br> Always attentive to detail and everyone's safety. <br><br> <em class="italic text-gray-600">"The best landscape is the one we share with others."</em>`,
       img: "/data/guia-martin.webp",
       instagram: "https://instagram.com/martinescalador",
       facebook: "https://facebook.com/martinescalador"
