@@ -15,10 +15,13 @@ import { languageList } from "../../i18n/ui";
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
 
+const pageTitle = t('home.page.title');
+const pageDescription = t('home.page.description');
+
 ---
 
 <!-- BaseLayout define la estructura general de la página (head, body, etc.) -->
-<BaseLayout title={t('home.page.title')} description={t('home.page.description')}>
+<BaseLayout title={pageTitle} description={pageDescription}>
   <!-- Slot para el encabezado: se coloca el componente Navbar -->
   <slot name="header"><Navbar /></slot>
 

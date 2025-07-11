@@ -5,16 +5,20 @@ import { languageList } from "../i18n/ui";
 
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
+
+const { title = t('page.title'),  description = t('page.description')} = Astro.props;
+
 ---
+
 <!DOCTYPE html>
 <html lang={currentLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <!-- Título dinámico de la página -->
-    <title>{t('page.title')}</title>
+    <title>{title}</title>
     <!-- Descripción dinámica para SEO -->
-    <meta name="description" content={t('page.description')} />
+    <meta name="description" content={description} />
     <!-- Favicon del sitio -->
     <link rel="icon" href="/data/favicon.png" type="image/png" />
   </head>

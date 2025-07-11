@@ -17,10 +17,13 @@ import { languageList } from "../../i18n/ui";
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
 
+const pageTitle = t('aboutus.page.title');
+const pageDescription = t('aboutus.page.description');
+
 ---
 
 <!-- Comenzamos a renderizar el layout base pasando título y descripción -->
-<BaseLayout title={t('aboutus.page.title')} description={t('aboutus.page.description')}>
+<BaseLayout title={pageTitle} description={pageDescription}>
 
   <!-- Slot para insertar elementos en la etiqueta <head> -->
   <slot name="head">
