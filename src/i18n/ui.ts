@@ -9,6 +9,10 @@ export const languageList = {
 export const labels = {
     es: {
 
+        //Title and description
+        'page.title': 'Montañismo Gastón Molina',
+        'page.description': 'Sitio web de Montañismo Gastón Molina',
+
         //NavBar
         'nav.title': 'Montañismo Gastón Molina',
         'nav.home': 'Inicio',
@@ -22,6 +26,8 @@ export const labels = {
         'footer.text':' 2025 Empresa de Montañismo. Todos los derechos reservados.',
 
         // Home
+        'home.page.title': "Montañismo Gastón Molina | Aventura en la montaña",
+        'home.page.description':"Descubre la pasión por la montaña con Montañismo Gastón Molina. Ofrecemos expediciones, trekking y actividades al aire libre guiadas por profesionales con amplia experiencia.",
         'home.hero.title': 'BIENVENIDO',
         'home.hero.subtitle': 'Descubre la aventura en la montaña',
         'home.about.title': 'Sobre nosotros',
@@ -47,6 +53,8 @@ export const labels = {
         'home.testimony.person4': '"La pasión que tienen por la montaña es contagiosa. Aprendí mucho y disfruté cada momento. ¡Volveré!"',
 
         //Sobre Nosotros
+        'aboutus.page.title' : "Quiénes Somos | Empresa de Montañismo",
+        'aboutus.page.description': "Información sobre quienes seran tus guías",
         'aboutus.hero.title': 'NUESTROS GUÍAS',
         'aboutus.hero.subtitle': 'Conocé a quienes te acompañarán en cada aventura',
         'aboutus.title': 'Nuestro equipo',
@@ -59,6 +67,10 @@ export const labels = {
     },
 
     en: {
+
+        //Title and description
+        'page.title': 'Climbing Gastón Molina',
+        'page.description': 'Climbing Gastón Molina website',
 
         //NavBar
         'nav.title': 'Climbing Gastón Molina',
@@ -73,6 +85,8 @@ export const labels = {
         'footer.text':' 2025 Climbing Company. All rights reserved.',
 
         // Home
+        'home.page.title': "Climbing Gastón Molina | Mountain Adventure",
+        'home.page.description':"Discover the passion for mountains with Climbing Gastón Molina. We offer expeditions, trekking, and outdoor activities guided by professionals with extensive experience.",
         'home.hero.title': 'WELCOME',
         'home.hero.subtitle': 'Discover the adventure in the mountains',
         'home.about.title': 'About us',
@@ -98,6 +112,8 @@ export const labels = {
         'home.testimony.person4': '"The passion they have for the mountains is contagious. I learned a lot and enjoyed every moment. I will return!"',
 
         //Sobre Nosotros
+        'aboutus.page.title' : "Who We Are | Climbing Company",
+        'aboutus.page.description': "Information about who will be your guides",
         'aboutus.hero.title': 'OUR GUIDES',
         'aboutus.hero.subtitle': 'Meet those who will accompany you on every adventure',
         'aboutus.title': 'Our team',
@@ -113,6 +129,10 @@ export const labels = {
 
     pt: {
 
+        //Title and description
+        'page.title': 'Escalada Gastón Molina',
+        'page.description': 'Site da Escalada Gastón Molina',
+
         //NavBar
         'nav.title': 'Escalada Gastón Molina',
         'nav.home': 'Início',
@@ -126,6 +146,8 @@ export const labels = {
         'footer.text':' 2025 Empresa de Escalada. Todos os direitos reservados.',
 
         // Home
+        'home.page.title': "Escalada Gastón Molina | Aventura na montanha",
+        'home.page.description':"Descubra a paixão pela montanha com Escalada Gastón Molina. Oferecemos expedições, trekking e atividades ao ar livre guiadas por profissionais com ampla experiência.",
         'home.hero.title': 'BEM-VINDO',
         'home.hero.subtitle': 'Descubra a aventura nas montanhas',
         'home.about.title': 'Sobre nós',
@@ -151,6 +173,8 @@ export const labels = {
         'home.testimony.person4': '"A paixão que eles têm pelas montanhas é contagiante. Aprendi muito e aproveitei cada momento. Voltarei!"',
 
         //Sobre Nosotros
+        'aboutus.page.title' : "Quem Somos | Empresa de Escalada",
+        'aboutus.page.description': "Informações sobre quem serão seus guias",
         'aboutus.hero.title': 'NOSSOS GUIAS',
         'aboutus.hero.subtitle': 'Conheça quem irá te acompanhar em cada aventura',
         'aboutus.title': 'Nossa equipe',

@@ -9,17 +9,15 @@ import Navbar from "../../components/NavBar.astro";
 import Hero from "../../components/Hero.astro";
 import Footer from "../../components/Footer.astro";
 
-import { getRelativeLocaleUrl } from "astro:i18n";
 import { useTranslations } from "../../i18n/util";
 import { languageList } from "../../i18n/ui";
 
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
 
-// Definimos el título y la descripción de la página (útil para SEO y etiquetas meta)
-const pageTitle = "Montañismo Gastón Molina | Aventura en la montaña";
-const pageDescription =
-  "Descubre la pasión por la montaña con Montañismo Gastón Molina. Ofrecemos expediciones, trekking y actividades al aire libre guiadas por profesionales con amplia experiencia.";
+const pageTitle = t('home.page.title');
+const pageDescription = t('home.page.description');
+
 ---
 
 <!-- BaseLayout define la estructura general de la página (head, body, etc.) -->
