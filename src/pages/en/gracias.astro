@@ -4,9 +4,14 @@ import Navbar from "../../components/NavBar.astro";
 import Hero from "../../components/Hero.astro";
 import Footer from "../../components/Footer.astro";
 
-// Título y descripción para SEO y encabezado de la página
-const pageTitle = "Contáctanos | Montañismo Gastón Molina";
-const pageDescription = "Completa nuestro formulario de contacto y te responderemos en menos de 24 horas. Estamos aquí para ayudarte con tus consultas sobre montañismo, expediciones y más.";
+import { useTranslations } from "../../i18n/util";
+import { languageList } from "../../i18n/ui";
+
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
+
+const pageTitle = t('thanks.page.title');
+const pageDescription = t('thanks.page.description');
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
@@ -16,8 +21,8 @@ const pageDescription = "Completa nuestro formulario de contacto y te respondere
   <!-- Sección Hero con imagen de fondo y mensaje de éxito -->
   <Hero 
     backgroundImage="/data/consultas-fondo.webp"
-    title="¡Gracias por contactarnos!"
-    subtitle="Tu mensaje ha sido enviado con éxito"
+    title={t('thanks.hero.title')}
+    subtitle={t('thanks.hero.subtitle')}
     blurIntensity="md"
     loading="eager" 
     opacity={20}
@@ -34,14 +39,13 @@ const pageDescription = "Completa nuestro formulario de contacto y te respondere
       </div>
       
       <!-- Título de confirmación -->
-      <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Hemos recibido tu consulta</h2>
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">{t('thanks.title')}</h2>
       
       <!-- Mensaje informativo y enlaces útiles -->
       <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Te responderemos a la brevedad. Nuestro equipo se pondrá en contacto contigo en menos de 24 horas hábiles.
-        Mientras tanto, puedes explorar nuestras 
-        <a class="text-yellow-600 hover:text-yellow-700 font-medium">próximas expediciones</a> o 
-        <a class="text-yellow-600 hover:text-yellow-700 font-medium">consejos de montañismo</a> en nuestro blog.
+        {t('thanks.subtitle1')}
+        <a class="text-yellow-600 hover:text-yellow-700 font-medium">{t('thanks.subtitle2')}</a> {t('thanks.subtitle3')} 
+        <a class="text-yellow-600 hover:text-yellow-700 font-medium">{t('thanks.subtitle4')}</a> {t('thanks.subtitle5')}
       </p>
       
       <!-- Botones de acción para el usuario -->
@@ -50,13 +54,13 @@ const pageDescription = "Completa nuestro formulario de contacto y te respondere
           href="/" 
           class="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-lg shadow-sm transition-all duration-300 inline-flex items-center justify-center"
         >
-          Volver al inicio
+          {t('thanks.backhome')}
         </a>
         <a 
           href="/consultas" 
           class="px-6 py-3 bg-white hover:bg-gray-50 text-gray-800 font-medium rounded-lg border border-gray-300 shadow-sm transition-all duration-300 inline-flex items-center justify-center"
         >
-          Enviar otra consulta
+          {t('thanks.gotoqueries')}
         </a>
       </div>
     </div>
