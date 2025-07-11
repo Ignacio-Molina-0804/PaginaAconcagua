@@ -17,13 +17,10 @@ import { languageList } from "../../i18n/ui";
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
 
-// Definimos el título y descripción de la página para el SEO y metadatos
-const pageTitle = "Quiénes Somos | Empresa de Montañismo";
-const pageDescription = "Información sobre quienes seran tus guías";
 ---
 
 <!-- Comenzamos a renderizar el layout base pasando título y descripción -->
-<BaseLayout title={pageTitle} description={pageDescription}>
+<BaseLayout title={t('aboutus.page.title')} description={t('aboutus.page.description')}>
 
   <!-- Slot para insertar elementos en la etiqueta <head> -->
   <slot name="head">
@@ -121,6 +118,6 @@ const pageDescription = "Información sobre quienes seran tus guías";
 
   <!-- Importamos el script que maneja la lógica del slider de guías -->
   <script>
-    import "/src/scripts/slider-guias-es.js";
+    import "/src/scripts/slider-guias-pt.js";
   </script>
 </BaseLayout>
