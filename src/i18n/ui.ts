@@ -61,8 +61,23 @@ export const labels = {
         'aboutus.subtitle1': 'Somos un grupo de guías certificados y apasionados por la montaña, con años de experiencia en expediciones y actividades de aventura.',
         'aboutus.subtitle2': 'Nos caracteriza el compromiso con la seguridad, el respeto por la naturaleza y el deseo de compartir experiencias inolvidables con cada persona que se suma a nuestras salidas.',
         'aboutus.subtitle3': '¡Te invitamos a conocernos y a vivir la montaña con nosotros!',
-        'aboutus.guide1.name': 'Gastón Molina',
-        'aboutus.guide1.description':'Guía de montaña certificado con más de 12 años de experiencia liderando expediciones en los Andes y otras cordilleras de Sudamérica.<br><br>Apasionado por la naturaleza, la seguridad y la formación de nuevos aventureros.<br><br><em class="italic text-gray-600">"Cada salida es una oportunidad para aprender, disfrutar y compartir el amor por la montaña."</em>',
+
+        //Gracias
+
+        'thanks.page.title': "Gracias | Montañismo Gastón Molina",
+        'thanks.page.description': "Completa nuestro formulario de contacto y te responderemos en menos de 24 horas. Estamos aquí para ayudarte con tus consultas sobre montañismo, expediciones y más.",
+
+        'thanks.hero.title': '¡Gracias por contactarnos!',
+        'thanks.hero.subtitle': 'Tu mensaje ha sido enviado correctamente',
+
+        'thanks.title': 'Hemos recibido tu consulta',
+        'thanks.subtitle1': 'Te responderemos a la brevedad. Nuestro equipo se pondrá en contacto contigo en menos de 24 horas hábiles. Mientras tanto, puedes explorar nuestras',
+        'thanks.subtitle2': 'próximas expediciones',
+        'thanks.subtitle3': 'o',
+        'thanks.subtitle4': 'consejos de montañismo',
+        'thanks.subtitle5': 'en nuestro blog',
+        'thanks.backhome': 'Volver al inicio',
+        'thanks.gotoqueries': 'Enviar otra consulta',
 
     },
 
@@ -120,10 +135,20 @@ export const labels = {
         'aboutus.subtitle1': 'We are a group of certified guides and mountain enthusiasts with years of experience in expeditions and adventure activities.',
         'aboutus.subtitle2': 'We are characterized by our commitment to safety, respect for nature, and the desire to share unforgettable experiences with every person who joins our outings.',
         'aboutus.subtitle3': 'We invite you to get to know us and live the mountains with us!',
-        'aboutus.guide1.name': 'Gastón Molina',
-        'aboutus.guide1.description':'Certified mountain guide with over 12 years of experience leading expeditions in the Andes and other mountain ranges in South America.<br><br>Passionate about nature, safety, and training new adventurers.<br><br><em class="italic text-gray-600">"Every outing is an opportunity to learn, enjoy, and share the love for the mountains."</em>',
 
-        
+        //Gracias
+        'thanks.page.title': "Thank You | Climbing Gastón Molina",
+        'thanks.page.description': "Complete our contact form and we will respond within 24 hours. We are here to help you with your queries about climbing, expeditions, and more.",
+        'thanks.hero.title': 'Thank you for contacting us!',
+        'thanks.hero.subtitle': 'Your message has been sent successfully',
+        'thanks.title': 'We have received your query',
+        'thanks.subtitle1': 'We will respond shortly. Our team will get back to you within 24 business hours. In the meantime, you can explore our',
+        'thanks.subtitle2': 'upcoming expeditions',
+        'thanks.subtitle3': 'or',
+        'thanks.subtitle4': 'climbing tips',
+        'thanks.subtitle5': 'on our blog',
+        'thanks.backhome': 'Back to home',
+        'thanks.gotoqueries': 'Send another query',
 
     },
 
@@ -181,6 +206,20 @@ export const labels = {
         'aboutus.subtitle1': 'Somos um grupo de guias certificados e apaixonados por montanhas, com anos de experiência em expedições e atividades de aventura.',
         'aboutus.subtitle2': 'Nosso compromisso é com a segurança, o respeito pela natureza e o desejo de compartilhar experiências inesquecíveis com cada pessoa que se junta às nossas saídas.',
         'aboutus.subtitle3': 'Convidamos você a nos conhecer e viver as montanhas conosco!',
+        
+        //Gracias
+        'thanks.page.title': "Obrigado | Escalada Gastón Molina",
+        'thanks.page.description': "Preencha nosso formulário de contato e responderemos em até 24 horas. Estamos aqui para ajudar com suas dúvidas sobre escalada, expedições e mais.",
+        'thanks.hero.title': 'Obrigado por entrar em contato!',
+        'thanks.hero.subtitle': 'Sua mensagem foi enviada com sucesso',
+        'thanks.title': 'Recebemos sua consulta',
+        'thanks.subtitle1': 'Responderemos em breve. Nossa equipe entrará em contato com você em até 24 horas úteis. Enquanto isso, você pode explorar nossas',
+        'thanks.subtitle2': 'próximas expedições',
+        'thanks.subtitle3': 'ou',
+        'thanks.subtitle4': 'dicas de escalada',
+        'thanks.subtitle5': 'em nosso blog',
+        'thanks.backhome': 'Voltar para o início',
+        'thanks.gotoqueries': 'Enviar outra consulta',
         
     }
 }
