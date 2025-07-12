@@ -133,12 +133,6 @@ export const labels = {
         'queries.why.subtitle2': 'Información sobre equipamiento necesario',
         'queries.why.subtitle3': 'Detalles sobre próximas expediciones',
         'queries.why.subtitle4': 'Respuestas a todas tus dudas sobre montañismo',
-        'queries.type.query1': 'Expediciones',
-        'queries.type.query2': 'Trekking',
-        'queries.type.query3': 'Cursos de montañismo',
-        'queries.type.query4': 'Equipamiento',
-        'queries.type.query5': 'Grupos privados',
-        'queries.type.query6': 'Otros',
         
 
 
@@ -266,14 +260,6 @@ export const labels = {
         'queries.why.subtitle2': 'Information on necessary equipment',
         'queries.why.subtitle3': 'Details about upcoming expeditions',
         'queries.why.subtitle4': 'Answers to all your climbing questions',
-        'queries.type.query1': 'Expeditions',
-        'queries.type.query2': 'Trekking',
-        'queries.type.query3': 'Climbing courses',
-        'queries.type.query4': 'Equipment',
-        'queries.type.query5': 'Private groups',
-        'queries.type.query6': 'Others',
-
-
 
     },
 
@@ -405,10 +391,6 @@ export const labels = {
         'queries.type.query4': 'Equipamentos',
         'queries.type.query5': 'Grupos privados',
         'queries.type.query6': 'Outros',
-
-        
-        
-
 
     }
 }
