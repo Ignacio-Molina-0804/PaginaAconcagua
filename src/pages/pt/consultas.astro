@@ -4,6 +4,13 @@ import Navbar from "../../components/NavBar.astro";
 import Hero from "../../components/Hero.astro";
 import Footer from "../../components/Footer.astro";
 
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { useTranslations } from "../../i18n/util";
+import { languageList } from "../../i18n/ui";
+
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
+
 // Lista de tipos de consulta para el formulario
 const tiposConsulta = [
   "Expediciones",
@@ -51,7 +58,7 @@ const pageDescription = "Completa nuestro formulario de contacto y te respondere
         >
           <!-- Campos ocultos para configuración de FormSubmit -->
           <input type="hidden" name="_captcha" value="true">
-          <input type="hidden" name="_next" value="https://gastonmolinaguide.netlify.app/gracias">
+          <input type="hidden" name="_next" value="https://gastonmolinaguide.netlify.app/en/gracias">
           
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
             <!-- Campo: Nombre -->

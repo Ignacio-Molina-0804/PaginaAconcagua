@@ -101,6 +101,38 @@ export const labels = {
         'galery.image11': 'Nuestro equipo de guías',
         'galery.image12': 'Grupo de expedicionarios',
 
+        //Consultas
+
+        'queries.page.title': "Contáctanos | Montañismo Gastón Molina",
+        'queries.page.description': "Completa nuestro formulario de contacto y te responderemos en menos de 24 horas. Estamos aquí para ayudarte con tus consultas sobre montañismo, expediciones y más.",
+        'queries.hero.title': 'Contáctanos',
+        'queries.hero.subtitle': 'Tu aventura comienza con una consulta',
+        'queries.form.title': 'Formulario de contacto',
+        'queries.form.subtitle': 'Completa el formulario y te responderemos en menos de 24h',
+        'queries.form.name': 'Nombre*',
+        'queries.form.name.placeholder': 'Tu nombre',
+        'queries.form.subname': 'Apellido',
+        'queries.form.subname.placeholder': 'Tu apellido',
+        'queries.form.email': 'Email*',
+        'queries.form.email.placeholder': 'tucorreo@ejemplo.com',
+        'queries.form.type': 'Tipo de consulta*',
+        'queries.form.type.placeholder': 'Selecciona una opción',
+        'queries.form.mensage': 'Mensaje*',
+        'queries.form.mensage.placeholder': 'Describe tu consulta o interés...',
+        'queries.form.newsletter': 'Quiero recibir novedades y ofertas',
+        'queries.form.button': 'Enviar consulta',
+        'queries.info.title': 'Otras formas de contacto',
+        'queries.info.phone': 'Teléfono',
+        'queries.info.phone.description': 'Lunes a Viernes de 9 a 18hs',
+        'queries.info.email': 'Email',
+        'queries.info.email.description': 'Respondemos en menos de 24h',
+        'queries.info.ofice': 'Oficina',
+        'queries.info.ofice.description': 'Con cita previa',
+        'queries.why.title': '¿Por qué contactarnos?',
+        'queries.why.subtitle1': 'Asesoramiento personalizado según tus objetivos',
+        'queries.why.subtitle2': 'Información sobre equipamiento necesario',
+        'queries.why.subtitle3': 'Detalles sobre próximas expediciones',
+        'queries.why.subtitle4': 'Respuestas a todas tus dudas sobre montañismo',
 
 
     },
@@ -289,6 +321,8 @@ export const labels = {
         'galery.image10': 'Guia Martín liderando grupo',
         'galery.image11': 'Nossa equipe de guias',
         'galery.image12': 'Grupo de expedicionários',
+
+
         
         
 
