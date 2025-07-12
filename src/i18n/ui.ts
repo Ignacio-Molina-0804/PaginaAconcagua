@@ -79,6 +79,30 @@ export const labels = {
         'thanks.backhome': 'Volver al inicio',
         'thanks.gotoqueries': 'Enviar otra consulta',
 
+        //Galería
+        'galery.page.title': "Galería de Aventuras | Montañismo Gastón Molina",
+        'galery.page.description': "Revive los momentos más épicos en la montaña. Explora nuestra galería de fotos del Aconcagua y otras expediciones.",
+        'galery.hero.title': 'Galería de Aventuras',
+        'galery.hero.subtitle': 'Expediciones al Aconcagua y otras montañas',
+        'galery.title': 'NUESTRAS AVENTURAS',
+        'galery.memories.title': 'Memorias del Aconcagua',
+        'galery.memories.subtitle': 'Cada imagen es un testimonio de superación. El Aconcagua, con sus 6,962 metros, nos exige lo mejor de nosotros mismos. Estas fotografías capturan esos instantes donde el esfuerzo se transforma en gloria.',
+        'galery.memories.button': 'Vive tu propia aventura',
+        'galery.image1': 'Vista panorámica del Aconcagua',
+        'galery.image2': 'Ascenso al Aconcagua',
+        'galery.image3': 'Aconcagua desde Argentina',
+        'galery.image4': 'Cumbre del Aconcagua',
+        'galery.image5': 'Trekking en Aconcagua',
+        'galery.image6': 'Ruta normal de ascenso',
+        'galery.image7': 'Ascenso en equipo',
+        'galery.image8': 'Campamento base del Aconcagua',
+        'galery.image9': 'Guía Lucía en expedición',
+        'galery.image10': 'Guía Martín liderando grupo',
+        'galery.image11': 'Nuestro equipo de guías',
+        'galery.image12': 'Grupo de expedicionarios',
+
+
+
     },
 
     en: {
@@ -150,6 +174,29 @@ export const labels = {
         'thanks.backhome': 'Back to home',
         'thanks.gotoqueries': 'Send another query',
 
+        //Galería
+        'galery.page.title': "Adventure Gallery | Climbing Gastón Molina",
+        'galery.page.description': "Relive the most epic moments in the mountains. Explore our photo gallery of Aconcagua and other expeditions.",
+        'galery.hero.title': 'Adventure Gallery',
+        'galery.hero.subtitle': 'Expeditions to Aconcagua and other mountains',
+        'galery.title': 'OUR ADVENTURES',
+        'galery.memories.title': 'Memories of Aconcagua',
+        'galery.memories.subtitle': 'Each image is a testament to overcoming challenges. Aconcagua, at 6,962 meters, demands the best from us. These photographs capture those moments where effort transforms into glory.',
+        'galery.memories.button': 'Live your own adventure',
+        'galery.image1': 'Panoramic view of Aconcagua',
+        'galery.image2': 'Ascent to Aconcagua',
+        'galery.image3': 'Aconcagua from Argentina',
+        'galery.image4': 'Summit of Aconcagua',
+        'galery.image5': 'Trekking in Aconcagua',
+        'galery.image6': 'Normal route ascent',
+        'galery.image7': 'Ascent in a team',
+        'galery.image8': 'Base camp of Aconcagua',
+        'galery.image9': 'Guide Lucía on expedition',
+        'galery.image10': 'Guide Martín leading group',
+        'galery.image11': 'Our team of guides',
+        'galery.image12': 'Group of expeditioners',
+
+
     },
 
     pt: {
@@ -220,6 +267,31 @@ export const labels = {
         'thanks.subtitle5': 'em nosso blog',
         'thanks.backhome': 'Voltar para o início',
         'thanks.gotoqueries': 'Enviar outra consulta',
+
+        //Galería
+        'galery.page.title': "Galeria de Aventuras | Escalada Gastón Molina",
+        'galery.page.description': "Reviva os momentos mais épicos nas montanhas. Explore nossa galeria de fotos do Aconcágua e outras expedições.",
+        'galery.hero.title': 'Galeria de Aventuras',
+        'galery.hero.subtitle': 'Expedições ao Aconcágua e outras montanhas',
+        'galery.title': 'NOSSAS AVENTURAS',
+        'galery.memories.title': 'Memórias do Aconcágua',
+        'galery.memories.subtitle': 'Cada imagem é um testemunho de superação. O Aconcágua, com seus 6.962 metros, exige o melhor de nós. Estas fotografias capturam aqueles momentos onde o esforço se transforma em glória.',
+        'galery.memories.button': 'Viva sua própria aventura',
+        'galery.image1': 'Vista panorâmica do Aconcágua',
+        'galery.image2': 'Ascensão ao Aconcágua',
+        'galery.image3': 'Aconcágua da Argentina',
+        'galery.image4': 'Cume do Aconcágua',
+        'galery.image5': 'Trekking no Aconcágua',
+        'galery.image6': 'Rota normal de ascensão',
+        'galery.image7': 'Ascensão em equipe',
+        'galery.image8': 'Acampamento base do Aconcágua',
+        'galery.image9': 'Guia Lucía em expedição',
+        'galery.image10': 'Guia Martín liderando grupo',
+        'galery.image11': 'Nossa equipe de guias',
+        'galery.image12': 'Grupo de expedicionários',
         
+        
+
+
     }
 }
