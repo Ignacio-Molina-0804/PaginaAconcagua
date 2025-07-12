@@ -11,23 +11,23 @@ const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
 
 // Título y descripción para SEO y encabezado de la página
-const pageTitle = "Galería de Aventuras | Montañismo Gastón Molina";
-const pageDescription = "Revive los momentos más épicos en la montaña. Explora nuestra galería de fotos del Aconcagua y otras expediciones.";
+const pageTitle = t('galery.page.title');
+const pageDescription = t('galery.page.description');
 
 // Array de imágenes para la galería, cada una con su ruta, descripción y fecha
 const galleryImages = [
-  { id: 1, src: "/data/aconcagua_ejemplo.webp", alt: "Vista panorámica del Aconcagua", date: "2023-11-15" },
-  { id: 2, src: "/data/aconcagua-1.webp", alt: "Ascenso al Aconcagua", date: "2023-09-22" },
-  { id: 3, src: "/data/aconcagua-argentina-1.webp", alt: "Aconcagua desde Argentina", date: "2023-10-05" },
-  { id: 4, src: "/data/aconcagua-summit.webp", alt: "Cumbre del Aconcagua", date: "2023-08-17" },
-  { id: 5, src: "/data/aconcugua.webp", alt: "Trekking en Aconcagua", date: "2023-07-30" },
-  { id: 6, src: "/data/ascenso-cerro-aconcagua-ruta-normal-640.webp", alt: "Ruta normal de ascenso", date: "2023-06-12" },
-  { id: 7, src: "/data/ascent-to-mount-aconcagua-472.webp", alt: "Ascenso en equipo", date: "2023-05-18" },
-  { id: 8, src: "/data/campamento-base-aconcagua.webp", alt: "Campamento base del Aconcagua", date: "2023-04-22" },
-  { id: 9, src: "/data/guia-lucia.webp", alt: "Guía Lucía en expedición", date: "2023-03-15" },
-  { id: 10, src: "/data/guia-martin.webp", alt: "Guía Martín liderando grupo", date: "2023-02-08" },
-  { id: 11, src: "/data/guia-principal.webp", alt: "Nuestro equipo de guías", date: "2023-01-20" },
-  { id: 12, src: "/data/imagenGrupoGente.webp", alt: "Grupo de expedicionarios", date: "2022-12-05" },
+  { id: 1, src: "/data/aconcagua_ejemplo.webp", alt: t('galery.image1'), date: "2023-11-15" },
+  { id: 2, src: "/data/aconcagua-1.webp", alt: t('galery.image2'), date: "2023-09-22" },
+  { id: 3, src: "/data/aconcagua-argentina-1.webp", alt: t('galery.image3'), date: "2023-10-05" },
+  { id: 4, src: "/data/aconcagua-summit.webp", alt: t('galery.image4'), date: "2023-08-17" },
+  { id: 5, src: "/data/aconcugua.webp", alt: t('galery.image5'), date: "2023-07-30" },
+  { id: 6, src: "/data/ascenso-cerro-aconcagua-ruta-normal-640.webp", alt: t('galery.image6'), date: "2023-06-12" },
+  { id: 7, src: "/data/ascent-to-mount-aconcagua-472.webp", alt: t('galery.image7'), date: "2023-05-18" },
+  { id: 8, src: "/data/campamento-base-aconcagua.webp", alt: t('galery.image8'), date: "2023-04-22" },
+  { id: 9, src: "/data/guia-lucia.webp", alt: t('galery.image9'), date: "2023-03-15" },
+  { id: 10, src: "/data/guia-martin.webp", alt: t('galery.image10'), date: "2023-02-08" },
+  { id: 11, src: "/data/guia-principal.webp", alt: t('galery.image11'), date: "2023-01-20" },
+  { id: 12, src: "/data/imagenGrupoGente.webp", alt: t('galery.image12'), date: "2022-12-05" },
 ];
 ---
 
@@ -38,8 +38,8 @@ const galleryImages = [
   <!-- Sección Hero con imagen de fondo y título -->
   <Hero 
     backgroundImage="/data/galeria-hero.webp"
-    title="Galería de Aventuras"
-    subtitle="Expediciones al Aconcagua y otras montañas"
+    title={t('galery.hero.title')}
+    subtitle={t('galery.hero.subtitle')}
     blurIntensity="md"
     loading="eager" 
     opacity={20}
@@ -51,7 +51,7 @@ const galleryImages = [
     <div class="text-center mb-16 animate-fade-in">
       <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
         <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-amber-800">
-          NUESTRAS AVENTURAS
+          {t('galery.title')}
         </span>
       </h2>
       <div class="w-24 h-1.5 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto rounded-full"></div>
@@ -91,18 +91,16 @@ const galleryImages = [
 
     <!-- Sección de texto motivacional y llamado a la acción -->
     <div class="max-w-3xl mx-auto text-center px-4 pt-10 border-t border-gray-100 animate-fade-in">
-      <h3 class="text-2xl font-bold text-gray-800 mb-6">Memorias del Aconcagua</h3>
+      <h3 class="text-2xl font-bold text-gray-800 mb-6">{t('galery.memories.title')}</h3>
       <p class="text-gray-600 text-lg leading-relaxed">
-        Cada imagen es un testimonio de superación. El Aconcagua, con sus 6,962 metros, 
-        nos exige lo mejor de nosotros mismos. Estas fotografías capturan esos instantes 
-        donde el esfuerzo se transforma en gloria.
+        {t('galery.memories.subtitle')}
       </p>
       <!-- Botón para ir a la página de consultas -->
       <a 
         href="/consultas" 
         class="mt-8 inline-block px-8 py-3 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-full transition-colors duration-300"
       >
-        Vive tu propia aventura
+        {t('galery.memories.button')}
       </a>
     </div>
   </main>
