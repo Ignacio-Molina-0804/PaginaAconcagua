@@ -4,6 +4,7 @@ import Navbar from "../../components/NavBar.astro";
 import Hero from "../../components/Hero.astro";
 import Footer from "../../components/Footer.astro";
 
+import { getRelativeLocaleUrl } from "astro:i18n";
 import { useTranslations } from "../../i18n/util";
 import { languageList } from "../../i18n/ui";
 
@@ -51,13 +52,13 @@ const pageDescription = t('thanks.page.description');
       <!-- Botones de acción para el usuario -->
       <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
         <a 
-          href="/" 
+          href={getRelativeLocaleUrl(currentLang, "/")} 
           class="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-lg shadow-sm transition-all duration-300 inline-flex items-center justify-center"
         >
           {t('thanks.backhome')}
         </a>
         <a 
-          href="/consultas" 
+          href={getRelativeLocaleUrl(currentLang, "/consultas")}  
           class="px-6 py-3 bg-white hover:bg-gray-50 text-gray-800 font-medium rounded-lg border border-gray-300 shadow-sm transition-all duration-300 inline-flex items-center justify-center"
         >
           {t('thanks.gotoqueries')}
