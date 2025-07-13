@@ -155,8 +155,9 @@ export const labels = {
         //Aconcagua
         'aconcagua.page.title' : 'Aconcagua | Montañismo Gastón Molina',
         'aconcagua.page.description' : "Expedición al Aconcagua, el techo de América, con guías certificados y un protocolo de aclimatación progresiva.",
+        'aconcagua.hero.title':'Expedición al Aconcagua',
+        'aconcagua.hero.subtitle':'El techo de América',
         'aconcagua.title': 'La Aventura del Aconcagua',
-        'aconcagua.technicaldetails.title' : 'Detalles Técnicos',
         'aconcagua.technicaldetails.info1' : '<div><h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Detalles Técnicos</h3><ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700"><li>🗻 Altura: 6,962 msnm (Punto más alto de América)</li><li>📍 Ubicación: Mendoza, Argentina</li><li>⏳ Duración: 18-21 días (expedición completa)</li><li>📈 Dificultad: Alta (requiere aclimatación)</li><li>🛣️ Ruta Normal: Vía Horcones</li></ul></div>',
         'aconcagua.technicaldetails.info2' : '<div class="mt-4 md:mt-0"><h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Incluye</h3><ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700"><li>✅ Guías de montaña certificados UIAGM</li><li>✅ Permisos y tasas de acceso</li><li>✅ Comidas durante la expedición</li><li>✅ Equipo de campamento base</li><li>✅ Asistencia médica en altura</li></ul></div>',
         'aconcagua.itinerary.title' : 'Itinerario Resumido',
@@ -310,7 +311,25 @@ export const labels = {
         'trekking.phylosophy.description':'<div class="space-y-3 sm:space-y-4 text-sm sm:text-base"><p>Trekking is <strong>more than just walking</strong> - it is a way to reconnect with nature, overcome personal limits, and create bonds with fellow adventurers.</p><p>Our guides are <strong>locals with extensive knowledge</strong> of the routes, flora, and fauna of each region.</p><p>We promote <strong>responsible tourism</strong>, leaving zero footprint in the natural environments we visit.</p></div>',
         'trekking.recomendations':'Recommendations',
         'trekking.recomendations.basicequipment': '<div><h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Basic Equipment</h4><ul class="list-disc pl-5 space-y-1 text-sm sm:text-base"><li>Trekking shoes or boots</li><li>Comfortable backpack (20-30L)</li><li>Sunblock and hat</li><li>At least 1 liter of water</li><li>Layered clothing</li></ul></div>',
-        'trekking.recomendations.physicalpreparation':`<div><h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Physical Preparation</h4><ul class="list-disc pl-5 space-y-1 text-sm sm:text-base"><li>Walk regularly before the outing</li><li>Stay well hydrated in the days leading up</li><li>Communicate any medical conditions</li><li>Get a good night's sleep before the outing</li></ul></div>`
+        'trekking.recomendations.physicalpreparation':`<div><h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Physical Preparation</h4><ul class="list-disc pl-5 space-y-1 text-sm sm:text-base"><li>Walk regularly before the outing</li><li>Stay well hydrated in the days leading up</li><li>Communicate any medical conditions</li><li>Get a good night's sleep before the outing</li></ul></div>`,
+
+        //Aconcagua
+        'aconcagua.page.title' : 'Aconcagua | Mountaineering Gastón Molina',
+        'aconcagua.page.description' : "Expedition to Aconcagua, the roof of the Americas, with certified guides and a progressive acclimatization protocol.",
+        'aconcagua.hero.title':'Aconcagua Expedition',
+        'aconcagua.hero.subtitle':'The Roof of the Americas',
+        'aconcagua.title': 'The Aconcagua Adventure',
+        'aconcagua.technicaldetails.info1' : '<div><h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Technical Details</h3><ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700"><li>🗻 Altitude: 6,962 masl (Highest point in the Americas)</li><li>📍 Location: Mendoza, Argentina</li><li>⏳ Duration: 18–21 days (full expedition)</li><li>📈 Difficulty: High (requires acclimatization)</li><li>🛣️ Normal Route: Horcones Route</li></ul></div>',
+        'aconcagua.technicaldetails.info2' : '<div class="mt-4 md:mt-0"><h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Includes</h3><ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700"><li>✅ UIAGM Certified Mountain Guides</li><li>✅ Permits and access fees</li><li>✅ Meals during the expedition</li><li>✅ Base camp equipment</li><li>✅ High-altitude medical assistance</li></ul></div>',
+        'aconcagua.itinerary.title' : 'Brief Itinerary',
+        'aconcagua.itinerary.info' : '<div class="border-l-4 border-yellow-500 pl-3 sm:pl-4 space-y-4 sm:space-y-6"><div><h4 class="font-semibold text-base sm:text-lg">Days 1–3: Acclimatization</h4><p class="text-sm sm:text-base">Trekking through Horcones Valley, visit to Plaza de Mulas (4,370m)</p></div><div><h4 class="font-semibold text-base sm:text-lg">Days 4–10: Progressive Ascent</h4><p class="text-sm sm:text-base">Altitude rotation: Camp Canadá (5,000m), Nido de Cóndores (5,400m)</p></div><div><h4 class="font-semibold text-base sm:text-lg">Days 14–16: Summit</h4><p class="text-sm sm:text-base">Summit push from Berlin or Colera (weather window)</p></div></div>',
+        'aconcagua.expedition.title':'Why Choose This Expedition?',
+        'aconcagua.expedition.info' : '<div class="space-y-3 sm:space-y-4 text-sm sm:text-base"><p>Aconcagua offers one of the <strong>most accessible challenges among the Seven Summits</strong>, combining spectacular Andean landscapes with the thrill of Himalayan altitudes.</p><p>Our team has <strong>15 years of mountain experience</strong> and an <strong>85% summit success rate</strong> thanks to our progressive acclimatization protocol.</p><p>The normal route does not require advanced climbing techniques, but it does demand <strong>excellent physical condition and endurance</strong>.</p></div>',
+        'aconcagua.galery.title':'Route Gallery',
+        'aconcagua.galery.image1':'Aconcagua View',
+        'aconcagua.galery.image2':'Base Camp',
+        'aconcagua.galery.image3':'Summit View',
+
 
     },
 
@@ -459,11 +478,24 @@ export const labels = {
         'trekking.phylosophy.description':'<div class="space-y-3 sm:space-y-4 text-sm sm:text-base"><p>O trekking é <strong>mais do que caminhar</strong> - é uma forma de reconectar com a natureza, superar limites pessoais e criar laços com companheiros de aventura.</p><p>Nossos guias são <strong>locais com amplo conhecimento</strong> das rotas, flora e fauna de cada região.</p><p>Promovemos o <strong>turismo responsável</strong>, deixando zero pegada nos ambientes naturais que visitamos.</p></div>',
         'trekking.recomendations':'Recomendações',
         'trekking.recomendations.basicequipment': '<div><h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Equipamento Básico</h4><ul class="list-disc pl-5 space-y-1 text-sm sm:text-base"><li>Calçados de trekking ou botas</li><li>Mochila confortável (20-30L)</li><li>Protetor solar e chapéu</li><li>Pelo menos 1 litro de água</li><li>Roupas em camadas</li></ul></div>',
-        'trekking.recomendations.physicalpreparation':`<div><h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Preparação Física</h4><ul class="list-disc pl-5 space-y-1 text-sm sm:text-base"><li>Caminhar regularmente antes da saída</li><li>Hidratar-se bem nos dias anteriores</li><li>Comunicar qualquer condição médica</li><li>Dormir bem na noite anterior</li></ul></div>`
+        'trekking.recomendations.physicalpreparation':`<div><h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Preparação Física</h4><ul class="list-disc pl-5 space-y-1 text-sm sm:text-base"><li>Caminhar regularmente antes da saída</li><li>Hidratar-se bem nos dias anteriores</li><li>Comunicar qualquer condição médica</li><li>Dormir bem na noite anterior</li></ul></div>`,
 
-        
-
-
+        //Aconcágua
+        'aconcagua.page.title' : 'Aconcágua | Montanhismo Gastón Molina',
+        'aconcagua.page.description' : "Expedição ao Aconcágua, o teto das Américas, com guias certificados e um protocolo de aclimatação progressiva.",
+        'aconcagua.hero.title':'Expedição ao Aconcágua',
+        'aconcagua.hero.subtitle':'O Teto das Américas',
+        'aconcagua.title': 'A Aventura do Aconcágua',
+        'aconcagua.technicaldetails.info1' : '<div><h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Detalhes Técnicos</h3><ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700"><li>🗻 Altitude: 6.962 m (Ponto mais alto das Américas)</li><li>📍 Localização: Mendoza, Argentina</li><li>⏳ Duração: 18–21 dias (expedição completa)</li><li>📈 Dificuldade: Alta (requer aclimatação)</li><li>🛣️ Rota Normal: Via Horcones</li></ul></div>',
+        'aconcagua.technicaldetails.info2' : '<div class="mt-4 md:mt-0"><h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Inclui</h3><ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700"><li>✅ Guias de montanha certificados UIAGM</li><li>✅ Permissões e taxas de acesso</li><li>✅ Refeições durante a expedição</li><li>✅ Equipamento de acampamento base</li><li>✅ Assistência médica em altitude</li></ul></div>',
+        'aconcagua.itinerary.title' : 'Itinerário Resumido',
+        'aconcagua.itinerary.info' : '<div class="border-l-4 border-yellow-500 pl-3 sm:pl-4 space-y-4 sm:space-y-6"><div><h4 class="font-semibold text-base sm:text-lg">Dias 1–3: Aclimatação</h4><p class="text-sm sm:text-base">Caminhada pelo Vale de Horcones, visita à Plaza de Mulas (4.370m)</p></div><div><h4 class="font-semibold text-base sm:text-lg">Dias 4–10: Ascensão progressiva</h4><p class="text-sm sm:text-base">Rotação de altitude: Acampamento Canadá (5.000m), Ninho dos Condores (5.400m)</p></div><div><h4 class="font-semibold text-base sm:text-lg">Dias 14–16: Cume</h4><p class="text-sm sm:text-base">Ataque ao cume desde Berlim ou Colera (janela meteorológica)</p></div></div>',
+        'aconcagua.expedition.title':'Por que escolher esta expedição?',
+        'aconcagua.expedition.info' : '<div class="space-y-3 sm:space-y-4 text-sm sm:text-base"><p>O Aconcágua oferece um dos <strong>desafios mais acessíveis entre os Sete Cumes</strong>, combinando paisagens andinas espetaculares com a emoção de atingir altitudes himalaianas.</p><p>Nossa equipe possui <strong>15 anos de experiência</strong> na montanha e uma <strong>taxa de sucesso de 85% no cume</strong>, graças ao nosso protocolo de aclimatação progressiva.</p><p>A rota normal não exige técnicas avançadas de escalada, mas sim <strong>excelente condição física e resistência</strong>.</p></div>',
+        'aconcagua.galery.title':'Galeria da Rota',
+        'aconcagua.galery.image1':'Vista do Aconcágua',
+        'aconcagua.galery.image2':'Acampamento base',
+        'aconcagua.galery.image3':'Vista do cume',
 
     }
 }
