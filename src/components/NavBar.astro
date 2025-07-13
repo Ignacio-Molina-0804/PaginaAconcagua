@@ -9,6 +9,18 @@ import { languageList } from "../i18n/ui";
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
 
+// Obtener la ruta actual sin el prefijo de idioma
+const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\//, '/');
+const cleanPath = currentPath === `/${currentLang}` ? '/' : currentPath;
+
+// Función para generar URL de idioma manteniendo la ruta actual
+const getLanguageUrl = (lang: string) => {
+  // Si ya estamos en el home, simplemente cambiamos el idioma
+  if (cleanPath === '/') return `/${lang}`;
+  
+  // Para otras rutas, mantenemos la estructura /idioma/ruta-actual
+  return `/${lang}${cleanPath}`;
+};
 ---
 
 <!-- 
@@ -34,9 +46,9 @@ const t = useTranslations(currentLang as keyof typeof languageList);
           </button>
           <!-- Opciones de idioma -->
           <div class="absolute left-0 mt-2 w-20 bg-gray-800 rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-1 group-hover:translate-y-0">
-            <a href="/es" class="block w-full text-left px-3 py-1 hover:bg-gray-700 hover:text-yellow-400">ES</a>
-            <a href="/en" class="block w-full text-left px-3 py-1 hover:bg-gray-700 hover:text-yellow-400">EN</a>
-            <a href="/pt" class="block w-full text-left px-3 py-1 hover:bg-gray-700 hover:text-yellow-400">PT</a>
+            <a href={getLanguageUrl('es')} class="block w-full text-left px-3 py-1 hover:bg-gray-700 hover:text-yellow-400">ES</a>
+            <a href={getLanguageUrl('en')} class="block w-full text-left px-3 py-1 hover:bg-gray-700 hover:text-yellow-400">EN</a>
+            <a href={getLanguageUrl('pt')} class="block w-full text-left px-3 py-1 hover:bg-gray-700 hover:text-yellow-400">PT</a>
           </div>
         </div>
       </div>
@@ -109,9 +121,9 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         <li class="pt-2 border-t border-gray-700">
           <div class="font-medium px-3 py-2">{t('nav.language')}</div>
           <div class="flex space-x-2 px-3 py-1">
-            <a href="/es" class={`px-3 py-1 rounded hover:bg-gray-700 hover:text-yellow-400 ${currentLang === 'es' ? 'bg-gray-700 text-yellow-400' : ''}`}>ES</a>
-            <a href="/en" class={`px-3 py-1 rounded hover:bg-gray-700 hover:text-yellow-400 ${currentLang === 'en' ? 'bg-gray-700 text-yellow-400' : ''}`}>EN</a>
-            <a href="/pt" class={`px-3 py-1 rounded hover:bg-gray-700 hover:text-yellow-400 ${currentLang === 'pt' ? 'bg-gray-700 text-yellow-400' : ''}`}>PT</a>
+            <a href={getLanguageUrl('es')} class={`px-3 py-1 rounded hover:bg-gray-700 hover:text-yellow-400 ${currentLang === 'es' ? 'bg-gray-700 text-yellow-400' : ''}`}>ES</a>
+            <a href={getLanguageUrl('en')} class={`px-3 py-1 rounded hover:bg-gray-700 hover:text-yellow-400 ${currentLang === 'en' ? 'bg-gray-700 text-yellow-400' : ''}`}>EN</a>
+            <a href={getLanguageUrl('pt')} class={`px-3 py-1 rounded hover:bg-gray-700 hover:text-yellow-400 ${currentLang === 'pt' ? 'bg-gray-700 text-yellow-400' : ''}`}>PT</a>
           </div>
         </li>
       </ul>
