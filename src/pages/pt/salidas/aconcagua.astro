@@ -4,9 +4,15 @@ import NavBar from "../../../components/NavBar.astro";
 import Hero from "../../../components/Hero.astro";
 import Footer from "../../../components/Footer.astro";
 
+import { useTranslations } from "../../../i18n/util";
+import { languageList } from "../../../i18n/ui";
+
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
+
 // Título y descripción para SEO y encabezado de la página
-const pageTitle = "Aconcagua | Montañismo Gastón Molina";
-const pageDescription = "Expedición al Aconcagua, el techo de América, con guías certificados y un protocolo de aclimatación progresiva.";
+const pageTitle = t('aconcagua.page.title');
+const pageDescription = t('aconcagua.page.description');
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
@@ -16,8 +22,8 @@ const pageDescription = "Expedición al Aconcagua, el techo de América, con gu�
     <!-- Sección Hero con imagen de fondo, título y subtítulo -->
     <Hero
       backgroundImage="/data/aconcagua-argentina-1.webp"
-      title="Expedición al Aconcagua"
-      subtitle="El techo de América"
+      title={t('aconcagua.hero.title')}
+      subtitle={t('aconcagua.hero.subtitle')}
       blurIntensity="md"  
       loading="eager" 
       opacity={20} 
@@ -26,71 +32,36 @@ const pageDescription = "Expedición al Aconcagua, el techo de América, con gu�
     <main class="container mx-auto px-4 sm:px-6 py-6 sm:py-8 max-w-4xl">
       <!-- Sección de introducción y detalles técnicos -->
       <section class="mb-8 sm:mb-12">
-        <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">La Aventura del Aconcagua</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">{t('aconcagua.title')}</h2>
         
         <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
           <!-- Columna: Detalles técnicos de la expedición -->
-          <div>
-            <h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Detalles Técnicos</h3>
-            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
-              <li>🗻 Altura: 6,962 msnm (Punto más alto de América)</li>
-              <li>📍 Ubicación: Mendoza, Argentina</li>
-              <li>⏳ Duración: 18-21 días (expedición completa)</li>
-              <li>📈 Dificultad: Alta (requiere aclimatación)</li>
-              <li>🛣️ Ruta Normal: Vía Horcones</li>
-            </ul>
-          </div>
+          <div set:html={t('aconcagua.technicaldetails.info1')}></div>
           
           <!-- Columna: Qué incluye la expedición -->
-          <div class="mt-4 md:mt-0">
-            <h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Incluye</h3>
-            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
-              <li>✅ Guías de montaña certificados UIAGM</li>
-              <li>✅ Permisos y tasas de acceso</li>
-              <li>✅ Comidas durante la expedición</li>
-              <li>✅ Equipo de campamento base</li>
-              <li>✅ Asistencia médica en altura</li>
-            </ul>
-          </div>
+          <div set:html={t('aconcagua.technicaldetails.info2')}></div>
         </div>
       </section>
 
       <!-- Sección de itinerario resumido -->
       <section class="mb-8 sm:mb-12">
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Itinerario Resumido</h3>
-        <div class="border-l-4 border-yellow-500 pl-3 sm:pl-4 space-y-4 sm:space-y-6">
-          <div>
-            <h4 class="font-semibold text-base sm:text-lg">Días 1-3: Aclimatación</h4>
-            <p class="text-sm sm:text-base">Trekking por el Valle de Horcones, visita a Plaza de Mulas (4,370m)</p>
-          </div>
-          <div>
-            <h4 class="font-semibold text-base sm:text-lg">Días 4-10: Ascenso progresivo</h4>
-            <p class="text-sm sm:text-base">Rotación de alturas: Camp Canadá (5,000m), Nido de Cóndores (5,400m)</p>
-          </div>
-          <div>
-            <h4 class="font-semibold text-base sm:text-lg">Día 14-16: Cumbre</h4>
-            <p class="text-sm sm:text-base">Ataque a la cumbre desde Berlín o Colera (ventana meteorológica)</p>
-          </div>
-        </div>
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">{t('aconcagua.itinerary.title')}</h3>
+        <div set:html={t('aconcagua.itinerary.info')}></div>
       </section>
 
       <!-- Sección de razones para elegir la expedición -->
       <section class="bg-gray-50 p-4 sm:p-6 rounded-lg mb-6 sm:mb-8">
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">¿Por qué elegir esta expedición?</h3>
-        <div class="space-y-3 sm:space-y-4 text-sm sm:text-base">
-          <p>El Aconcagua ofrece uno de los <strong>retos más accesibles entre los siete techos continentales</strong>, combinando paisajes andinos espectaculares con la emoción de alcanzar alturas himalayas.</p>
-          <p>Nuestro equipo cuenta con <strong>15 años de experiencia</strong> en la montaña y un <strong>85% de tasa de éxito</strong> en cumbre, gracias a nuestro protocolo de aclimatación progresiva.</p>
-          <p>La ruta normal no requiere técnicas de escalada avanzadas, pero sí <strong>excelente condición física y resistencia</strong>.</p>
-        </div>
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">{t('aconcagua.expedition.title')}</h3>
+        <div set:html={t('aconcagua.expedition.info')}></div>
       </section>
 
       <!-- Sección de galería de imágenes de la ruta -->
       <section>
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Galería de la Ruta</h3>
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">{t('aconcagua.galery.title')}</h3>
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4">
-          <img src="/data/aconcagua-1.webp" alt="Vista del Aconcagua" class="rounded-lg h-32 sm:h-40 object-cover">
-          <img src="/data/campamento-base-aconcagua.webp" alt="Campamento base" class="rounded-lg h-32 sm:h-40 object-cover">
-          <img src="/data/aconcagua-summit.webp" alt="Vista desde la cumbre" class="rounded-lg h-32 sm:h-40 object-cover">
+          <img src="/data/aconcagua-1.webp" alt={t('aconcagua.galery.image1')} class="rounded-lg h-32 sm:h-40 object-cover">
+          <img src="/data/campamento-base-aconcagua.webp" alt={t('aconcagua.galery.image2')} class="rounded-lg h-32 sm:h-40 object-cover">
+          <img src="/data/aconcagua-summit.webp" alt={t('aconcagua.galery.image3')} class="rounded-lg h-32 sm:h-40 object-cover">
         </div>
       </section>
     </main>
