@@ -4,9 +4,16 @@ import NavBar from "../../../components/NavBar.astro";
 import Hero from "../../../components/Hero.astro";
 import Footer from "../../../components/Footer.astro";
 
+import { useTranslations } from "../../../i18n/util";
+import { languageList } from "../../../i18n/ui";
+
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
+
+
 // Título y descripción para SEO y encabezado de la página
-const pageTitle = "Trekking en Montaña | Montañismo Gastón Molina";
-const pageDescription = "Explora nuestras rutas de trekking guiadas, desde caminatas suaves hasta desafiantes ascensos en la montaña. Conoce nuestros itinerarios y recomendaciones para disfrutar al máximo de la naturaleza.";
+const pageTitle = t('trekking.page.title');
+const pageDescription = t('trekking.page.description');
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
@@ -16,8 +23,8 @@ const pageDescription = "Explora nuestras rutas de trekking guiadas, desde camin
     <!-- Sección Hero con imagen de fondo, título y subtítulo -->
     <Hero
       backgroundImage="/data/trekking-hero.webp"
-      title="Trekking en Montaña"
-      subtitle="Conecta con la naturaleza"
+      title={t('trekking.hero.title')}
+      subtitle={t('trekking.hero.subtitle')}
       blurIntensity="md"  
       loading="eager" 
       opacity={20}
@@ -26,92 +33,44 @@ const pageDescription = "Explora nuestras rutas de trekking guiadas, desde camin
     <main class="container mx-auto px-4 sm:px-6 py-6 sm:py-8 max-w-4xl">
       <!-- Sección de presentación de rutas -->
       <section class="mb-8 sm:mb-12">
-        <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">Nuestras Rutas de Trekking</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">{t('trekking.title')}</h2>
         
         <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
           <!-- Columna: Características generales -->
-          <div>
-            <h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Características</h3>
-            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
-              <li>🥾 Dificultad: Desde principiante hasta avanzado</li>
-              <li>⏱️ Duración: 1 día hasta expediciones de 1 semana</li>
-              <li>🌄 Altura máxima: 2,000 a 5,000 msnm según ruta</li>
-              <li>👥 Grupos reducidos: Máximo 8 personas</li>
-              <li>🏕️ Opciones: Con o sin pernocta</li>
-            </ul>
-          </div>
+          <div set:html={t('trekking.caracteristicas')}></div>
           
           <!-- Columna: Qué incluye la experiencia -->
-          <div class="mt-4 md:mt-0">
-            <h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Incluimos</h3>
-            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
-              <li>✅ Guías certificados</li>
-              <li>✅ Seguro de accidentes</li>
-              <li>✅ Almuerzo campestre (en rutas de día completo)</li>
-              <li>✅ Equipo básico de seguridad</li>
-              <li>✅ Transporte desde punto de encuentro</li>
-            </ul>
-          </div>
+          <div set:html={t('trekking.whichincludes')} class="mt-4 md:mt-0"></div> 
         </div>
       </section>
 
       <!-- Sección de próximas salidas -->
       <section class="mb-8 sm:mb-12">
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Próximas Salidas</h3>
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">{t('trekking.nextdepartures')}</h3>
         <div class="space-y-3 sm:space-y-4">
           <!-- Salida 1 -->
-          <div class="border-l-4 border-green-500 pl-3 sm:pl-4 py-1 sm:py-2">
-            <h4 class="font-semibold text-base sm:text-lg">Cerro Champaquí</h4>
-            <p class="text-xs sm:text-sm text-gray-600">📅 15-17 Octubre | 💪 Dificultad media | 🏔️ 2,790 msnm</p>
-          </div>
+          <div set:html={t('trekking.nextdepartures.departure1')}></div>
           <!-- Salida 2 -->
-          <div class="border-l-4 border-blue-500 pl-3 sm:pl-4 py-1 sm:py-2">
-            <h4 class="font-semibold text-base sm:text-lg">Valle de Calamuchita</h4>
-            <p class="text-xs sm:text-sm text-gray-600">📅 5 Noviembre | 💪 Baja dificultad | 🌿 Todo el día</p>
-          </div>
+          <div set:html={t('trekking.nextdepartures.departure2')}></div>
           <!-- Salida 3 -->
-          <div class="border-l-4 border-red-500 pl-3 sm:pl-4 py-1 sm:py-2">
-            <h4 class="font-semibold text-base sm:text-lg">Los Gigantes</h4>
-            <p class="text-xs sm:text-sm text-gray-600">📅 20-22 Noviembre | 💪 Alta dificultad | ⛰️ 2,370 msnm</p>
-          </div>
+          <div set:html={t('trekking.nextdepartures.departure3')}></div>
         </div>
       </section>
 
       <!-- Sección sobre la filosofía de la empresa -->
       <section class="bg-gray-50 p-4 sm:p-6 rounded-lg mb-6 sm:mb-8">
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Nuestra Filosofía</h3>
-        <div class="space-y-3 sm:space-y-4 text-sm sm:text-base">
-          <p>El trekking es <strong>más que caminar</strong> - es una forma de reconectar con la naturaleza, superar límites personales y crear lazos con compañeros de aventura.</p>
-          <p>Nuestros guías son <strong>locales con amplio conocimiento</strong> de las rutas, flora y fauna de cada región.</p>
-          <p>Promovemos el <strong>turismo responsable</strong>, dejando cero huella en los entornos naturales que visitamos.</p>
-        </div>
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">{t('trekking.phylosophy')}</h3>
+        <div set:html={t('trekking.phylosophy.description')}></div>
       </section>
 
       <!-- Sección de recomendaciones para los participantes -->
       <section>
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Recomendaciones</h3>
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">{t('trekking.recomendations')}</h3>
         <div class="grid md:grid-cols-2 gap-4 sm:gap-6">
           <!-- Columna: Equipo básico recomendado -->
-          <div>
-            <h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Equipo Básico</h4>
-            <ul class="list-disc pl-5 space-y-1 text-sm sm:text-base">
-              <li>Zapatillas de trekking o botas</li>
-              <li>Mochila cómoda (20-30L)</li>
-              <li>Protector solar y gorra</li>
-              <li>1 litro de agua mínimo</li>
-              <li>Ropa por capas</li>
-            </ul>
-          </div>
+          <div set:html={t('trekking.recomendations.basicequipment')}></div>
           <!-- Columna: Consejos de preparación física -->
-          <div>
-            <h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Preparación Física</h4>
-            <ul class="list-disc pl-5 space-y-1 text-sm sm:text-base">
-              <li>Caminar regularmente antes de la salida</li>
-              <li>Hidratarse bien desde días previos</li>
-              <li>Comunicar cualquier condición médica</li>
-              <li>Dormir bien la noche anterior</li>
-            </ul>
-          </div>
+          <div set:html={t('trekking.recomendations.physicalpreparation')}></div>
         </div>
       </section>
     </main>

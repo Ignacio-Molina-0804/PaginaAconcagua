@@ -134,7 +134,25 @@ export const labels = {
         'queries.why.subtitle3': 'Detalles sobre próximas expediciones',
         'queries.why.subtitle4': 'Respuestas a todas tus dudas sobre montañismo',
         
+        //Trekking
+        'trekking.page.title': "Trekking en Montaña | Montañismo Gastón Molina",
+        'trekking.page.description': "Explora nuestras rutas de trekking guiadas, desde caminatas suaves hasta desafiantes ascensos en la montaña. Conoce nuestros itinerarios y recomendaciones para disfrutar al máximo de la naturaleza.",
+        'trekking.hero.title': 'Trekking en Montaña',
+        'trekking.hero.subtitle': 'Conecta con la naturaleza',
+        'trekking.title': 'Nuestras Rutas de Trekking',
+        'trekking.caracteristicas': '<div><h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Características</h3><ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700"><li>🥾 Dificultad: Desde principiante hasta avanzado</li><li>⏱️ Duración: 1 día hasta expediciones de 1 semana</li><li>🌄 Altura máxima: 2,000 a 5,000 msnm según ruta</li><li>👥 Grupos reducidos: Máximo 8 personas</li><li>🏕️ Opciones: Con o sin pernocta</li></ul></div>',
+        'trekking.whichincludes':'<div class="mt-4 md:mt-0"><h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Incluimos</h3><ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700"><li>✅ Guías certificados</li><li>✅ Seguro de accidentes</li><li>✅ Almuerzo campestre (en rutas de día completo)</li><li>✅ Equipo básico de seguridad</li><li>✅ Transporte desde punto de encuentro</li></ul></div>',
+        'trekking.nextdepartures': 'Próximas Salidas',
+        'trekking.nextdepartures.departure1': '<div class="border-l-4 border-green-500 pl-3 sm:pl-4 py-1 sm:py-2"><h4 class="font-semibold text-base sm:text-lg">Cerro Champaquí</h4><p class="text-xs sm:text-sm text-gray-600">📅 15-17 Octubre | 💪 Dificultad media | 🏔️ 2,790 msnm</p></div>',
+        'trekking.nextdepartures.departure2': '<div class="border-l-4 border-blue-500 pl-3 sm:pl-4 py-1 sm:py-2"><h4 class="font-semibold text-base sm:text-lg">Valle de Calamuchita</h4><p class="text-xs sm:text-sm text-gray-600">📅 5 Noviembre | 💪 Baja dificultad | 🌿 Todo el día</p></div>',
+        'trekking.nextdepartures.departure3': '<div class="border-l-4 border-red-500 pl-3 sm:pl-4 py-1 sm:py-2"><h4 class="font-semibold text-base sm:text-lg">Los Gigantes</h4><p class="text-xs sm:text-sm text-gray-600">📅 20-22 Noviembre | 💪 Alta dificultad | ⛰️ 2,370 msnm</p></div>',
+        'trekking.phylosophy': 'Nuestra Filosofía',
+        'trekking.phylosophy.description':'<div class="space-y-3 sm:space-y-4 text-sm sm:text-base"><p>El trekking es <strong>más que caminar</strong> - es una forma de reconectar con la naturaleza, superar límites personales y crear lazos con compañeros de aventura.</p><p>Nuestros guías son <strong>locales con amplio conocimiento</strong> de las rutas, flora y fauna de cada región.</p><p>Promovemos el <strong>turismo responsable</strong>, dejando cero huella en los entornos naturales que visitamos.</p></div>',
+        'trekking.recomendations':'Recomendaciones',
+        'trekking.recomendations.basicequipment': '<div><h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Equipo Básico</h4><ul class="list-disc pl-5 space-y-1 text-sm sm:text-base"><li>Zapatillas de trekking o botas</li><li>Mochila cómoda (20-30L)</li><li>Protector solar y gorra</li><li>1 litro de agua mínimo</li><li>Ropa por capas</li></ul></div>',
+        'trekking.recomendations.physicalpreparation':'<div><h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Preparación Física</h4><ul class="list-disc pl-5 space-y-1 text-sm sm:text-base"><li>Caminar regularmente antes de la salida</li><li>Hidratarse bien desde días previos</li><li>Comunicar cualquier condición médica</li><li>Dormir bien la noche anterior</li></ul></div>'
 
+        
 
     },
 
@@ -260,6 +278,24 @@ export const labels = {
         'queries.why.subtitle2': 'Information on necessary equipment',
         'queries.why.subtitle3': 'Details about upcoming expeditions',
         'queries.why.subtitle4': 'Answers to all your climbing questions',
+
+        //Trekking
+        'trekking.page.title': "Mountain Trekking | Climbing Gastón Molina",
+        'trekking.page.description': "Explore our guided trekking routes, from easy walks to challenging mountain ascents. Discover our itineraries and recommendations to make the most of nature.",
+        'trekking.hero.title': 'Mountain Trekking',
+        'trekking.hero.subtitle': 'Connect with nature',
+        'trekking.title': 'Our Trekking Routes',
+        'trekking.caracteristicas': '<div><h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Characteristics</h3><ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700"><li>🥾 Difficulty: From beginner to advanced</li><li>⏱️ Duration: 1 day to 1 week expeditions</li><li>🌄 Maximum height: 2,000 to 5,000 meters above sea level depending on the route</li><li>👥 Small groups: Maximum of 8 people</li><li>🏕️ Options: With or without overnight stay</li></ul></div>',
+        'trekking.whichincludes':'<div class="mt-4 md:mt-0"><h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">We include</h3><ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700"><li>✅ Certified guides</li><li>✅ Accident insurance</li><li>✅ Picnic lunch (on full-day routes)</li><li>✅ Basic safety equipment</li><li>✅ Transportation from meeting point</li></ul></div>',
+        'trekking.nextdepartures': 'Upcoming Departures',
+        'trekking.nextdepartures.departure1': '<div class="border-l-4 border-green-500 pl-3 sm:pl-4 py-1 sm:py-2"><h4 class="font-semibold text-base sm:text-lg">Cerro Champaquí</h4><p class="text-xs sm:text-sm text-gray-600">📅 October 15-17 | 💪 Medium difficulty | 🏔️ 2,790 meters above sea level</p></div>',
+        'trekking.nextdepartures.departure2': '<div class="border-l-4 border-blue-500 pl-3 sm:pl-4 py-1 sm:py-2"><h4 class="font-semibold text-base sm:text-lg">Valle de Calamuchita</h4><p class="text-xs sm:text-sm text-gray-600">📅 November 5 | 💪 Low difficulty | 🌿 All day</p></div>',
+        'trekking.nextdepartures.departure3': '<div class="border-l-4 border-red-500 pl-3 sm:pl-4 py-1 sm:py-2"><h4 class="font-semibold text-base sm:text-lg">Los Gigantes</h4><p class="text-xs sm:text-sm text-gray-600">📅 November 20-22 | 💪 High difficulty | ⛰️ 2,370 meters above sea level</p></div>',
+        'trekking.phylosophy': 'Our Philosophy',
+        'trekking.phylosophy.description':'<div class="space-y-3 sm:space-y-4 text-sm sm:text-base"><p>Trekking is <strong>more than just walking</strong> - it is a way to reconnect with nature, overcome personal limits, and create bonds with fellow adventurers.</p><p>Our guides are <strong>locals with extensive knowledge</strong> of the routes, flora, and fauna of each region.</p><p>We promote <strong>responsible tourism</strong>, leaving zero footprint in the natural environments we visit.</p></div>',
+        'trekking.recomendations':'Recommendations',
+        'trekking.recomendations.basicequipment': '<div><h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Basic Equipment</h4><ul class="list-disc pl-5 space-y-1 text-sm sm:text-base"><li>Trekking shoes or boots</li><li>Comfortable backpack (20-30L)</li><li>Sunblock and hat</li><li>At least 1 liter of water</li><li>Layered clothing</li></ul></div>',
+        'trekking.recomendations.physicalpreparation':`<div><h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Physical Preparation</h4><ul class="list-disc pl-5 space-y-1 text-sm sm:text-base"><li>Walk regularly before the outing</li><li>Stay well hydrated in the days leading up</li><li>Communicate any medical conditions</li><li>Get a good night's sleep before the outing</li></ul></div>`
 
     },
 
@@ -391,6 +427,28 @@ export const labels = {
         'queries.type.query4': 'Equipamentos',
         'queries.type.query5': 'Grupos privados',
         'queries.type.query6': 'Outros',
+
+        //Trekking
+        'trekking.page.title': "Trekking na Montanha | Escalada Gastón Molina",
+        'trekking.page.description': "Explore nossas rotas de trekking guiadas, desde caminhadas suaves até desafiadoras ascensões na montanha. Conheça nossos itinerários e recomendações para aproveitar ao máximo a natureza.",
+        'trekking.hero.title': 'Trekking na Montanha',
+        'trekking.hero.subtitle': 'Conecte-se com a natureza',
+        'trekking.title': 'Nossas Rotas de Trekking',
+        'trekking.caracteristicas': '<div><h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Características</h3><ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700"><li>🥾 Dificuldade: Desde iniciante até avançado</li><li>⏱️ Duração: 1 dia até expedições de 1 semana</li><li>🌄 Altura máxima: 2.000 a 5.000 metros acima do nível do mar, dependendo da rota</li><li>👥 Grupos pequenos: Máximo de 8 pessoas</li><li>🏕️ Opções: Com ou sem pernoite</li></ul></div>',
+        'trekking.whichincludes':'<div class="mt-4 md:mt-0"><h3 class="text-lg sm:text-xl font-semibold text-yellow-600 mb-2 sm:mb-3">Incluímos</h3><ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700"><li>✅ Guias certificados</li><li>✅ Seguro de acidentes</li><li>✅ Almoço campestre (em rotas de dia completo)</li><li>✅ Equipamento básico de segurança</li><li>✅ Transporte do ponto de encontro</li></ul></div>',
+        'trekking.nextdepartures': 'Próximas Partidas',
+        'trekking.nextdepartures.departure1': '<div class="border-l-4 border-green-500 pl-3 sm:pl-4 py-1 sm:py-2"><h4 class="font-semibold text-base sm:text-lg">Cerro Champaquí</h4><p class="text-xs sm:text-sm text-gray-600">📅 15-17 Outubro | 💪 Dificuldade média | 🏔️ 2.790 metros acima do nível do mar</p></div>',
+        'trekking.nextdepartures.departure2': '<div class="border-l-4 border-blue-500 pl-3 sm:pl-4 py-1 sm:py-2"><h4 class="font-semibold text-base sm:text-lg">Vale de Calamuchita</h4><p class="text-xs sm:text-sm text-gray-600">📅 5 Novembro | 💪 Dificuldade baixa | 🌿 Dia inteiro</p></div>',
+        'trekking.nextdepartures.departure3': '<div class="border-l-4 border-red-500 pl-3 sm:pl-4 py-1 sm:py-2"><h4 class="font-semibold text-base sm:text-lg">Los Gigantes</h4><p class="text-xs sm:text-sm text-gray-600">📅 20-22 Novembro | 💪 Dificuldade alta | ⛰️ 2.370 metros acima do nível do mar</p></div>',
+        'trekking.phylosophy': 'Nossa Filosofia',
+        'trekking.phylosophy.description':'<div class="space-y-3 sm:space-y-4 text-sm sm:text-base"><p>O trekking é <strong>mais do que caminhar</strong> - é uma forma de reconectar com a natureza, superar limites pessoais e criar laços com companheiros de aventura.</p><p>Nossos guias são <strong>locais com amplo conhecimento</strong> das rotas, flora e fauna de cada região.</p><p>Promovemos o <strong>turismo responsável</strong>, deixando zero pegada nos ambientes naturais que visitamos.</p></div>',
+        'trekking.recomendations':'Recomendações',
+        'trekking.recomendations.basicequipment': '<div><h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Equipamento Básico</h4><ul class="list-disc pl-5 space-y-1 text-sm sm:text-base"><li>Calçados de trekking ou botas</li><li>Mochila confortável (20-30L)</li><li>Protetor solar e chapéu</li><li>Pelo menos 1 litro de água</li><li>Roupas em camadas</li></ul></div>',
+        'trekking.recomendations.physicalpreparation':`<div><h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Preparação Física</h4><ul class="list-disc pl-5 space-y-1 text-sm sm:text-base"><li>Caminhar regularmente antes da saída</li><li>Hidratar-se bem nos dias anteriores</li><li>Comunicar qualquer condição médica</li><li>Dormir bem na noite anterior</li></ul></div>`
+
+        
+
+
 
     }
 }
