@@ -1,11 +1,11 @@
 ---
-import BaseLayout from "../../../layouts/BaseLayout.astro";
-import NavBar from "../../../components/NavBar.astro";
-import Hero from "../../../components/Hero.astro";
-import Footer from "../../../components/Footer.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NavBar from "../../components/NavBar.astro";
+import Hero from "../../components/Hero.astro";
+import Footer from "../../components/Footer.astro";
 
-import { useTranslations } from "../../../i18n/util";
-import { languageList } from "../../../i18n/ui";
+import { useTranslations } from "../../i18n/util";
+import { languageList } from "../../i18n/ui";
 
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
