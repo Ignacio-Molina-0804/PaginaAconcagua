@@ -9,24 +9,31 @@ import { languageList } from "../i18n/ui";
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
 
-// Obtener la ruta actual sin el prefijo de idioma
-const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\//, '/');
-const cleanPath = currentPath === `/${currentLang}` ? '/' : currentPath;
+// Obtener la ruta actual
+const currentPath = Astro.url.pathname;
+const isDefaultLocale = currentLang === "es"; // 'es' es tu locale por defecto
 
-// Función para generar URL de idioma manteniendo la ruta actual
+// Función para generar URL de idioma
 const getLanguageUrl = (lang: string) => {
-  // Si ya estamos en el home, simplemente cambiamos el idioma
-  if (cleanPath === '/') return `/${lang}`;
-  
-  // Para otras rutas, mantenemos la estructura /idioma/ruta-actual
-  return `/${lang}${cleanPath}`;
+  // Si estamos en el locale por defecto (es) y vamos a otro idioma
+  if (isDefaultLocale && lang !== "es") {
+    return currentPath === "/" ? `/${lang}` : `/${lang}${currentPath}`;
+  }
+  // Si estamos en un idioma no por defecto y vamos al por defecto (es)
+  else if (!isDefaultLocale && lang === "es") {
+    const pathWithoutLang = currentPath.replace(/^\/[a-z]{2}/, '');
+    return pathWithoutLang || "/";
+  }
+  // Cambio entre idiomas no por defecto (ej: en -> pt)
+  else if (!isDefaultLocale && lang !== "es") {
+    return currentPath.replace(/^\/[a-z]{2}/, `/${lang}`);
+  }
+  // Mismo idioma
+  return currentPath;
 };
 ---
 
-<!-- 
-  Barra de navegación principal del sitio.
-  Incluye logo, selector de idioma, menú de navegación (desktop y móvil) y menús desplegables.
--->
+<!-- Barra de navegación principal -->
 <nav class="fixed top-0 left-0 w-full z-50 bg-gray-900 text-white shadow-md">
   <div class="container mx-auto px-6 py-4">
     <div class="flex items-center justify-between">

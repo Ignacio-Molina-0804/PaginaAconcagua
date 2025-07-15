@@ -17,11 +17,11 @@ export default defineConfig({
     routing: {
       // PrefixDefaultLocale: true = siempre muestra el idioma en la URL
       // Ej: /es/inicio en lugar de /inicio para el idioma default
-      prefixDefaultLocale: true,
+      // prefixDefaultLocale: true,
 
       // RedirectToDefaultLocale (comentado)
       // Si true, redirige / → /es cuando el default es 'es'
-      // redirectToDefaultLocale: false
+      redirectToDefaultLocale: true,
     },
   },
 });
