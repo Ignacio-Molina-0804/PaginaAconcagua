@@ -7,6 +7,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const dropdownMenu = document.getElementById('dropdown-menu');
   const dropdownArrow = document.getElementById('dropdown-arrow');
 
+  // Selector de idioma custom
+  const langToggle = document.getElementById('lang-toggle');
+  const langDropdown = document.getElementById('lang-dropdown');
+  const langArrow = document.getElementById('lang-arrow');
+
+  if (langToggle && langDropdown) {
+    langToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = !langDropdown.classList.contains('hidden');
+      langDropdown.classList.toggle('hidden');
+      langArrow.classList.toggle('rotate-180', !isOpen);
+
+      // 👇 agregamos o quitamos la clase amarilla
+      if (isOpen) {
+        langToggle.classList.remove('text-yellow-400');
+      } else {
+        langToggle.classList.add('text-yellow-400');
+      }
+    });
+
+    // cerrar al tocar fuera
+    document.addEventListener('click', (e) => {
+      if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+        langDropdown.classList.add('hidden');
+        langArrow.classList.remove('rotate-180');
+      }
+    });
+  }
+
   if (!menuBtn || !mobileMenu || !dropdownBtn || !dropdownMenu || !dropdownArrow) return;
 
   const openMenu = () => {

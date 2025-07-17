@@ -43,20 +43,20 @@ const getLanguageUrl = (lang: string) => {
         <span class="font-bold text-lg">{t('nav.title')}</span>
         
         <!-- Selector de Idioma (desktop) -->
-        <div class="relative group">
-          <button class="flex items-center space-x-1 hover:text-yellow-400 transition-colors py-1 px-2 rounded border border-gray-600">
+        <!-- Selector custom (para móvil y desktop) -->
+        <div class="relative">
+          <button id="lang-toggle" class="flex items-center space-x-1 border border-gray-600 py-1 px-2 rounded transition-colors">
             <span>{currentLang.toUpperCase()}</span>
-            <!-- Flecha para desplegar idiomas -->
-            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+            <svg id="lang-arrow" class="w-4 h-4 transition-transform" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
             </svg>
           </button>
-          <!-- Opciones de idioma -->
-          <div class="absolute left-0 mt-2 w-20 bg-gray-800 rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-1 group-hover:translate-y-0">
-            <a href={getLanguageUrl('es')} class="block w-full text-left px-3 py-1 hover:bg-gray-700 hover:text-yellow-400">ES</a>
-            <a href={getLanguageUrl('en')} class="block w-full text-left px-3 py-1 hover:bg-gray-700 hover:text-yellow-400">EN</a>
-            <a href={getLanguageUrl('pt')} class="block w-full text-left px-3 py-1 hover:bg-gray-700 hover:text-yellow-400">PT</a>
-          </div>
+
+          <ul id="lang-dropdown" class="absolute left-0 mt-2 w-20 bg-gray-800 rounded-md shadow-lg py-1 z-50 hidden transition-all duration-200 origin-top">
+            <li><a href={getLanguageUrl('es')} class="block px-3 py-1 hover:bg-gray-700 hover:text-yellow-400">ES</a></li>
+            <li><a href={getLanguageUrl('en')} class="block px-3 py-1 hover:bg-gray-700 hover:text-yellow-400">EN</a></li>
+            <li><a href={getLanguageUrl('pt')} class="block px-3 py-1 hover:bg-gray-700 hover:text-yellow-400">PT</a></li>
+          </ul>
         </div>
       </div>
 
