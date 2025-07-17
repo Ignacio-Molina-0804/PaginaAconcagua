@@ -14,10 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (langToggle && langDropdown) {
     langToggle.addEventListener('click', (e) => {
-      e.stopPropagation();           // no cierres si clickeás dentro
+      e.stopPropagation();
       const isOpen = !langDropdown.classList.contains('hidden');
       langDropdown.classList.toggle('hidden');
       langArrow.classList.toggle('rotate-180', !isOpen);
+
+      // 👇 agregamos o quitamos la clase amarilla
+      if (isOpen) {
+        langToggle.classList.remove('text-yellow-400');
+      } else {
+        langToggle.classList.add('text-yellow-400');
+      }
     });
 
     // cerrar al tocar fuera
