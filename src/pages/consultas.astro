@@ -17,138 +17,194 @@ const tiposConsulta = [
   "Cursos de montañismo",
   "Equipamiento",
   "Grupos privados",
-  "Otros"
+  "Otros",
 ];
 
 // Título y descripción para SEO y encabezado de la página
-const pageTitle = t('queries.page.title');
-const pageDescription = t('queries.page.description');
+const pageTitle = t("queries.page.title");
+const pageDescription = t("queries.page.description");
 ---
+
 <BaseLayout title={pageTitle} description={pageDescription}>
   <!-- Barra de navegación superior -->
   <slot name="header"><Navbar /></slot>
 
   <!-- Sección Hero con imagen de fondo, título y subtítulo -->
-  <Hero 
+  <Hero
     backgroundImage="/data/consultas-fondo.webp"
-    title={t('queries.hero.title')}
-    subtitle={t('queries.hero.subtitle')}
+    title={t("queries.hero.title")}
+    subtitle={t("queries.hero.subtitle")}
     blurIntensity="md"
-    loading="eager" 
+    loading="eager"
     opacity={20}
   />
 
   <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-12 lg:py-16">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
       <!-- Formulario de contacto -->
-      <div class="bg-white rounded-xl md:rounded-2xl shadow-lg md:shadow-2xl p-5 sm:p-6 md:p-8 relative overflow-hidden">
+      <div
+        class="bg-white rounded-xl md:rounded-2xl shadow-lg md:shadow-2xl p-5 sm:p-6 md:p-8 relative overflow-hidden"
+      >
         <!-- Elementos decorativos de fondo -->
-        <div class="absolute -top-10 -right-10 w-32 h-32 bg-yellow-500 rounded-full opacity-10"></div>
-        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-500 rounded-full opacity-10"></div>
-        
-        <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2 relative z-10">{t('queries.form.title')}</h2>
-        <p class="text-gray-600 mb-6 relative z-10">{t('queries.form.subtitle')}</p>
-        
-        <form 
+        <div
+          class="absolute -top-10 -right-10 w-32 h-32 bg-yellow-500 rounded-full opacity-10"
+        >
+        </div>
+        <div
+          class="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-500 rounded-full opacity-10"
+        >
+        </div>
+
+        <h2
+          class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2 relative z-10"
+        >
+          {t("queries.form.title")}
+        </h2>
+        <p class="text-gray-600 mb-6 relative z-10">
+          {t("queries.form.subtitle")}
+        </p>
+
+        <form
           id="contactForm"
           class="space-y-4 sm:space-y-5 relative z-10"
-          action="https://formsubmit.co/tufiesta@gmail.com" 
           method="POST"
         >
           <!-- Campos ocultos para configuración de FormSubmit -->
-          <input type="hidden" name="_captcha" value="true">
-          <input type="hidden" name="_next" value="https://gastonmolinaguide.netlify.app/gracias">
-          
+          <input type="hidden" name="_captcha" value="true" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://gastonmolinaguide.netlify.app/gracias"
+          />
+
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
             <!-- Campo: Nombre -->
             <div>
-              <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">{t('queries.form.name')}</label>
-              <input 
-                type="text" 
-                id="nombre" 
-                name="nombre" 
+              <label
+                for="nombre"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >{t("queries.form.name")}</label
+              >
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
                 required
                 class="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
-                placeholder={t('queries.form.name.placeholder')}
-              >
+                placeholder={t("queries.form.name.placeholder")}
+              />
             </div>
             <!-- Campo: Apellido -->
             <div>
-              <label for="apellido" class="block text-sm font-medium text-gray-700 mb-1">{t('queries.form.subname')}</label>
-              <input 
-                type="text" 
-                id="apellido" 
-                name="apellido" 
-                class="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
-                placeholder={t('queries.form.subname.placeholder')}
+              <label
+                for="apellido"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >{t("queries.form.subname")}</label
               >
+              <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                class="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
+                placeholder={t("queries.form.subname.placeholder")}
+              />
             </div>
           </div>
 
           <!-- Campo: Email -->
           <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">{t('queries.form.email')}</label>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
+            <label
+              for="email"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >{t("queries.form.email")}</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
               required
               class="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
-              placeholder={t('queries.form.email.placeholder')}
-            >
+              placeholder={t("queries.form.email.placeholder")}
+            />
           </div>
 
           <!-- Campo: Tipo de consulta (select) -->
           <div>
-            <label for="consulta" class="block text-sm font-medium text-gray-700 mb-1">{t('queries.form.type')}</label>
-            <select 
-              id="consulta" 
-              name="tipo_consulta" 
+            <label
+              for="consulta"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >{t("queries.form.type")}</label
+            >
+            <select
+              id="consulta"
+              name="tipo_consulta"
               required
               class="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all appearance-none bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNoZXZyb24tZG93biI+PHBhdGggZD0ibTYgOSA2IDYgNi02Ii8+PC9zdmc+')] bg-no-repeat bg-[center_right_0.75rem] sm:bg-[center_right_1rem]"
             >
-              <option value="" disabled selected>{t('queries.form.type.placeholder')}</option>
-              {tiposConsulta.map((tipo) => (
-                <option value={tipo}>{tipo}</option>
-              ))}
+              <option value="" disabled selected
+                >{t("queries.form.type.placeholder")}</option
+              >
+              {
+                tiposConsulta.map((tipo) => (
+                  <option value={tipo}>{tipo}</option>
+                ))
+              }
             </select>
           </div>
 
           <!-- Campo: Mensaje -->
           <div>
-            <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">{t('queries.form.mensage')}</label>
-            <textarea 
-              id="mensaje" 
-              name="mensaje" 
+            <label
+              for="mensaje"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >{t("queries.form.mensage")}</label
+            >
+            <textarea
+              id="mensaje"
+              name="mensaje"
               rows="4"
               required
               class="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
-              placeholder={t('queries.form.mensage.placeholder')}
-            ></textarea>
+              placeholder={t("queries.form.mensage.placeholder")}></textarea>
           </div>
 
           <!-- Checkbox para suscribirse a novedades -->
           <div class="flex items-center">
-            <input 
-              type="checkbox" 
-              id="newsletter" 
-              name="newsletter" 
+            <input
+              type="checkbox"
+              id="newsletter"
+              name="newsletter"
               class="w-4 h-4 text-yellow-600 rounded focus:ring-yellow-500"
+            />
+            <label for="newsletter" class="ml-2 text-sm text-gray-700"
+              >{t("queries.form.newsletter")}</label
             >
-            <label for="newsletter" class="ml-2 text-sm text-gray-700">{t('queries.form.newsletter')}</label>
           </div>
 
           <!-- Botón de envío del formulario -->
-          <button 
+          <button
             type="submit"
             class="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center"
           >
             <!-- Ícono de sobre -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="mr-2"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              ></path>
               <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
-            {t('queries.form.button')}
+            {t("queries.form.button")}
           </button>
         </form>
       </div>
@@ -156,87 +212,253 @@ const pageDescription = t('queries.page.description');
       <!-- Columna: Información de contacto y motivos para consultar -->
       <div class="space-y-6 sm:space-y-8">
         <!-- Otras formas de contacto -->
-        <div class="bg-gray-50 rounded-xl md:rounded-2xl p-5 sm:p-6 md:p-8 border border-gray-200">
-          <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">{t('queries.info.title')}</h3>
-          
+        <div
+          class="bg-gray-50 rounded-xl md:rounded-2xl p-5 sm:p-6 md:p-8 border border-gray-200"
+        >
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">
+            {t("queries.info.title")}
+          </h3>
+
           <div class="space-y-4 sm:space-y-5">
             <!-- Teléfono -->
             <div class="flex items-start">
               <div class="bg-yellow-100 p-2 sm:p-3 rounded-full mr-3 sm:mr-4">
                 <!-- Ícono de teléfono -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" sm:w-6 sm:h-6 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-600">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  sm:w-6
+                  sm:h-6
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-yellow-600"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
                 </svg>
               </div>
               <div>
-                <h4 class="font-semibold text-gray-800">{t('queries.info.phone')}</h4>
-                <p class="text-gray-600">+54 9 11 1234-5678</p>
-                <p class="text-xs sm:text-sm text-gray-500 mt-1">{t('queries.info.phone.description')}</p>
+                <h4 class="font-semibold text-gray-800">
+                  {t("queries.info.phone")}
+                </h4>
+                <p class="text-gray-600">+54 9 261-693-3585</p>
+                <p class="text-xs sm:text-sm text-gray-500 mt-1">
+                  {t("queries.info.phone.description")}
+                </p>
               </div>
             </div>
-            
+
             <!-- Email -->
             <div class="flex items-start">
               <div class="bg-blue-100 p-2 sm:p-3 rounded-full mr-3 sm:mr-4">
                 <!-- Ícono de email -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" sm:w-6 sm:h-6 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  sm:w-6
+                  sm:h-6
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-blue-600"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
                   <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
               </div>
               <div>
-                <h4 class="font-semibold text-gray-800">{t('queries.info.email')}</h4>
-                <p class="text-gray-600">info@montañismo.com</p>
-                <p class="text-xs sm:text-sm text-gray-500 mt-1">{t('queries.info.email.description')}</p>
+                <h4 class="font-semibold text-gray-800">
+                  {t("queries.info.email")}
+                </h4>
+                <p class="text-gray-600">gmolinamountainguide@gmail.com</p>
+                <p class="text-xs sm:text-sm text-gray-500 mt-1">
+                  {t("queries.info.email.description")}
+                </p>
               </div>
             </div>
-            
+
             <!-- Oficina -->
             <div class="flex items-start">
               <div class="bg-green-100 p-2 sm:p-3 rounded-full mr-3 sm:mr-4">
                 <!-- Ícono de ubicación/oficina -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" sm:w-6 sm:h-6 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  sm:w-6
+                  sm:h-6
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-green-600"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
               </div>
               <div>
-                <h4 class="font-semibold text-gray-800">{t('queries.info.ofice')}</h4>
-                <p class="text-gray-600">Av. Montaña 1234, Mendoza</p>
-                <p class="text-xs sm:text-sm text-gray-500 mt-1">{t('queries.info.ofice.description')}</p>
+                <h4 class="font-semibold text-gray-800">
+                  {t("queries.info.ofice")}
+                </h4>
+                <p class="text-gray-600">
+                  Altos de la Crucecita J14, Las Compuertas, Lujan de Cuyo,
+                  Mendoza
+                </p>
+                <p class="text-xs sm:text-sm text-gray-500 mt-1">
+                  {t("queries.info.ofice.description")}
+                </p>
+              </div>
+            </div>
+
+            <!-- Instagram -->
+            <div class="flex items-start">
+              <div class="bg-pink-100 p-2 sm:p-3 rounded-full mr-3 sm:mr-4">
+                <!-- Ícono de Instagram -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-pink-600 w-5 h-5 sm:w-6 sm:h-6"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-800">
+                  {t("queries.info.instagram")}
+                </h4>
+                <a
+                  href="https://www.instagram.com/gastonmolinamguide/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-600 hover:text-pink-600 transition-colors"
+                  >@gastonmolinamguide</a
+                >
+                <p class="text-xs sm:text-sm text-gray-500 mt-1">
+                  {t("queries.info.instagram.description")}
+                </p>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Motivos para contactarnos -->
-        <div class="bg-gray-900 rounded-xl md:rounded-2xl p-5 sm:p-6 md:p-8 text-white">
-          <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">{t('queries.why.title')}</h3>
+        <div
+          class="bg-gray-900 rounded-xl md:rounded-2xl p-5 sm:p-6 md:p-8 text-white"
+        >
+          <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
+            {t("queries.why.title")}
+          </h3>
           <ul class="space-y-2 sm:space-y-3">
             <li class="flex items-start">
               <!-- Ícono de check -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" sm:w-5 sm:h-5 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-400 mr-2 mt-0.5 flex-shrink-0">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                sm:w-5
+                sm:h-5
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+              >
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
-              <span class="text-sm sm:text-base">{t('queries.why.subtitle1')}</span>
+              <span class="text-sm sm:text-base"
+                >{t("queries.why.subtitle1")}</span
+              >
             </li>
             <li class="flex items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" sm:w-5 sm:h-5 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-400 mr-2 mt-0.5 flex-shrink-0">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                sm:w-5
+                sm:h-5
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+              >
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
-              <span class="text-sm sm:text-base">{t('queries.why.subtitle2')}</span>
+              <span class="text-sm sm:text-base"
+                >{t("queries.why.subtitle2")}</span
+              >
             </li>
             <li class="flex items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" sm:w-5 sm:h-5 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-400 mr-2 mt-0.5 flex-shrink-0">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                sm:w-5
+                sm:h-5
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+              >
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
-              <span class="text-sm sm:text-base">{t('queries.why.subtitle3')}</span>
+              <span class="text-sm sm:text-base"
+                >{t("queries.why.subtitle3")}</span
+              >
             </li>
             <li class="flex items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" sm:w-5 sm:h-5 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-400 mr-2 mt-0.5 flex-shrink-0">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                sm:w-5
+                sm:h-5
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+              >
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
-              <span class="text-sm sm:text-base">{t('queries.why.subtitle4')}</span>
+              <span class="text-sm sm:text-base"
+                >{t("queries.why.subtitle4")}</span
+              >
             </li>
           </ul>
         </div>
@@ -251,5 +473,4 @@ const pageDescription = t('queries.page.description');
   <script>
     import "/src/scripts/consultas-form.js";
   </script>
-
 </BaseLayout>
