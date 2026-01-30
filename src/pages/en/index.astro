@@ -27,7 +27,11 @@ const pageDescription = t('home.page.description');
 
   <!-- Sección principal destacada con imagen de fondo, título y subtítulo -->
   <Hero
-    backgroundImage="/data/aconcagua_ejemplo.webp"
+    backgroundImage={[
+      "/data/imagenes/imagen-inicio-1.jpg",
+      "/data/imagenes/imagen-inicio-2.jpg",
+      "/data/imagenes/imagen-inicio-3.jpg",
+    ]}
     title={t("home.hero.title")}
     subtitle={t("home.hero.subtitle")}
     blurIntensity="md"
