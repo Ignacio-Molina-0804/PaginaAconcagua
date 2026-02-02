@@ -11,8 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
       Quando não está na montanha, trabalha como alpinista vertical, socorrista em alta altitude e meteorologista.<br><br>
       A gestão da segurança em ambientes naturais é a principal motivação por trás de seu trabalho como profissional de montanha.`,
       img: "/data/imagenes/imagenes-guias/gastonMolinaFoto.png",
-      instagram: "https://instagram.com/gastonmontana",
-      facebook: "https://facebook.com/gastonmontana"
+      instagram: "https://instagram.com/gastonmolinamguide",
     },
     {
       nombre: "Lucía Fernández",
@@ -22,15 +21,25 @@ document.addEventListener('DOMContentLoaded', () => {
       A Patagônia é seu segundo lar; quando não está guiando nos Andes Centrais e no Aconcágua, está guiando na Patagônia e em Ushuaia.<br><br>
       Ela fala espanhol e inglês e está aprendendo a língua de sinais.`,
       img: "/data/imagenes/imagenes-guias/florenciaTorreFoto.jpeg",
-      instagram: "https://instagram.com/luciaandina",
-      facebook: "https://facebook.com/luciaandina"
+      instagram: "https://instagram.com/flor_en_andes",
     },
     {
-      nombre: "Martín Pérez",
-      descripcion: `Instrutor de escalada e resgate em montanha. Mais de 10 anos treinando novos montanhistas. <br><br> Sempre atento aos detalhes e à segurança de todos. <br><br> <em class="italic text-gray-600">"A melhor paisagem é aquela que compartilhamos com os outros."</em>`,
+      nombre: "José Purto",
+      descripcion: `José Purto é um guia de montanha chileno especializado em Andes Centrais e em montanhas de grande altitude. <br><br>
+      Começou a trabalhar como guia aos 17 anos e atualmente possui a certificação AAGM/UIMLA, WFR vigente e mais de 15 ascensiones ao Cerro Aconcagua, além de numerosas expedições em outras montanhas da região. <br><br>
+      É também um habilidoso esquiador, com experiência em esqui de vulcões do sul do Chile. <br><br>
+      Idiomas: espanhol, inglês e português.`,
       img: "/data/imagenes/imagenes-guias/josePurtoFoto.jpg",
-      instagram: "https://instagram.com/martinescalador",
-      facebook: "https://facebook.com/martinescalador"
+      instagram: "https://instagram.com/josepurto",
+    },
+    {
+      nombre: "Javier Vega",
+      descripcion: `Javier Vega é guia de montanha profissional desde 2012 e possui uma trajetória de sucesso de 20 temporadas consecutivas no Aconcágua, desempenhando diversas funções e contribuindo com sua expertise em cada expedição. Seu profundo conhecimento do Aconcágua e sua paixão pelas montanhas o tornam uma figura de referência para aqueles que buscam uma experiência autêntica e segura no pico mais alto das Américas. <br><br>
+
+      Além de seu trabalho no Aconcágua, Javier lidera expedições guiadas no Cordón del Plata Vallecitos, uma das áreas de montanhismo mais emblemáticas de Mendoza. Seu entusiasmo por escalada e esqui complementa seu perfil, permitindo-lhe transmitir a cada participante o espírito de aventura e crescimento pessoal que caracteriza a Aconcagua Experiences. <br><br>
+
+      O compromisso de Javier com a segurança, o treinamento contínuo e a excelência no atendimento garantem que cada expedição seja uma experiência inesquecível, onde a paixão pelas montanhas e o profissionalismo se unem para oferecer aventuras únicas nos Andes.`,
+      img: "/data/imagenes/imagenes-guias/javierVegaFoto.jpeg"
     }
   ];
 

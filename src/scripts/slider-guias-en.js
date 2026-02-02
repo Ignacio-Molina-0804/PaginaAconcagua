@@ -1,6 +1,6 @@
 // slider-guias.js
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   const guias = [
     {
       nombre: "Gastón Molina",
@@ -11,8 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
       When he is off the mountain, he works as a vertical worker, high-altitude rescuer, and snow and weather forecaster. <br><br>
       Safety management in natural environments is the main driving force behind his work as a mountain professional.`,
       img: "/data/imagenes/imagenes-guias/gastonMolinaFoto.png",
-      instagram: "https://instagram.com/gastonmontana",
-      facebook: "https://facebook.com/gastonmontana"
+      instagram: "https://instagram.com/gastonmolinamguide",
     },
     {
       nombre: "Florencia Torres",
@@ -22,37 +21,58 @@ document.addEventListener('DOMContentLoaded', () => {
       Patagonia is her second home; when she's not guiding in the Central Andes and on Aconcagua, she's guiding in Patagonia and Ushuaia.<br><br>
       She speaks Spanish and English and is currently learning sign language.`,
       img: "/data/imagenes/imagenes-guias/florenciaTorreFoto.jpeg",
-      instagram: "https://instagram.com/luciaandina",
-      facebook: "https://facebook.com/luciaandina"
+      instagram: "https://instagram.com/flor_en_andes",
     },
     {
       nombre: "José Purto",
-      descripcion: `Climbing and mountain rescue instructor. Over 10 years training new mountaineers. <br><br> Always attentive to detail and everyone's safety. <br><br> <em class="italic text-gray-600">"The best landscape is the one we share with others."</em>`,
+      descripcion: `José Purto is a Chilean mountain guide specializing in the Central Andes and high-altitude mountains. <br><br>
+      He began working as a guide at age 17 and currently holds AAGM/UIMLA certification, a valid WFR, and has over 15 ascents of Aconcagua, in addition to numerous expeditions on other mountains in the region. <br><br>
+      He is also a skilled skier, with experience skiing down volcanoes in southern Chile. <br><br>
+      Languages: Spanish, English, and Portuguese.`,
       img: "/data/imagenes/imagenes-guias/josePurtoFoto.jpg",
-      instagram: "https://instagram.com/martinescalador",
-      facebook: "https://facebook.com/martinescalador"
-    }
+      instagram: "https://instagram.com/josepurto",
+    },
+    {
+      nombre: "Javier Vega",
+      descripcion: `Javier Vega is a professional mountain guide since 2012 and has a distinguished career of 20 consecutive seasons on Aconcagua, performing different roles and contributing his experience in each expedition. His deep knowledge of Aconcagua and his passion for mountaineering make him a reference for those who seek to live an authentic and safe experience at the highest peak in America. <br><br>  
+
+      In addition to his work on Aconcagua, Javier leads guided tours in the Cordón del Plata Vallecitos, one of the most emblematic areas for mountaineering in Mendoza. His enthusiasm for climbing and skiing complement his profile, allowing him to transmit to each participant the spirit of adventure and achievement that characterizes Aconcagua Experiences. <br><br>
+
+      Javier's commitment to safety, continuous training, and excellence in service ensures that every expedition is an unforgettable experience, where passion for mountaineering and professionalism come together to offer unique adventures in the Andes.`,
+      img: "/data/imagenes/imagenes-guias/javierVegaFoto.jpeg",
+    },
   ];
 
   // Precargar imágenes
   function precargarImagenes() {
-    guias.forEach(guia => {
+    guias.forEach((guia) => {
       const img = new Image();
       img.src = guia.img;
     });
   }
 
-  const guiaContainer = document.querySelector('.guia-container');
-  const prevButton = document.getElementById('prev-guia');
-  const nextButton = document.getElementById('next-guia');
-  const nombreEl = document.getElementById('guia-nombre');
-  const descEl = document.getElementById('guia-descripcion');
-  const imgEl = document.getElementById('guia-img');
-  const redesEl = document.getElementById('redes-guia');
-  const imgLoading = document.getElementById('img-loading');
+  const guiaContainer = document.querySelector(".guia-container");
+  const prevButton = document.getElementById("prev-guia");
+  const nextButton = document.getElementById("next-guia");
+  const nombreEl = document.getElementById("guia-nombre");
+  const descEl = document.getElementById("guia-descripcion");
+  const imgEl = document.getElementById("guia-img");
+  const redesEl = document.getElementById("redes-guia");
+  const imgLoading = document.getElementById("img-loading");
 
-  if (!guiaContainer || !prevButton || !nextButton || !nombreEl || !descEl || !imgEl || !redesEl || !imgLoading) {
-    console.error('No se encontraron todos los elementos necesarios para el slider');
+  if (
+    !guiaContainer ||
+    !prevButton ||
+    !nextButton ||
+    !nombreEl ||
+    !descEl ||
+    !imgEl ||
+    !redesEl ||
+    !imgLoading
+  ) {
+    console.error(
+      "No se encontraron todos los elementos necesarios para el slider",
+    );
     return;
   }
 
@@ -60,14 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function mostrarGuia(idx) {
     const guia = guias[idx];
-    
-    imgLoading.style.display = 'flex';
+
+    imgLoading.style.display = "flex";
     imgEl.style.opacity = 0;
-    
+
     nombreEl.textContent = guia.nombre;
     descEl.innerHTML = guia.descripcion;
-    
-    let redesHTML = '';
+
+    let redesHTML = "";
     if (guia.instagram) {
       redesHTML += `
         <a href="${guia.instagram}" target="_blank" rel="noopener noreferrer" 
@@ -76,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <img src="/data/insta-logo.webp" alt="Instagram" class="w-5 h-5 group-hover:invert" loading="lazy">
            </div>
            <span class="text-gray-700 group-hover:text-pink-600 transition-colors">
-              @${guia.instagram.split('/').pop()}
+              @${guia.instagram.split("/").pop()}
            </span>
         </a>`;
     }
@@ -89,20 +109,20 @@ document.addEventListener('DOMContentLoaded', () => {
               <img src="/data/facebook-logo.webp" alt="Facebook" class="w-5 h-5 group-hover:invert" loading="lazy">
            </div>
            <span class="text-gray-700 group-hover:text-blue-600 transition-colors">
-              ${guia.nombre.split(' ')[0]}
+              ${guia.nombre.split(" ")[0]}
            </span>
         </a>`;
     }
 
     redesEl.innerHTML = redesHTML
       ? `<div class="mt-4 flex items-center">${redesHTML}</div>`
-      : '';
+      : "";
 
     const imgCache = new Image();
-    imgCache.onload = function() {
+    imgCache.onload = function () {
       imgEl.src = guia.img;
-      imgEl.onload = function() {
-        imgLoading.style.display = 'none';
+      imgEl.onload = function () {
+        imgLoading.style.display = "none";
         imgEl.style.opacity = 1;
       };
     };
@@ -112,11 +132,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function mostrarGuiaAnimado(idx) {
-    guiaContainer.classList.add('opacity-0');
-    
+    guiaContainer.classList.add("opacity-0");
+
     setTimeout(() => {
       mostrarGuia(idx);
-      guiaContainer.classList.remove('opacity-0');
+      guiaContainer.classList.remove("opacity-0");
     }, 300);
   }
 
@@ -125,24 +145,24 @@ document.addEventListener('DOMContentLoaded', () => {
     nextButton.disabled = guiaActual === guias.length - 1;
   }
 
-  prevButton.addEventListener('click', () => {
+  prevButton.addEventListener("click", () => {
     if (guiaActual > 0) {
       guiaActual--;
       mostrarGuiaAnimado(guiaActual);
     }
   });
 
-  nextButton.addEventListener('click', () => {
+  nextButton.addEventListener("click", () => {
     if (guiaActual < guias.length - 1) {
       guiaActual++;
       mostrarGuiaAnimado(guiaActual);
     }
   });
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft' && !prevButton.disabled) {
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft" && !prevButton.disabled) {
       prevButton.click();
-    } else if (e.key === 'ArrowRight' && !nextButton.disabled) {
+    } else if (e.key === "ArrowRight" && !nextButton.disabled) {
       nextButton.click();
     }
   });
