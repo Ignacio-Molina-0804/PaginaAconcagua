@@ -11,8 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
       Cuando esta fuera de la montaña se desempeña como trabajador vertical, rescatista de altura y pronosticador nivometeorologo.<br><br>
       La gestión de SEGURIDAD en ambientes naturales es el principal motor que lo lleva a desempeñarse como un profesional de la Montaña.`,
       img: "/data/imagenes/imagenes-guias/gastonMolinaFoto.png",
-      instagram: "https://instagram.com/gastonmontana",
-      facebook: "https://facebook.com/gastonmontana"
+      instagram: "https://instagram.com/gastonmolinamguide"
     },
     {
       nombre: "Florencia Torres",
@@ -22,15 +21,25 @@ document.addEventListener('DOMContentLoaded', () => {
       La Patagonia es su segundo hogar; cuando no guía en los Andes Centrales y el Aconcagua, guía en la Patagonia y Ushuaia.<br><br>
       Habla español e inglés y actualmente está aprendiendo lengua de señas.`,
       img: "/data/imagenes/imagenes-guias/florenciaTorreFoto.jpeg",
-      instagram: "https://instagram.com/florenciatorres",
-      facebook: "https://facebook.com/florenciatorres"
+      instagram: "https://instagram.com/flor_en_andes"
     },
     {
       nombre: "José Purto",
-      descripcion: `Guía de montaña certificado con más de 12 años de experiencia liderando expediciones en los Andes y otras cordilleras de América del Sur. <br><br>Apasionado por la naturaleza, la seguridad y la formación de nuevos aventureros. <br><br> <em class="italic text-gray-600">"Cada passeio é uma oportunidade para aprender, aproveitar e compartilhar o amor pelas montanhas."</em>`,
+      descripcion: `José Purto es un guía de montaña chileno especializado en los Andes Centrales y en montañas de gran altitud. <br><br>
+      Comenzó a trabajar como guía a los 17 años y actualmente cuenta con la certificación AAGM/UIMLA, WFR vigente y más de 15 ascensiones al Cerro Aconcagua, además de numerosas expediciones en otras montañas de la región. <br><br>
+      Es también un hábil esquiador, con experiencia en esquí de volcanes del sur de Chile. <br><br>
+      Idiomas: español, inglés y portugués.`,
       img: "/data/imagenes/imagenes-guias/josePurtoFoto.jpg",
-      instagram: "https://instagram.com/martinescalador",
-      facebook: "https://facebook.com/martinescalador"
+      instagram: "https://instagram.com/josepurto"
+    },
+    {
+      nombre: "Javier Vega",
+      descripcion: `Javier Vega es guía profesional de montaña desde 2012 y cuenta con una destacada trayectoria de 20 temporadas consecutivas en el Cerro Aconcagua, desempeñando diferentes roles y aportando su experiencia en cada expedición. Su profundo conocimiento del Aconcagua y su pasión por la montaña lo convierten en un referente para quienes buscan vivir una experiencia auténtica y segura en la cumbre más alta de América. <br><br>  
+
+      Además de su labor en el Aconcagua, Javier lidera guiadas en el Cordón del Plata Vallecitos, una de las zonas más emblemáticas para el montañismo en Mendoza. Su entusiasmo por la escalada y el esquí complementa su perfil, permitiéndole transmitir a cada participante el espíritu de aventura y superación que caracteriza a Aconcagua Experiences. <br><br>
+
+      El compromiso de Javier con la seguridad, la formación continua y la excelencia en el servicio garantiza que cada expedición sea una experiencia inolvidable, donde la pasión por la montaña y el profesionalismo se unen para ofrecer aventuras únicas en los Andes.`,
+      img: "/data/imagenes/imagenes-guias/javierVegaFoto.jpeg"
     }
   ];
 
