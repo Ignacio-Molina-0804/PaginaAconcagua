@@ -4,22 +4,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const guias = [
     {
       nombre: "Gastón Molina",
-      descripcion: `Guia de montanha certificado com mais de 12 anos de experiência liderando expedições nos Andes e outras cadeias de montanhas da América do Sul. <br><br>Apaixonado por natureza, segurança e treinamento de novos aventureiros. <br><br> <em class="italic text-gray-600">"Cada passeio é uma oportunidade para aprender, aproveitar e compartilhar o amor pelas montanhas."</em>`,
-      img: "/data/guia-principal.webp",
+      descripcion: `Gaston Molina é um guia de montanha profissional, certificado pela Escola Provincial de Guias de Alta Montanha e Trekking da Província de Mendoza. <br><br>
+      Ele trabalha no Monte Aconcágua desde os 20 anos de idade. Já liderou mais de 40 expedições, alcançando o cume do pico mais alto das Américas pelo menos 27 vezes.<br><br>
+      Seus 19 anos de experiência garantem uma aventura segura e bem-sucedida em todas as suas fases.<br><br>
+      Gaston é um escalador apaixonado por rocha e gelo, tendo escalado na Patagônia, Bolívia, Chile e Peru. <br><br>
+      Quando não está na montanha, trabalha como alpinista vertical, socorrista em alta altitude e meteorologista.<br><br>
+      A gestão da segurança em ambientes naturais é a principal motivação por trás de seu trabalho como profissional de montanha.`,
+      img: "/data/imagenes/imagenes-guias/gastonMolinaFoto.png",
       instagram: "https://instagram.com/gastonmontana",
       facebook: "https://facebook.com/gastonmontana"
     },
     {
       nombre: "Lucía Fernández",
-      descripcion:`Especialista em logística de trekking e expedições. Ele liderou grupos na Patagônia, Cuyo e no norte da Argentina. <br><br> Sua energia e dedicação tornam cada aventura segura e divertida. <br><br> <em class="italic text-gray-600">"As montanhas nos ensinam humildade e trabalho em equipe."</em>`,
-      img: "/data/guia-lucia.webp",
+      descripcion:`Florencia Torres, nascida em Mendoza, é uma Guia de Montanha Profissional certificada pela Associação Argentina de Guias. <br><br>
+      Desde jovem, desenvolveu uma paixão pelas montanhas que a levou aos picos mais altos dos Andes. Começou a trabalhar no Aconcágua em 2010, primeiro como carregadora e depois como Guia de Montanha Profissional.<br><br>
+      Sua força e onde se sente mais confortável é em grandes altitudes. Ela escalou extensivamente nos Andes, no norte do Chile e na Argentina.<br><br>
+      A Patagônia é seu segundo lar; quando não está guiando nos Andes Centrais e no Aconcágua, está guiando na Patagônia e em Ushuaia.<br><br>
+      Ela fala espanhol e inglês e está aprendendo a língua de sinais.`,
+      img: "/data/imagenes/imagenes-guias/florenciaTorreFoto.jpeg",
       instagram: "https://instagram.com/luciaandina",
       facebook: "https://facebook.com/luciaandina"
     },
     {
       nombre: "Martín Pérez",
       descripcion: `Instrutor de escalada e resgate em montanha. Mais de 10 anos treinando novos montanhistas. <br><br> Sempre atento aos detalhes e à segurança de todos. <br><br> <em class="italic text-gray-600">"A melhor paisagem é aquela que compartilhamos com os outros."</em>`,
-      img: "/data/guia-martin.webp",
+      img: "/data/imagenes/imagenes-guias/josePurtoFoto.jpg",
       instagram: "https://instagram.com/martinescalador",
       facebook: "https://facebook.com/martinescalador"
     }

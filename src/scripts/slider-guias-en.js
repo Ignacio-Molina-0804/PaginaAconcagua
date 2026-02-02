@@ -4,22 +4,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const guias = [
     {
       nombre: "Gastón Molina",
-      descripcion: `Certified mountain guide with over 12 years of experience leading expeditions in the Andes and other South American mountain ranges. <br><br>Passionate about nature, safety, and training new adventurers. <br><br> <em class="italic text-gray-600">"Every outing is an opportunity to learn, enjoy, and share the love of the mountains."</em>`,
-      img: "/data/guia-principal.webp",
+      descripcion: `Gaston Molina is a professional mountain guide, certified by the Provincial School of High Mountain and Trekking Guides of Mendoza Province. <br><br>
+      He has been working on Mount Aconcagua since he was 20 years old. He has led more than 40 expeditions, reaching the summit of the highest peak in the Americas at least 27 times. <br><br>
+      19 years of experience ensure a safe and successful adventure in all its phases. <br><br>
+      Gaston is a passionate rock and ice climber, having climbed in Patagonia, Bolivia, Chile, and Peru. <br><br>
+      When he is off the mountain, he works as a vertical worker, high-altitude rescuer, and snow and weather forecaster. <br><br>
+      Safety management in natural environments is the main driving force behind his work as a mountain professional.`,
+      img: "/data/imagenes/imagenes-guias/gastonMolinaFoto.png",
       instagram: "https://instagram.com/gastonmontana",
       facebook: "https://facebook.com/gastonmontana"
     },
     {
-      nombre: "Lucía Fernández",
-      descripcion: `Trekking and expedition logistics specialist. He has led groups in Patagonia, Cuyo, and northern Argentina. <br><br> His energy and dedication make every adventure safe and fun. <br><br> <em class="italic text-gray-600">"The mountains teach us humility and teamwork."</em>`,
-      img: "/data/guia-lucia.webp",
+      nombre: "Florencia Torres",
+      descripcion: `Florencia Torres, born in Mendoza, is a Professional Mountain Guide certified by the Argentine Association of Guides. <br><br>
+      From a young age, she developed a passion for the mountains that led her to the highest peaks of the Andes. She began working on Aconcagua in 2010, first as a porter and then as a Professional Mountain Guide.<br><br>
+      Her strength and where she feels most comfortable is at high altitude. She has climbed extensively in the Andes, northern Chile, and Argentina.<br><br>
+      Patagonia is her second home; when she's not guiding in the Central Andes and on Aconcagua, she's guiding in Patagonia and Ushuaia.<br><br>
+      She speaks Spanish and English and is currently learning sign language.`,
+      img: "/data/imagenes/imagenes-guias/florenciaTorreFoto.jpeg",
       instagram: "https://instagram.com/luciaandina",
       facebook: "https://facebook.com/luciaandina"
     },
     {
-      nombre: "Martín Pérez",
+      nombre: "José Purto",
       descripcion: `Climbing and mountain rescue instructor. Over 10 years training new mountaineers. <br><br> Always attentive to detail and everyone's safety. <br><br> <em class="italic text-gray-600">"The best landscape is the one we share with others."</em>`,
-      img: "/data/guia-martin.webp",
+      img: "/data/imagenes/imagenes-guias/josePurtoFoto.jpg",
       instagram: "https://instagram.com/martinescalador",
       facebook: "https://facebook.com/martinescalador"
     }
