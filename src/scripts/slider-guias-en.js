@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       Gaston is a passionate rock and ice climber, having climbed in Patagonia, Bolivia, Chile, and Peru. <br><br>
       When he is off the mountain, he works as a vertical worker, high-altitude rescuer, and snow and weather forecaster. <br><br>
       Safety management in natural environments is the main driving force behind his work as a mountain professional.`,
-      img: "/data/imagenes/imagenes-guias/gastonMolinaFoto.png",
+      img: "/data/imagenes/imagenes-guias/gastonMolinaFoto.webp",
       instagram: "https://instagram.com/gastonmolinamguide",
     },
     {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       Her strength and where she feels most comfortable is at high altitude. She has climbed extensively in the Andes, northern Chile, and Argentina.<br><br>
       Patagonia is her second home; when she's not guiding in the Central Andes and on Aconcagua, she's guiding in Patagonia and Ushuaia.<br><br>
       She speaks Spanish and English and is currently learning sign language.`,
-      img: "/data/imagenes/imagenes-guias/florenciaTorreFoto.jpeg",
+      img: "/data/imagenes/imagenes-guias/florenciaTorreFoto.webp",
       instagram: "https://instagram.com/flor_en_andes",
     },
     {
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       He began working as a guide at age 17 and currently holds AAGM/UIMLA certification, a valid WFR, and has over 15 ascents of Aconcagua, in addition to numerous expeditions on other mountains in the region. <br><br>
       He is also a skilled skier, with experience skiing down volcanoes in southern Chile. <br><br>
       Languages: Spanish, English, and Portuguese.`,
-      img: "/data/imagenes/imagenes-guias/josePurtoFoto.jpg",
+      img: "/data/imagenes/imagenes-guias/josePurtoFoto.webp",
       instagram: "https://instagram.com/josepurto",
     },
     {
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       In addition to his work on Aconcagua, Javier leads guided tours in the Cordón del Plata Vallecitos, one of the most emblematic areas for mountaineering in Mendoza. His enthusiasm for climbing and skiing complement his profile, allowing him to transmit to each participant the spirit of adventure and achievement that characterizes Aconcagua Experiences. <br><br>
 
       Javier's commitment to safety, continuous training, and excellence in service ensures that every expedition is an unforgettable experience, where passion for mountaineering and professionalism come together to offer unique adventures in the Andes.`,
-      img: "/data/imagenes/imagenes-guias/javierVegaFoto.jpeg",
+      img: "/data/imagenes/imagenes-guias/javierVegaFoto.webp",
     },
   ];
 

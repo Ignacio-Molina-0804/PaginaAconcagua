@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       Gaston é um escalador apaixonado por rocha e gelo, tendo escalado na Patagônia, Bolívia, Chile e Peru. <br><br>
       Quando não está na montanha, trabalha como alpinista vertical, socorrista em alta altitude e meteorologista.<br><br>
       A gestão da segurança em ambientes naturais é a principal motivação por trás de seu trabalho como profissional de montanha.`,
-      img: "/data/imagenes/imagenes-guias/gastonMolinaFoto.png",
+      img: "/data/imagenes/imagenes-guias/gastonMolinaFoto.webp",
       instagram: "https://instagram.com/gastonmolinamguide",
     },
     {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       Sua força e onde se sente mais confortável é em grandes altitudes. Ela escalou extensivamente nos Andes, no norte do Chile e na Argentina.<br><br>
       A Patagônia é seu segundo lar; quando não está guiando nos Andes Centrais e no Aconcágua, está guiando na Patagônia e em Ushuaia.<br><br>
       Ela fala espanhol e inglês e está aprendendo a língua de sinais.`,
-      img: "/data/imagenes/imagenes-guias/florenciaTorreFoto.jpeg",
+      img: "/data/imagenes/imagenes-guias/florenciaTorreFoto.webp",
       instagram: "https://instagram.com/flor_en_andes",
     },
     {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       Começou a trabalhar como guia aos 17 anos e atualmente possui a certificação AAGM/UIMLA, WFR vigente e mais de 15 ascensiones ao Cerro Aconcagua, além de numerosas expedições em outras montanhas da região. <br><br>
       É também um habilidoso esquiador, com experiência em esqui de vulcões do sul do Chile. <br><br>
       Idiomas: espanhol, inglês e português.`,
-      img: "/data/imagenes/imagenes-guias/josePurtoFoto.jpg",
+      img: "/data/imagenes/imagenes-guias/josePurtoFoto.webp",
       instagram: "https://instagram.com/josepurto",
     },
     {
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       Além de seu trabalho no Aconcágua, Javier lidera expedições guiadas no Cordón del Plata Vallecitos, uma das áreas de montanhismo mais emblemáticas de Mendoza. Seu entusiasmo por escalada e esqui complementa seu perfil, permitindo-lhe transmitir a cada participante o espírito de aventura e crescimento pessoal que caracteriza a Aconcagua Experiences. <br><br>
 
       O compromisso de Javier com a segurança, o treinamento contínuo e a excelência no atendimento garantem que cada expedição seja uma experiência inesquecível, onde a paixão pelas montanhas e o profissionalismo se unem para oferecer aventuras únicas nos Andes.`,
-      img: "/data/imagenes/imagenes-guias/javierVegaFoto.jpeg"
+      img: "/data/imagenes/imagenes-guias/javierVegaFoto.webp"
     }
   ];
 
