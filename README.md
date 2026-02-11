@@ -1,107 +1,101 @@
-# Proyecto de Página Web para Empresa de Montañismo
+# 🏔️ Gastón Molina - Guía de Montaña
 
-Este repositorio contiene el desarrollo de una página web moderna, adaptable y profesional para una empresa dedicada al montañismo, excursiones y actividades de aventura. El sitio está pensado para mostrar servicios, próximas salidas, galería de imágenes y un canal de contacto para consultas de potenciales clientes.
+Este repositorio contiene el código fuente del sitio web oficial de **Gastón Molina**, guía profesional de montaña especializado en expediciones al Aconcagua y trekking en los Andes.
 
-Puedes ver una previsualización online en:  
-👉 **[https://gastonmolinaguide.netlify.app](https://gastonmolinaguide.netlify.app)**
+El sitio ha sido desarrollado con tecnologías modernas para garantizar un alto rendimiento, accesibilidad y una experiencia de usuario fluida.
 
----
-
-## 🚀 Stack Moderno: Astro + Tailwind CSS
-
-El proyecto fue migrado y optimizado utilizando [Astro](https://astro.build/) como framework principal y [Tailwind CSS](https://tailwindcss.com/) para los estilos.  
-Esto permite un desarrollo ágil, componentes reutilizables, excelente rendimiento y un diseño adaptable a cualquier dispositivo.
-
-**Ventajas de la migración:**
-- Componentización: NavBar, Footer, Hero y otros elementos reutilizables en todas las páginas.
-- Mejor organización: Separación clara entre componentes, layouts, páginas y scripts.
-- Optimización automática: Mejor rendimiento y carga de recursos.
-- Escalabilidad: Fácil de mantener y ampliar.
-- Estilos modernos: Tailwind CSS permite un diseño rápido, consistente y responsive.
+👉 **Previsualización online:** [https://gmmountainguide.com](https://gmmountainguide.com)
 
 ---
 
-## 🌟 Características principales
+## 🚀 Tecnologías Principales
 
-- **Diseño responsive:** Visualización óptima en computadoras, tablets y móviles.
-- **Navegación y footer fijos:** Menú y pie de página comunes en todas las páginas.
-- **Hero dinámico:** Imagen de fondo, mensaje de bienvenida y llamada a la acción en cada sección.
-- **Bloques informativos:** Secciones sobre la empresa, valores, servicios y próximos eventos.
-- **Secciones independientes:** Cada apartado principal tiene su propio archivo en `/src/pages`.
-- **Slider de guías:** En "Quiénes somos" se puede navegar entre los guías con animación y flechas.
-- **Animaciones al hacer scroll:** Las secciones aparecen animadas al desplazarse.
-- **Galería de imágenes:** Página dedicada para mostrar fotos de expediciones y actividades.
-- **Fácil personalización:** Textos, imágenes y secciones adaptables a las necesidades de la empresa.
-- **Optimización para SEO y rendimiento:** Astro genera HTML estático rápido y accesible.
+El proyecto utiliza un stack moderno optimizado para velocidad y SEO:
+
+-   **[Astro](https://astro.build/):** Framework web para sitios orientados a contenido, optimizado para velocidad.
+-   **[Tailwind CSS](https://tailwindcss.com/):** Framework de utilidades para un diseño rápido y responsivo.
+-   **TypeScript:** Para un código más robusto y seguro.
+-   **i18n (Internacionalización):** Soporte nativo para múltiples idiomas (Español, Inglés, Portugués).
 
 ---
 
-## 📁 Estructura del proyecto
+## 🌟 Características
 
-```
-astro-project/
-│
-├── public/
-│   └── data/               # Imágenes y recursos estáticos
-│
+### 🌍 Multi-idioma
+El sitio está completamente traducido a tres idiomas, con detección y enrutamiento automático:
+-   🇦🇷 **Español** (default)
+-   🇺🇸 **Inglés** (`/en`)
+-   🇧🇷 **Portugués** (`/pt`)
+
+### 📱 Diseño Responsivo
+Interfaz adaptada a cualquier dispositivo: móviles, tablets y escritorio. Incluye un menú de navegación optimizado y un footer consistente.
+
+### 🖼️ Galería Multimedia
+Sección dedicada para mostrar imágenes de expediciones anteriores, optimizadas para carga rápida.
+
+### 📍 Páginas Específicas
+-   **Inicio:** Presentación y servicios destacados.
+-   **Quiénes Somos:** Información sobre el equipo y los guías.
+-   **Salidas:** Detalle de expediciones (Aconcagua, Trekking).
+-   **Consultas:** Formulario de contacto integrado.
+
+### ⚡ Rendimiento y SEO
+-   Generación de sitio estático (SSG) para tiempos de carga mínimos.
+-   Optimización de imágenes.
+-   Buenas prácticas de SEO implementadas.
+
+---
+
+## 📁 Estructura del Proyecto
+
+```bash
+/
+├── public/             # Archivos estáticos (imágenes, iconos)
 ├── src/
-│   ├── components/         # Componentes Astro reutilizables (NavBar, Footer, Hero)
-│   ├── layouts/            # Layout base para las páginas
-│   ├── pages/              # Páginas principales (index, quienes-somos, salidas, galeria, consultas)
-│   ├── scripts/            # JavaScript para animaciones y slider de guías
-│
-├── package.json            # Dependencias y scripts
-├── astro.config.mjs        # Configuración de Astro y Tailwind CSS
-├── tailwind.config.mjs     # Configuración de Tailwind CSS
-└── tsconfig.json           # Configuración de TypeScript
+│   ├── components/     # Componentes reutilizables (NavBar, Footer, Hero...)
+│   ├── data/           # Datos estáticos (provincias, textos)
+│   ├── i18n/           # Configuración y traducciones (ui.ts, utils.ts)
+│   ├── layouts/        # Plantillas base de página
+│   ├── pages/          # Rutas del sitio
+│   │   ├── en/         # Versión en Inglés
+│   │   ├── pt/         # Versión en Portugués
+│   │   └── ...         # Versión en Español (raíz)
+│   └── scripts/        # Lógica del lado del cliente (menús, sliders)
+└── astro.config.mjs    # Configuración de Astro
 ```
 
 ---
 
-## ⚙️ ¿Cómo funciona el proyecto?
+## 🛠️ Instalación y Ejecución
 
-- **Astro** gestiona la estructura, el ruteo y la generación de las páginas.
-- **Tailwind CSS** se utiliza para todos los estilos, permitiendo un diseño responsivo y moderno sin escribir CSS tradicional.
-- **Componentes Astro** como NavBar, Footer y Hero se reutilizan en todas las páginas para mantener coherencia visual.
-- **JavaScript** en `/src/scripts/` agrega interactividad, como animaciones al hacer scroll y el slider de guías.
-- **Imágenes** y recursos estáticos se encuentran en `/public/data/`.
+Para correr el proyecto localmente:
 
----
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone <url-del-repositorio>
+    cd PaginaAconcagua
+    ```
 
-## 🛠️ Tecnologías utilizadas
+2.  **Instalar dependencias:**
+    ```bash
+    npm install
+    ```
 
-- **Astro** para la estructura y generación del sitio.
-- **Tailwind CSS** para los estilos y diseño visual.
-- **HTML5** y **Astro Components** para la estructura de las páginas.
-- **JavaScript** para funcionalidades interactivas (animaciones y slider de guías).
+3.  **Iniciar servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+    El sitio estará disponible en `http://localhost:4321`.
 
----
-
-## 🚀 Personalización y desarrollo
-
-El proyecto está pensado para ser fácilmente modificado y ampliado. Puedes cambiar textos, imágenes, colores y secciones según las necesidades de la empresa.  
-La estructura modular permite agregar nuevas páginas o funcionalidades sin complicaciones.
-
----
-
-## ▶️ Cómo ejecutar el proyecto
-
-1. Instala las dependencias:
-
-   ```bash
-   npm install
-   ```
-
-2. Ejecuta el servidor de desarrollo:
-
-   ```bash
-   npm run dev
-   ```
-
-3. Abre tu navegador en `http://localhost:4321` para ver el sitio.
+4.  **Construir para producción:**
+    ```bash
+    npm run build
+    ```
+    Esto generará los archivos estáticos en la carpeta `dist/`.
 
 ---
 
 ## 📬 Contacto
 
-Para dudas, mejoras o personalización, podés abrir un issue o contactarte con el desarrollador.
+Si tienes alguna duda sobre el código o el proyecto, no dudes en contactar.
+
