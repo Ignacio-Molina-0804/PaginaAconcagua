@@ -12,28 +12,120 @@ const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
 
 // Título y descripción para SEO y encabezado de la página
-const pageTitle = t('galery.page.title');
-const pageDescription = t('galery.page.description');
+const pageTitle = t("galery.page.title");
+const pageDescription = t("galery.page.description");
 
 // Array de imágenes para la galería, cada una con su ruta, descripción y fecha
-const galleryImages = [
-  { id: 1, src: "/data/imagenes/imagenes-galeria/galeria1.webp", alt: t('galery.image1'), date: "2023-11-15" },
-  { id: 2, src: "/data/imagenes/imagenes-galeria/galeria2.webp", alt: t('galery.image2'), date: "2023-09-22" },
-  { id: 3, src: "/data/imagenes/imagenes-galeria/galeria3.webp", alt: t('galery.image3'), date: "2023-10-05" },
-  { id: 4, src: "/data/imagenes/imagenes-galeria/galeria4.webp", alt: t('galery.image4'), date: "2023-08-17" },
-  { id: 5, src: "/data/imagenes/imagenes-galeria/galeria5.webp", alt: t('galery.image5'), date: "2023-07-30" },
-  { id: 6, src: "/data/imagenes/imagenes-galeria/galeria6.webp", alt: t('galery.image6'), date: "2023-06-12" },
-  { id: 7, src: "/data/imagenes/imagenes-galeria/galeria7.webp", alt: t('galery.image7'), date: "2023-05-18" },
-  { id: 8, src: "/data/imagenes/imagenes-galeria/galeria8.webp", alt: t('galery.image8'), date: "2023-04-22" },
-  { id: 9, src: "/data/imagenes/imagenes-galeria/galeria9.webp", alt: t('galery.image9'), date: "2023-03-15" },
-  { id: 10, src: "/data/imagenes/imagenes-galeria/galeria10.webp", alt: t('galery.image10'), date: "2023-02-08" },
-  { id: 11, src: "/data/imagenes/imagenes-galeria/galeria11.webp", alt: t('galery.image11'), date: "2023-01-20" },
-  { id: 12, src: "/data/imagenes/imagenes-galeria/galeria12.webp", alt: t('galery.image12'), date: "2022-12-05" },
-  { id: 13, src: "/data/imagenes/imagenes-galeria/galeria13.webp", alt: t('galery.image12'), date: "2022-12-05" },
-  { id: 14, src: "/data/imagenes/imagenes-galeria/galeria14.webp", alt: t('galery.image12'), date: "2022-12-05" },
-  { id: 15, src: "/data/imagenes/imagenes-galeria/galeria15.webp", alt: t('galery.image12'), date: "2022-12-05" },
-  { id: 16, src: "/data/imagenes/imagenes-galeria/galeria16.webp", alt: t('galery.image12'), date: "2022-12-05" },
-  { id: 17, src: "/data/imagenes/imagenes-galeria/galeria17.webp", alt: t('galery.image12'), date: "2022-12-05" }
+interface GalleryImage {
+  id: number;
+  src: string;
+  alt: string;
+  date?: string;
+}
+
+const galleryImages: GalleryImage[] = [
+  {
+    id: 1,
+    src: "/data/imagenes/imagenes-galeria/galeria1.webp",
+    alt: t("galery.image1"),
+    date: "2023-11-15",
+  },
+  {
+    id: 2,
+    src: "/data/imagenes/imagenes-galeria/galeria2.webp",
+    alt: t("galery.image2"),
+    date: "2023-09-22",
+  },
+  {
+    id: 3,
+    src: "/data/imagenes/imagenes-galeria/galeria3.webp",
+    alt: t("galery.image3"),
+    date: "2023-10-05",
+  },
+  {
+    id: 4,
+    src: "/data/imagenes/imagenes-galeria/galeria4.webp",
+    alt: t("galery.image4"),
+    date: "2023-08-17",
+  },
+  {
+    id: 5,
+    src: "/data/imagenes/imagenes-galeria/galeria5.webp",
+    alt: t("galery.image5"),
+    date: "2023-07-30",
+  },
+  {
+    id: 6,
+    src: "/data/imagenes/imagenes-galeria/galeria6.webp",
+    alt: t("galery.image6"),
+    date: "2023-06-12",
+  },
+  {
+    id: 7,
+    src: "/data/imagenes/imagenes-galeria/galeria7.webp",
+    alt: t("galery.image7"),
+    date: "2023-05-18",
+  },
+  {
+    id: 8,
+    src: "/data/imagenes/imagenes-galeria/galeria8.webp",
+    alt: t("galery.image8"),
+    date: "2023-04-22",
+  },
+  {
+    id: 9,
+    src: "/data/imagenes/imagenes-galeria/galeria9.webp",
+    alt: t("galery.image9"),
+    date: "2023-03-15",
+  },
+  {
+    id: 10,
+    src: "/data/imagenes/imagenes-galeria/galeria10.webp",
+    alt: t("galery.image10"),
+    date: "2023-02-08",
+  },
+  {
+    id: 11,
+    src: "/data/imagenes/imagenes-galeria/galeria11.webp",
+    alt: t("galery.image11"),
+    date: "2023-01-20",
+  },
+  {
+    id: 12,
+    src: "/data/imagenes/imagenes-galeria/galeria12.webp",
+    alt: t("galery.image12"),
+    date: "2022-12-05",
+  },
+  {
+    id: 13,
+    src: "/data/imagenes/imagenes-galeria/galeria13.webp",
+    alt: t("galery.image12"),
+    date: "2022-12-05",
+  },
+  {
+    id: 14,
+    src: "/data/imagenes/imagenes-galeria/galeria14.webp",
+    alt: t("galery.image12"),
+    date: "2022-12-05",
+  },
+  {
+    id: 15,
+    src: "/data/imagenes/imagenes-galeria/galeria15.webp",
+    alt: t("galery.image12"),
+    date: "2022-12-05",
+  },
+  {
+    id: 16,
+    src: "/data/imagenes/imagenes-galeria/galeria16.webp",
+    alt: t("galery.image12"),
+    date: "2022-12-05",
+  },
+  {
+    id: 17,
+    src: "/data/imagenes/imagenes-galeria/galeria17.webp",
+    alt: t("galery.image12"),
+    date: "2022-12-05",
+  },
 ];
 ---
 
@@ -42,71 +134,86 @@ const galleryImages = [
   <slot name="header"><Navbar /></slot>
 
   <!-- Sección Hero con imagen de fondo y título -->
-  <Hero 
+  <Hero
     backgroundImage="/data/imagenes/imagenes-galeria/fondoGaleria.webp"
-    title={t('galery.hero.title')}
-    subtitle={t('galery.hero.subtitle')}
+    title={t("galery.hero.title")}
+    subtitle={t("galery.hero.subtitle")}
     blurIntensity="md"
-    loading="eager" 
+    loading="eager"
     opacity={20}
   />
 
   <main class="container mx-auto px-4 py-12">
-
     <!-- Título principal de la galería -->
     <div class="text-center mb-16 animate-fade-in">
       <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-        <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-amber-800">
-          {t('galery.title')}
+        <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-amber-800"
+        >
+          {t("galery.title")}
         </span>
       </h2>
-      <div class="w-24 h-1.5 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto rounded-full"></div>
+      <div
+        class="w-24 h-1.5 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto rounded-full"
+      >
+      </div>
     </div>
 
     <!-- Galería de imágenes en formato grid -->
-    <div 
+    <div
       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
       style="--stagger-delay: 100ms"
     >
-      {galleryImages.map((image, index) => (
-        <div 
-          class="relative group overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
-          style={`animation-delay: ${index * 0.1}s`}
-        >
-          {/* Imagen de la galería */}
-          <img 
-            src={image.src} 
-            alt={image.alt}
-            class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
-            loading="lazy"
-            decoding="async"
-          />
-          {/* Overlay con información al pasar el mouse */}
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-              <span class="inline-block px-3 py-1 bg-amber-600 text-white text-xs font-semibold rounded-full mb-2">
-                {/* Fecha de la foto, formateada */}
-                {new Date(image.date).toLocaleDateString('es-ES', { month: 'short', day: 'numeric' })}
-              </span>
-              <p class="text-white font-bold text-lg">{image.alt}</p>
+      {
+        galleryImages.map((image, index) => (
+          <div
+            class="relative group overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+            style={`animation-delay: ${index * 0.1}s`}
+          >
+            {/* Imagen de la galería */}
+            <img
+              src={image.src}
+              alt={image.alt}
+              class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+              decoding="async"
+            />
+            {/* Overlay con información al pasar el mouse */}
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                {image.date && (
+                  <span class="inline-block px-3 py-1 bg-amber-600 text-white text-xs font-semibold rounded-full mb-2">
+                    {/* Fecha de la foto, formateada */}
+                    {new Date(image.date!).toLocaleDateString("pt-BR", {
+                      month: "short",
+                      day: "numeric",
+                    })}
+                  </span>
+                )}
+                <p class="text-white font-bold text-lg">{image.alt}</p>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
 
     <!-- Sección de texto motivacional y llamado a la acción -->
-    <div class="max-w-3xl mx-auto text-center px-4 pt-10 border-t border-gray-100 animate-fade-in">
-      <h3 class="text-2xl font-bold text-gray-800 mb-6">{t('galery.memories.title')}</h3>
+    <div
+      class="max-w-3xl mx-auto text-center px-4 pt-10 border-t border-gray-100 animate-fade-in"
+    >
+      <h3 class="text-2xl font-bold text-gray-800 mb-6">
+        {t("galery.memories.title")}
+      </h3>
       <p class="text-gray-600 text-lg leading-relaxed">
-        {t('galery.memories.subtitle')}
+        {t("galery.memories.subtitle")}
       </p>
       <!-- Botón para ir a la página de consultas -->
-      <a 
-        href={getRelativeLocaleUrl(currentLang, "/consultas")} 
+      <a
+        href={getRelativeLocaleUrl(currentLang, "/consultas")}
         class="mt-8 inline-block px-8 py-3 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-full transition-colors duration-300"
       >
-        {t('galery.memories.button')}
+        {t("galery.memories.button")}
       </a>
     </div>
   </main>
@@ -117,8 +224,14 @@ const galleryImages = [
   <!-- Animaciones CSS para la galería -->
   <style>
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     .animate-fade-in {
       animation: fadeIn 0.6s ease-out forwards;
