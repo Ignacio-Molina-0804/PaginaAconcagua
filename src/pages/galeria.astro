@@ -175,8 +175,11 @@ const galleryImages: GalleryImage[] = [
               src={image.src}
               alt={image.alt}
               class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
-              loading="lazy"
+              loading="eager"
+              fetchpriority={index < 6 ? "high" : "auto"}
               decoding="async"
+              oncontextmenu="return false"
+              draggable="false"
             />
             {/* Overlay con información al pasar el mouse */}
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
