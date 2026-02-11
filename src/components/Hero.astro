@@ -10,6 +10,7 @@ export interface Props {
   opacity?: number;                  // Opacidad del fondo (0-100)
   placeholderColor?: string;         // Color de fondo mientras carga la imagen
   loading?: 'eager' | 'lazy';        // Estrategia de carga de la imagen
+  objectPosition?: string;           // Posición del objeto (ej: 'object-center', 'object-top')
 }
 
 // Desestructuración de props con valores por defecto
@@ -20,7 +21,8 @@ const {
   blurIntensity = 'sm', 
   opacity = 40,
   placeholderColor = 'rgb(23 23 23)',
-  loading = 'lazy'
+  loading = 'lazy',
+  objectPosition = 'object-center'
 } = Astro.props;
 
 // Convertir backgroundImage a array siempre para facilitar el manejo
@@ -59,7 +61,7 @@ if (loading === 'eager') {
         src={img}
         alt=""
         aria-hidden="true"
-        class={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-in-out ${index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+        class={`absolute inset-0 w-full h-full object-cover ${objectPosition} transition-opacity duration-1000 ease-in-out ${index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
         data-hero-image
         data-index={index}
         loading={index === 0 ? loading : 'lazy'}
