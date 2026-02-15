@@ -188,8 +188,8 @@ const galleryImages: GalleryImage[] = [
                   <span class="inline-block px-3 py-1 bg-amber-600 text-white text-xs font-semibold rounded-full mb-2">
                     {/* Fecha de la foto, formateada */}
                     {new Date(image.date!).toLocaleDateString("es-ES", {
-                      month: "short",
-                      day: "numeric",
+                      month: "long",
+                      year: "numeric",
                     })}
                   </span>
                 )}
