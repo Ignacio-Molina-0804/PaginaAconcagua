@@ -41,6 +41,15 @@ document.addEventListener("DOMContentLoaded", () => {
       Javier's commitment to safety, continuous training, and excellence in service ensures that every expedition is an unforgettable experience, where passion for mountaineering and professionalism come together to offer unique adventures in the Andes.`,
       img: "/data/imagenes/imagenes-guias/javierVegaFoto.webp",
     },
+    {
+      nombre: "Ana Saravia",
+      descripcion: `Logistical support and medical assistance at high altitude <br><br>
+      Specialist in internal medicine and mountain medicine.<br><br>
+      Work developed at high altitude and pre-ascent consultations since 2014.<br><br>
+      Logistics in mountain environments, responsible and committed.<br><br>
+      Lover of the mountain environment and its close relationship and interaction with the human body.`,
+      img: "/data/imagenes/imagenes-guias/anaSaraviaFoto.webp",
+    },
   ];
 
   // Precargar imágenes
