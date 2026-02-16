@@ -40,7 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
       El compromiso de Javier con la seguridad, la formación continua y la excelencia en el servicio garantiza que cada expedición sea una experiencia inolvidable, donde la pasión por la montaña y el profesionalismo se unen para ofrecer aventuras únicas en los Andes.`,
       img: "/data/imagenes/imagenes-guias/javierVegaFoto.webp"
-    }
+    },
+    {
+      nombre: "Ana Saravia",
+      descripcion: `Apoyo logístico y asistencia médica en altura <br><br>
+      Especialista en clínica médica y medicina de montaña.<br><br>
+      Trabajos desarrollados en altura y consultas pre ascenso desde 2014.<br><br>
+      Logística en ambientes de montaña, responsable y comprometida.<br><br>
+      Amante del ambiente de montaña y su estrecha relación e interacción con el cuerpo humano.`,
+      img: "/data/imagenes/imagenes-guias/anaSaraviaFoto.webp",
+    },
   ];
 
   // Precargar imágenes
