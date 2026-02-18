@@ -21,6 +21,7 @@ export const labels = {
         'nav.galery': 'Galería',
         'nav.queries': 'Consultas',
         'nav.language': 'Idioma',
+        'nav.aconcagua': 'Escala la Aconcagua',
 
         //Footer
         'footer.text':' 2025 Empresa de Montañismo. Todos los derechos reservados.',
@@ -193,6 +194,7 @@ export const labels = {
         'nav.galery': 'Gallery',
         'nav.queries': 'Queries',
         'nav.language': 'Language',
+        'nav.aconcagua': 'Climb Aconcagua',
 
         //Footer
         'footer.text':' 2025 Climbing Company. All rights reserved.',
@@ -361,6 +363,7 @@ export const labels = {
         'nav.galery': 'Galeria',
         'nav.queries': 'Consultas',
         'nav.language': 'Idioma',
+        'nav.aconcagua': 'Escala a Aconcagua',
 
         //Footer
         'footer.text':' 2025 Empresa de Escalada. Todos os direitos reservados.',
