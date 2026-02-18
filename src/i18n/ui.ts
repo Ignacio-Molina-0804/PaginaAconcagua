@@ -21,6 +21,7 @@ export const labels = {
         'nav.galery': 'Galería',
         'nav.queries': 'Consultas',
         'nav.language': 'Idioma',
+        'nav.aconcagua': 'Escala la Aconcagua',
 
         //Footer
         'footer.text':' 2025 Empresa de Montañismo. Todos los derechos reservados.',
@@ -140,6 +141,29 @@ export const labels = {
         'queries.why.subtitle2': 'Información sobre equipamiento necesario',
         'queries.why.subtitle3': 'Detalles sobre próximas expediciones',
         'queries.why.subtitle4': 'Respuestas a todas tus dudas sobre montañismo',
+
+        /// Escalar Aconcagua
+
+        // Aconcagua360
+        'aconcagua360.page.title': "Aconcagua 360 | Montañismo Gastón Molina",
+        'aconcagua360.page.description': "Expedición al Aconcagua, el techo de América, con guías certificados y un protocolo de aclimatación progresiva.",
+        'aconcagua360.hero.title': 'Aconcagua 360',
+        'aconcagua360.hero.subtitle': 'El techo de América',
+        // AconcaguaFast
+        'aconcaguaFast.page.title': "Aconcagua Fast | Montañismo Gastón Molina",
+        'aconcaguaFast.page.description': "Expedición al Aconcagua, el techo de América, con guías certificados y un protocolo de aclimatación progresiva.",
+        'aconcaguaFast.hero.title': 'Aconcagua Fast',
+        'aconcaguaFast.hero.subtitle': 'El techo de América',
+        // AconcaguaGlaciarPolacos
+        'aconcaguaGlaciarPolacos.page.title': "Aconcagua Glaciar de los Polacos | Montañismo Gastón Molina",
+        'aconcaguaGlaciarPolacos.page.description': "Expedición al Aconcagua, el techo de América, con guías certificados y un protocolo de aclimatación progresiva.",
+        'aconcaguaGlaciarPolacos.hero.title': 'Aconcagua Glaciar de los Polacos',
+        'aconcaguaGlaciarPolacos.hero.subtitle': 'El techo de América',
+        // AconcaguaRutaNormal
+        'aconcaguaRutaNormal.page.title': "Aconcagua Ruta Normal | Montañismo Gastón Molina",
+        'aconcaguaRutaNormal.page.description': "Expedición al Aconcagua, el techo de América, con guías certificados y un protocolo de aclimatación progresiva.",
+        'aconcaguaRutaNormal.hero.title': 'Aconcagua Ruta Normal',
+        'aconcaguaRutaNormal.hero.subtitle': 'El techo de América',
         
         //Trekking
         'trekking.page.title': "Trekking en Montaña | Montañismo Gastón Molina",
@@ -193,6 +217,7 @@ export const labels = {
         'nav.galery': 'Gallery',
         'nav.queries': 'Queries',
         'nav.language': 'Language',
+        'nav.aconcagua': 'Climb Aconcagua',
 
         //Footer
         'footer.text':' 2025 Climbing Company. All rights reserved.',
@@ -309,6 +334,31 @@ export const labels = {
         'queries.why.subtitle3': 'Details about upcoming expeditions',
         'queries.why.subtitle4': 'Answers to all your climbing questions',
 
+        /// Climb Aconcagua
+
+        // Aconcagua360
+        'aconcagua360.page.title': "Aconcagua 360 | Climbing Gastón Molina",
+        'aconcagua360.page.description': "Expedition to Aconcagua, the roof of the Americas, with certified guides and a progressive acclimatization protocol.",
+        'aconcagua360.hero.title': 'Aconcagua 360',
+        'aconcagua360.hero.subtitle': 'The Roof of the Americas',
+        // AconcaguaFast
+        'aconcaguaFast.page.title': "Aconcagua Fast | Climbing Gastón Molina",
+        'aconcaguaFast.page.description': "Expedition to Aconcagua, the roof of the Americas, with certified guides and a progressive acclimatization protocol.",
+        'aconcaguaFast.hero.title': 'Aconcagua Fast',
+        'aconcaguaFast.hero.subtitle': 'The Roof of the Americas',
+        // AconcaguaGlaciarPolacos
+        'aconcaguaGlaciarPolacos.page.title': "Aconcagua Polish Glacier | Climbing Gastón Molina",
+        'aconcaguaGlaciarPolacos.page.description': "Expedition to Aconcagua, the roof of the Americas, with certified guides and a progressive acclimatization protocol.",
+        'aconcaguaGlaciarPolacos.hero.title': 'Aconcagua Polish Glacier',
+        'aconcaguaGlaciarPolacos.hero.subtitle': 'The Roof of the Americas',
+        // AconcaguaRutaNormal
+        'aconcaguaRutaNormal.page.title': "Aconcagua Normal Route | Climbing Gastón Molina",
+        'aconcaguaRutaNormal.page.description': "Expedition to Aconcagua, the roof of the Americas, with certified guides and a progressive acclimatization protocol.",
+        'aconcaguaRutaNormal.hero.title': 'Aconcagua Normal Route',
+        'aconcaguaRutaNormal.hero.subtitle': 'The Roof of the Americas',
+
+        /// Salidas
+
         //Trekking
         'trekking.page.title': "Mountain Trekking | Climbing Gastón Molina",
         'trekking.page.description': "Explore our guided trekking routes, from easy walks to challenging mountain ascents. Discover our itineraries and recommendations to make the most of nature.",
@@ -361,6 +411,7 @@ export const labels = {
         'nav.galery': 'Galeria',
         'nav.queries': 'Consultas',
         'nav.language': 'Idioma',
+        'nav.aconcagua': 'Escala a Aconcagua',
 
         //Footer
         'footer.text':' 2025 Empresa de Escalada. Todos os direitos reservados.',
@@ -483,6 +534,32 @@ export const labels = {
         'queries.type.query5': 'Grupos privados',
         'queries.type.query6': 'Outros',
 
+        /// Escalar Aconcagua
+
+        // Aconcagua360
+        'aconcagua360.page.title': "Aconcágua 360 | Montanhismo Gastón Molina",
+        'aconcagua360.page.description': "Expedição ao Aconcágua, o teto das Américas, com guias certificados e um protocolo de aclimatação progressiva.",
+        'aconcagua360.hero.title': 'Aconcágua 360',
+        'aconcagua360.hero.subtitle': 'O teto das Américas',
+        // AconcaguaFast
+        'aconcaguaFast.page.title': "Aconcágua Fast | Montanhismo Gastón Molina",
+        'aconcaguaFast.page.description': "Expedição ao Aconcágua, o teto das Américas, com guias certificados e um protocolo de aclimatação progressiva.",
+        'aconcaguaFast.hero.title': 'Aconcágua Fast',
+        'aconcaguaFast.hero.subtitle': 'O teto das Américas',
+        // AconcaguaGlaciarPolacos
+        'aconcaguaGlaciarPolacos.page.title': "Aconcágua Glaciar Polacos | Montanhismo Gastón Molina",
+        'aconcaguaGlaciarPolacos.page.description': "Expedição ao Aconcágua, o teto das Américas, com guias certificados e um protocolo de aclimatação progressiva.",
+        'aconcaguaGlaciarPolacos.hero.title': 'Aconcágua Glaciar Polacos',
+        'aconcaguaGlaciarPolacos.hero.subtitle': 'O teto das Américas',
+        // AconcaguaRutaNormal
+        'aconcaguaRutaNormal.page.title': "Aconcágua Ruta Normal | Montanhismo Gastón Molina",
+        'aconcaguaRutaNormal.page.description': "Expedição ao Aconcágua, o teto das Américas, com guias certificados e um protocolo de aclimatação progressiva.",
+        'aconcaguaRutaNormal.hero.title': 'Aconcágua Ruta Normal',
+        'aconcaguaRutaNormal.hero.subtitle': 'O teto das Américas',
+
+
+        /// Salidas
+
         //Trekking
         'trekking.page.title': "Trekking na Montanha | Escalada Gastón Molina",
         'trekking.page.description': "Explore nossas rotas de trekking guiadas, desde caminhadas suaves até desafiadoras ascensões na montanha. Conheça nossos itinerários e recomendações para aproveitar ao máximo a natureza.",
@@ -500,7 +577,6 @@ export const labels = {
         'trekking.recomendations':'Recomendações',
         'trekking.recomendations.basicequipment': '<div><h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Equipamento Básico</h4><ul class="list-disc pl-5 space-y-1 text-sm sm:text-base"><li>Calçados de trekking ou botas</li><li>Mochila confortável (20-30L)</li><li>Protetor solar e chapéu</li><li>Pelo menos 1 litro de água</li><li>Roupas em camadas</li></ul></div>',
         'trekking.recomendations.physicalpreparation':`<div><h4 class="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Preparação Física</h4><ul class="list-disc pl-5 space-y-1 text-sm sm:text-base"><li>Caminhar regularmente antes da saída</li><li>Hidratar-se bem nos dias anteriores</li><li>Comunicar qualquer condição médica</li><li>Dormir bem na noite anterior</li></ul></div>`,
-
         //Aconcágua
         'aconcagua.page.title' : 'Aconcágua | Montanhismo Gastón Molina',
         'aconcagua.page.description' : "Expedição ao Aconcágua, o teto das Américas, com guias certificados e um protocolo de aclimatação progressiva.",
