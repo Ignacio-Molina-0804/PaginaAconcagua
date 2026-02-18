@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import NavBar from "../../../components/NavBar.astro";
+import Hero from "../../../components/Hero.astro";
+import Footer from "../../../components/Footer.astro";
+
+import { useTranslations } from "../../../i18n/util";
+import { languageList } from "../../../i18n/ui";
+
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
+
+// Título y descripción para SEO y encabezado de la página
+const pageTitle = t('aconcaguaGlaciarPolacos.page.title');
+const pageDescription = t('aconcaguaGlaciarPolacos.page.description');
+---
+<BaseLayout title={pageTitle} description={pageDescription}>
+    <!-- Barra de navegación superior -->
+    <slot name="header"><NavBar /></slot>
+    
+    <!-- Sección Hero con imagen de fondo, título y subtítulo -->
+    <Hero
+      backgroundImage="/data/aconcagua-argentina-1.webp"
+      title={t('aconcaguaGlaciarPolacos.hero.title')}
+      subtitle={t('aconcaguaGlaciarPolacos.hero.subtitle')}
+      blurIntensity="md"  
+      loading="eager" 
+      opacity={20} 
+    />
+    
+    <!-- Footer del sitio -->
+    <slot name="footer"><Footer /></slot>
+</BaseLayout>
