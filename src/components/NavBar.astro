@@ -75,19 +75,22 @@ const getLanguageUrl = (lang: string) => {
               <a
                 href={getLanguageUrl("es")}
                 class="block px-3 py-1 hover:bg-gray-700 hover:text-yellow-400"
-                >ES</a>
+                >ES</a
+              >
             </li>
             <li>
               <a
                 href={getLanguageUrl("en")}
                 class="block px-3 py-1 hover:bg-gray-700 hover:text-yellow-400"
-                >EN</a>
+                >EN</a
+              >
             </li>
             <li>
               <a
                 href={getLanguageUrl("pt")}
                 class="block px-3 py-1 hover:bg-gray-700 hover:text-yellow-400"
-                >PT</a>
+                >PT</a
+              >
             </li>
           </ul>
         </div>
@@ -100,13 +103,72 @@ const getLanguageUrl = (lang: string) => {
             <a
               href={getRelativeLocaleUrl(currentLang, "/")}
               class="hover:text-yellow-400 transition-colors py-2 block"
-              >{t("nav.home")}</a>
+              >{t("nav.home")}</a
+            >
           </li>
           <li>
             <a
               href={getRelativeLocaleUrl(currentLang, "/quienes-somos")}
               class="hover:text-yellow-400 transition-colors py-2 block"
-              >{t("nav.aboutus")}</a>
+              >{t("nav.aboutus")}</a
+            >
+          </li>
+
+          <!-- Menú desplegable para "Aconcagua" -->
+          <li class="relative group">
+            <button
+              class="hover:text-yellow-400 transition-colors flex items-center gap-1 py-2"
+            >
+              {t("nav.aconcagua")}
+              <!-- Flecha para desplegar -->
+              <svg
+                class="w-4 h-4 mt-0.5 transition-transform group-hover:rotate-180"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            <!-- Opciones del menú desplegable -->
+            <div
+              class="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-1 group-hover:translate-y-0"
+            >
+              <a
+                href={getRelativeLocaleUrl(
+                  currentLang,
+                  "/aconcagua/aconcaguaRutaNormal",
+                )}
+                class="block px-4 py-2 hover:bg-gray-700 hover:text-yellow-400"
+                >Aconcagua Ruta Normal</a
+              >
+              <a
+                href={getRelativeLocaleUrl(
+                  currentLang,
+                  "/aconcagua/aconcagua360",
+                )}
+                class="block px-4 py-2 hover:bg-gray-700 hover:text-yellow-400"
+                >Aconcagua 360º</a
+              >
+              <a
+                href={getRelativeLocaleUrl(
+                  currentLang,
+                  "/aconcagua/aconcaguaGlaciarPolacos",
+                )}
+                class="block px-4 py-2 hover:bg-gray-700 hover:text-yellow-400"
+                >Aconcagua Glaciar de los Polacos</a
+              >
+              <a
+                href={getRelativeLocaleUrl(
+                  currentLang,
+                  "/aconcagua/aconcaguaFast",
+                )}
+                class="block px-4 py-2 hover:bg-gray-700 hover:text-yellow-400"
+                >Aconcagua Fast</a
+              >
+            </div>
           </li>
 
           <!-- Menú desplegable para "Salidas" -->
@@ -148,13 +210,15 @@ const getLanguageUrl = (lang: string) => {
             <a
               href={getRelativeLocaleUrl(currentLang, "/galeria")}
               class="hover:text-yellow-400 transition-colors py-2 block"
-              >{t("nav.galery")}</a>
+              >{t("nav.galery")}</a
+            >
           </li>
           <li>
             <a
               href={getRelativeLocaleUrl(currentLang, "/consultas")}
               class="hover:text-yellow-400 transition-colors py-2 block"
-              >{t("nav.queries")}</a>
+              >{t("nav.queries")}</a
+            >
           </li>
         </ul>
       </div>
@@ -192,27 +256,27 @@ const getLanguageUrl = (lang: string) => {
           <a
             href={getRelativeLocaleUrl(currentLang, "/")}
             class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors"
-            >{t("nav.home")}</a>
+            >{t("nav.home")}</a
+          >
         </li>
         <li>
           <a
             href={getRelativeLocaleUrl(currentLang, "/quienes-somos")}
             class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors"
-            >{t("nav.aboutus")}</a>
+            >{t("nav.aboutus")}</a
+          >
         </li>
 
-        <!-- Menú desplegable móvil para "Salidas" -->
+        <!-- Menú desplegable móvil para "Aconcagua" -->
         <li>
           <button
-            id="dropdown-btn"
-            class="w-full flex justify-between items-center px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors"
+            class="dropdown-btn w-full flex justify-between items-center px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors"
             aria-expanded="false"
           >
-            <span>{t("nav.departures")}</span>
+            <span>{t("nav.aconcagua")}</span>
             <!-- Flecha para desplegar -->
             <svg
-              id="dropdown-arrow"
-              class="w-4 h-4 transition-transform duration-200"
+              class="dropdown-arrow w-4 h-4 transition-transform duration-200"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
@@ -223,18 +287,84 @@ const getLanguageUrl = (lang: string) => {
             </svg>
           </button>
           <!-- Opciones del submenú móvil -->
-          <ul id="dropdown-menu" class="hidden pl-4 mt-2 space-y-2">
+          <ul class="dropdown-menu hidden pl-4 mt-2 space-y-2">
+            <li>
+              <a
+                href={getRelativeLocaleUrl(
+                  currentLang,
+                  "/aconcagua/aconcaguaRutaNormal",
+                )}
+                class="block px-3 py-2 hover:bg-gray-700 hover:text-yellow-400 rounded transition-colors"
+                >Aconcagua Ruta Normal</a
+              >
+            </li>
+            <li>
+              <a
+                href={getRelativeLocaleUrl(
+                  currentLang,
+                  "/aconcagua/aconcagua360",
+                )}
+                class="block px-3 py-2 hover:bg-gray-700 hover:text-yellow-400 rounded transition-colors"
+                >Aconcagua 360º</a
+              >
+            </li>
+            <li>
+              <a
+                href={getRelativeLocaleUrl(
+                  currentLang,
+                  "/aconcagua/aconcaguaGlaciarPolacos",
+                )}
+                class="block px-3 py-2 hover:bg-gray-700 hover:text-yellow-400 rounded transition-colors"
+                >Aconcagua Glaciar de los Polacos</a
+              >
+            </li>
+            <li>
+              <a
+                href={getRelativeLocaleUrl(
+                  currentLang,
+                  "/aconcagua/aconcaguaFast",
+                )}
+                class="block px-3 py-2 hover:bg-gray-700 hover:text-yellow-400 rounded transition-colors"
+                >Aconcagua Fast</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <!-- Menú desplegable móvil para "Salidas" -->
+        <li>
+          <button
+            class="dropdown-btn w-full flex justify-between items-center px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors"
+            aria-expanded="false"
+          >
+            <span>{t("nav.departures")}</span>
+            <!-- Flecha para desplegar -->
+            <svg
+              class="dropdown-arrow w-4 h-4 transition-transform duration-200"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <!-- Opciones del submenú móvil -->
+          <ul class="dropdown-menu hidden pl-4 mt-2 space-y-2">
             <li>
               <a
                 href={getRelativeLocaleUrl(currentLang, "/salidas/trekking")}
                 class="block px-3 py-2 hover:bg-gray-700 hover:text-yellow-400 rounded transition-colors"
-                >Trekking</a>
+                >Trekking</a
+              >
             </li>
             <li>
               <a
                 href={getRelativeLocaleUrl(currentLang, "/salidas/aconcagua")}
                 class="block px-3 py-2 hover:bg-gray-700 hover:text-yellow-400 rounded transition-colors"
-                >Aconcagua</a>
+                >Aconcagua</a
+              >
             </li>
           </ul>
         </li>
@@ -243,13 +373,15 @@ const getLanguageUrl = (lang: string) => {
           <a
             href={getRelativeLocaleUrl(currentLang, "/galeria")}
             class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors"
-            >{t("nav.galery")}</a>
+            >{t("nav.galery")}</a
+          >
         </li>
         <li>
           <a
             href={getRelativeLocaleUrl(currentLang, "/consultas")}
             class="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition-colors"
-            >{t("nav.queries")}</a>
+            >{t("nav.queries")}</a
+          >
         </li>
 
         <!-- Selector de Idioma para móvil -->
